@@ -1,0 +1,11 @@
+{
+    "printWidth": 100,
+    "editor.formatOnSave": false,
+    "tabWidth": 4,
+    "requireConfig": false,
+    "useTabs": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "semi": true
+}

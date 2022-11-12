@@ -1,0 +1,10 @@
+node_modules
+build
+cache
+yarn-error.log
+info/local.json
+info/localWETH.json
+scripts/deployConst.js
+
+.env
+.idea
