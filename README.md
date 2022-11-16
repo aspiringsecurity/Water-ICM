@@ -39,7 +39,7 @@ c. Government organizations can send aUSDC from Polygon source-chain to Fantom d
 
 3. Polygon: Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
 
-4. Multi-Chain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
+4. Multi-Chain: MultiChain Webapp integration with SocialCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
 
 5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks. PLease visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Nft-Covalent-aggregator
 
