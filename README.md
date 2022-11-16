@@ -23,3 +23,16 @@ Video analytics configuration using NFT.Storage for data retrieval.
 Live streaming with Object Detection Video Analytics using open source solutions for streaming, Litprotocol for security and NFT.Storage for snapshots.
 
 Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS using NFT.Storage. Store the hash returned from IPFS to Ethereum test network using NFT.Storage. Provide links to alarms and blockchain transaction details.Alarm Viewer: Add alarms with a single touch. Open the Alarm Settings menu from the home page. Add an alarm, set the wallpaper or choose an alarm tone. You can also delete an existing alarm
+
+Blockchain Eco-system
+
+1. Binance
+
+2. Axelar, Polygon and Fantom
+
+3. Polygon
+
+4. Multi-Chain
+
+5. Covalent
+
