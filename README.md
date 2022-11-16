@@ -29,11 +29,11 @@ Blockchain Eco-system
 1. Binance: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
 https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/BSC-WaterICM-Audit-Platform%20
 
-2. Axelar, Polygon and Fantom
+2. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board)
 
-3. Polygon
+3. Polygon: Polygon audit contracts.
 
-4. Multi-Chain
+4. Multi-Chain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. 
 
-5. Covalent
+5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks.
 
