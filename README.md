@@ -26,7 +26,8 @@ Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS 
 
 Blockchain Eco-system
 
-1. Binance
+1. Binance: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
+https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/BSC-WaterICM-Audit-Platform%20
 
 2. Axelar, Polygon and Fantom
 
