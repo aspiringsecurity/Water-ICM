@@ -1,16 +1,12 @@
-MultiChain Web Demo
-===================
+MultiChain Webapp integration with SocialCalc
+=============================================
 
-MultiChain Web Demo is a simple web interface for [MultiChain](http://www.multichain.com/) blockchains, written in PHP.
+MultiChain Webapp is a simple web interface for [MultiChain](http://www.multichain.com/) blockchains, written in PHP.
 
 https://github.com/MultiChain/multichain-web-demo
 
     Copyright(C) Coin Sciences Ltd.
     License: GNU Affero General Public License, see the file LICENSE.txt.
-
-
-Welcome to MultiChain Web Demo
-==============================
 
 This software uses PHP to provide a web front-end for a [MultiChain](http://www.multichain.com/) blockchain node.
 
@@ -28,22 +24,6 @@ It currently supports the following features:
 * Publishing items to streams, as JSON or text or an uploaded file.
 * Viewing stream items, including listing by key or publisher and downloading files.
 * Writing, testing and approving Smart Filters (both transaction and stream filters).
-
-The web demo does not yet support the following important functionality in the MultiChain API:
-
-* Managing per-asset and per-stream permissions.
-* Multisignature addresses and transactions.
-* Adding metadata (or stream items) to permissions or asset transactions.
-* Viewing an addresses' transactions.
-* Subscribing to assets and viewing their transactions.
-* Viewing a list of keys or publishers in a stream.
-* Peer-to-peer node management.
-* Message signing and verification.
-* Blockchain upgrading.
-* Working with the binary cache.
-
-The MultiChain Web Demo is still under development, so please [contact us](http://www.multichain.com/contact-us/) if any of these things are crucial for your needs.
-
 
 System Requirements
 -------------------
@@ -75,7 +55,7 @@ Then start MultiChain again:
 
 
 
-Configure the Web Demo
+Configure the Web App
 ----------------------
 
 _This section assumes your blockchain is named `chain1` and you are running the node and web server on a Unix variant such as Linux. If not, please substitute accordingly._
@@ -104,10 +84,10 @@ Multiple chains are supported by the web demo by copying the same section again 
 	another.rpchost=...
 	...
 
-**Note that the `config.txt` file is readable by users of your web demo installation, and contains your MultiChain API password, so you should never use this basic setup for a production system.**
+**Note that the `config.txt` file is readable by users of your web app installation, and contains your MultiChain API password, so you should never use this basic setup for a production system.**
 
 
-Launch the Web Demo
+Launch the Web App
 -------------------
 
-No additional configuration or setup is required. Based on where you installed the web demo, open the appropriate address in your web browser, and you are ready to go!
+No additional configuration or setup is required. Based on where you installed the web app, open the appropriate address in your web browser, and you are ready to go!
