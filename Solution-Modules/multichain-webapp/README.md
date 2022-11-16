@@ -3,7 +3,7 @@ MultiChain Webapp integration with SocialCalc
 
 MultiChain Webapp is a simple web interface for [MultiChain](http://www.multichain.com/) blockchains, written in PHP.
 
-https://github.com/MultiChain/multichain-web-demo
+We are extending multichain web app demo to integrate with SocialCalc to enable tabulation, charting, graphing, computation and organization.
 
     Copyright(C) Coin Sciences Ltd.
     License: GNU Affero General Public License, see the file LICENSE.txt.
