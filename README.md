@@ -29,11 +29,19 @@ Blockchain Eco-system
 1. Binance: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
 https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/BSC-WaterICM-Audit-Platform%20
 
-2. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board)
+2. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board).
 
-3. Polygon: Polygon audit contracts.
+a. Cross chain dapp development using https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/axelar-Water-ICM . We are extending the starter kit to develop cross chain dapps using Axelar.
 
-4. Multi-Chain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. 
+b. Cross chain lending platform: We can supply collateral and borrow tokens from a satellite chain to a fork of Ethereum's mainnet using existing Compound Protocol. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/collateral-cross-chain-lending
 
-5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks.
+c. Government organizations can send aUSDC from Polygon source-chain to Fantom destination-chain and distribute it equally among all accounts specified for subsidy or reimbursement using call contract with token. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/govt-reimburse-policy-call-contract-with-token
+
+3. Polygon: Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
+
+4. Multi-Chain: MultiChain Webapp integration with EtherCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
+
+5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks. PLease visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Nft-Covalent-aggregator
+
+6. Tron DAO: DAOtooling using TronDAO. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/tron-contracts
 
