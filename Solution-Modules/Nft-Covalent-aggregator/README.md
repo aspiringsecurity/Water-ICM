@@ -1,8 +1,7 @@
-# Nft Showcases
-A dapp where you can see all NFTs from wallet address in different networks.
+# Nft Covalent Aggregator enables you to observe and analyze all NFTs from wallet address in different networks.
 
 ## Features
-- Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain
+- Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon, Avalanche, and Binance Smart Chain
 - Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted
 
 ## Technologies
