@@ -47,3 +47,5 @@ Audit smart contracts compiled on Polygon managed by Ministry of Water. Please v
 
 6. Tron DAO: DAOtooling using TronDAO. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/tron-contracts
 
+7. Chainlink: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+
