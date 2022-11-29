@@ -24,7 +24,7 @@ Live streaming with Object Detection Video Analytics using open source solutions
 
 Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS using NFT.Storage. Store the hash returned from IPFS to Ethereum test network using NFT.Storage. Provide links to alarms and blockchain transaction details.Alarm Viewer: Add alarms with a single touch. Open the Alarm Settings menu from the home page. Add an alarm, set the wallpaper or choose an alarm tone. You can also delete an existing alarm
 
-Chainlink VRF: Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes.
+Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
 
 Blockchain Eco-system
 
@@ -49,5 +49,8 @@ Audit smart contracts compiled on Polygon managed by Ministry of Water. Please v
 
 6. Tron DAO: DAOtooling using TronDAO. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/tron-contracts
 
-7. Chainlink: Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+7. Chainlink: We are utilizing Chainlink VRF as follows:
 
+1. Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
+
+2. Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
