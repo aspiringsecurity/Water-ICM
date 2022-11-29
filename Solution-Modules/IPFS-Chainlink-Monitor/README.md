@@ -1,43 +1,8 @@
-> NOTE: With Rinkeby and Kovan being deprecated, the new default is goerli. 
+Chainlink: We are utilizing Chainlink VRF as follows:
 
-# chainlink-mix
+Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
 
-> NOTE: This has been recently updated for better compatibility with local blockchains. Check out the scripts to learn more.
-
-<br/>
-<p align="center">
-<a href="https://chain.link" target="_blank">
-<img src="./img/chainlink-brownie.png" width="225" alt="Chainlink Brownie logo">
-</a>
-</p>
-<br/>
-
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/smartcontractkit/chainlink-mix.svg)](http://isitmaintained.com/project/smartcontractkit/chainlink-mix "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/smartcontractkit/chainlink-mix.svg)](http://isitmaintained.com/project/smartcontractkit/chainlink-mix "Percentage of issues still open")
-
-This is a repo to work with and use Chainlink smart contracts in a python environment. If you're brand new to Chainlink, check out the beginner walk-through in remix to [learn the basics.](https://docs.chain.link/docs/beginners-tutorial)
-
-You can also check out the more advanced Chainlink tutorials there as well.
-
-- [chainlink-mix](#chainlink-mix)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Testnet Development](#testnet-development)
-  - [Local Development](#local-development)
-  - [Running Scripts and Deployment](#running-scripts-and-deployment)
-    - [Chainlink Price Feeds](#chainlink-price-feeds)
-    - [Chainlink VRF](#chainlink-vrf)
-    - [Chainlink API Call](#chainlink-api-call)
-    - [Chainlink Keeper Deployment](#chainlink-keeper-deployment)
-    - [Local Development](#local-development-1)
-  - [Testing](#testing)
-    - [To test development / local](#to-test-development--local)
-    - [To test mainnet-fork](#to-test-mainnet-fork)
-    - [To test a testnet](#to-test-a-testnet)
-  - [Adding additional Chains](#adding-additional-chains)
-  - [Linting](#linting)
-  - [Resources](#resources)
-  - [License](#license)
+Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
 
 ## Prerequisites
 
