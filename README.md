@@ -24,6 +24,8 @@ Live streaming with Object Detection Video Analytics using open source solutions
 
 Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS using NFT.Storage. Store the hash returned from IPFS to Ethereum test network using NFT.Storage. Provide links to alarms and blockchain transaction details.Alarm Viewer: Add alarms with a single touch. Open the Alarm Settings menu from the home page. Add an alarm, set the wallpaper or choose an alarm tone. You can also delete an existing alarm
 
+Chainlink VRF: Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes.
+
 Blockchain Eco-system
 
 1. Binance: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
