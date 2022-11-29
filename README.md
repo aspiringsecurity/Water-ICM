@@ -47,5 +47,5 @@ Audit smart contracts compiled on Polygon managed by Ministry of Water. Please v
 
 6. Tron DAO: DAOtooling using TronDAO. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/tron-contracts
 
-7. Chainlink: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+7. Chainlink: Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
 
