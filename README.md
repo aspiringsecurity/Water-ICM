@@ -51,6 +51,6 @@ Audit smart contracts compiled on Polygon managed by Ministry of Water. Please v
 
 7. Chainlink: We are utilizing Chainlink VRF as follows:
 
-1. Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
+Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
 
-2. Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
