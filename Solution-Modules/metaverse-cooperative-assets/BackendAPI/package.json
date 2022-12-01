@@ -1,0 +1,41 @@
+{
+  "name": "web3-bot",
+  "version": "1.0.0",
+  "description": "This example is so cool.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node app.js"
+  },
+  "keywords": [
+    "example",
+    "heroku",
+    "node"
+  ],
+  "author": "jane-doe",
+  "license": "MIT",
+  "dependencies": {
+    "@routerprotocol/router-js-sdk": "^0.1.5",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "revise-sdk": "^0.1.16",
+    "tslib": "^2.4.1",
+    "twilio": "^3.83.1"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnaneshdivi/web3-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gnaneshdivi/web3-Bot/issues"
+  },
+  "homepage": "https://github.com/Gnaneshdivi/web3-Bot#readme",
+  "devDependencies": {
+    "ethers": "^5.7.2"
+  }
+}
