@@ -1,12 +1,9 @@
 # Water-ICM
-Investigative Case Management for Integrated Water Management Resource Center
+Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS and medical embedded devices for cost effective monitoring for water management and reducing water wastage. 
 
 Website: https://sites.google.com/view/integratedwatermanagment/home
 
 Moralis Deployment URL: https://1li2klwerizr.usemoralis.com:2053/server (to be deployed to moralis)
-
-
-Developer Tools to manage and monitor drones, UAVS and medical embedded devices for cost effective monitoring for water management and reducing water wastage. 
 
 Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
 
