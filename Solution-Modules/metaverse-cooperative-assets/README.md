@@ -1,26 +1,17 @@
-# We3DeGames
-###### Every investment is subject to market risk! XD
+# Metaverse Cooperative Assets
+
 # Problem Statement & Proposed Solution:
-Ever imagined, a place in METAVERSE where you could live, experience virtually, and look at your Crypto Portfolio? Welcome to We3DeGames, where we get all your crypto ecosystem's protfolio right into an immersive expereince in the world of Metaverse. We are building a part of Metaverse where we, as a player get access to look and care our farms as in terms of our portfolios of cryptocurrencies. The more larger your portfolio is, the more levels and higer status you gain in your world, at Metaverse. 
+Ever imagined, a place in METAVERSE where you could live, experience virtually, and look at your Crypto Portfolio? Welcome to Metaverse Cooperative Assets, where we get all your crypto ecosystem's protfolio right into an immersive expereince in the world of Metaverse. We are building a part of Metaverse where we, as a player get access to look and care our farms as in terms of our portfolios of cryptocurrencies. The more larger your portfolio is, the more levels and higer status you gain in your world, at Metaverse. 
 
 TL;DR: Metaverse + Farms to simulate your crypto portfolio + Immersive Experience via interacting with your investments while trading and holding your "assets".
 
-# Tech Stack We Used: 
-
-1. Revise Network: We used Revise Network to create and manage Dynamic NFT's.
-2. Tatum API: We used Tatum API to get Wallet Data, and mint NFT's. 
-3. Unity Engine: Used to build games!
-4. Tensor Flow: Used to make the prediction model, for analysing and predicting the risk management. 
-5. Polygon: Deployed our smart contracts on the Polygon Chain. 
-6. Heroku: Used Heroku, to deply back-end API.
 
 # A Bit More About The Project: 
  - NFT: We used dynamic NFT's (Revise) to show the highest tier in each currency, it is given as an achivement/reward for connecting their currencies to the application. On each plot, there is a pedastal which shows off the "NFT" in all its glory.  
  - Weather API: There are 4 types of weathers: Sunny, Cloudy, Rainy, and Thunderstorms. The weather in each currency plot is based on our in-built risk anaysis ML model that predict the risk of holding a paticular currency. Sunny weather on a plot imples, no/very low risk, while cloudy, rainy and thunderstorms show the increased intensities of risk.
  - Currency Scaling: Each plant type in the "crypto-verse" has its own value, or as we call it, "scale". If we consider the case of Matic tokens, tier-1 plants hold ".1" Matic, and the tier-3 matic hold 5 Matic!! Overall, each plot is able to show at max 100 Matic showing lush golden forests.  
 
-# Demo Video of The Project:
-Link: https://youtu.be/9_pQsVN1Crk
+
 
 # Images of The Project: 
 ![Party Killer_Main Camera_2022-11-07-23-36-25_3840x2160](https://user-images.githubusercontent.com/54672017/200385338-619ba80a-f91d-4d60-afc7-e71d901bd5a1.png)
