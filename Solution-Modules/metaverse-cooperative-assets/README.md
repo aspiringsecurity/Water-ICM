@@ -14,7 +14,7 @@ TL;DR: Metaverse + Farms to simulate your crypto portfolio + Immersive Experienc
 
 
 # Images of The Project: 
-![Party Killer_Main Camera_2022-11-07-23-36-25_3840x2160](https://user-images.githubusercontent.com/54672017/200385338-619ba80a-f91d-4d60-afc7-e71d901bd5a1.png)
+
 ![Party Killer_Main Camera_2022-11-07-23-36-46_3840x2160](https://user-images.githubusercontent.com/54672017/200385252-fd71c77f-3c3c-4298-b74b-4e7aebc00fd3.png)
 ![Party Killer_Camera_2022-11-07-23-33-11_3840x2160](https://user-images.githubusercontent.com/54672017/200385022-2269706a-8780-4fd4-86be-3be158822040.png)
 ![Party Killer_Camera_2022-11-07-23-35-22_3840x2160](https://user-images.githubusercontent.com/54672017/200385274-345800fa-78e4-4367-8b96-4cdc5133901c.png)
