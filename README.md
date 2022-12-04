@@ -1,11 +1,12 @@
 # Water-ICM
-Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS and medical embedded devices for cost effective monitoring for water management and reducing water wastage. 
+Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS for cost effective monitoring of water supply chain units at sewage treatment plants and at larger water sources like dams, rivers and forest lakes in a variety of topographic regions. 
 
-Website: https://sites.google.com/view/integratedwatermanagment/home
+Website for Developers: https://sites.google.com/view/latcglobal/home
 
-Moralis Deployment URL: https://1li2klwerizr.usemoralis.com:2053/server (to be deployed to moralis)
+Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
-Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
+
+
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes NFT.Storage, IPFS and Axelar powered solutions with BNB audit contracts and Fantom destination chain for sorting information obtained from a variety of drone cameras deployed at monitoring spots.
 
@@ -21,26 +22,51 @@ Live streaming with Object Detection Video Analytics using open source solutions
 
 Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS using NFT.Storage. Store the hash returned from IPFS to Ethereum test network using NFT.Storage. Provide links to alarms and blockchain transaction details.Alarm Viewer: Add alarms with a single touch. Open the Alarm Settings menu from the home page. Add an alarm, set the wallpaper or choose an alarm tone. You can also delete an existing alarm
 
-Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
+Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
+
+Features:
+
+Our project focuses on effective design, engineering and delivery of solution for detecting & managing UAVs & Drones and setting up geo fences using predictive analytics and blockchain. 
+
+•Detection : Identifying the drones & UAVs in the video feed using object detection.
+
+•Discovery : Logging the identities of the drones & UAVs flying in a particular air space at any instant of time, using exchange of unique identifiers.
+
+•Geo-fencing : Discovering unlawful presence and raising alarms using the detection & discovery data.
+
+•Monitoring : Looking out and reporting incidents based on event detection in visual data.
+
+•Analysis : Analyzing route patterns and incidents.
+
+•Drone Incident Reporting : Publish drone incident reports, preventive measures and remediation using a decentralized twitter application over the Ethereum blockchain network and Embark Tools.
+
+A more safe & regulated local air traffic of drones & UAVs with availability of movement data and prediction of future of conditions. Drone incident reporting, preventive measures and remediation using a decentralized twitter application.
+
 
 Blockchain Eco-system
 
-1. Binance: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
+1. Metaverse: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
+2. Optimism and Open Sea Community Tooling
+
+3a. Binance smart contract light client implementation: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
 https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/BSC-WaterICM-Audit-Platform%20
 
-2. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board).
+b. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board).
 
-a. Cross chain dapp development using https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/axelar-Water-ICM . We are extending the starter kit to develop cross chain dapps using Axelar.
+b.1. Cross chain dapp development using https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/axelar-Water-ICM . We are extending the starter kit to develop cross chain dapps using Axelar.
 
-b. Cross chain lending platform: We can supply collateral and borrow tokens from a satellite chain to a fork of Ethereum's mainnet using existing Compound Protocol. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/collateral-cross-chain-lending
+b.2. Cross chain lending platform: We can supply collateral and borrow tokens from a satellite chain to a fork of Ethereum's mainnet using existing Compound Protocol. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/collateral-cross-chain-lending
 
-c. Government organizations can send aUSDC from Polygon source-chain to Fantom destination-chain and distribute it equally among all accounts specified for subsidy or reimbursement using call contract with token. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/govt-reimburse-policy-call-contract-with-token
+b.3. Government organizations can send aUSDC from Polygon source-chain to Fantom destination-chain and distribute it equally among all accounts specified for subsidy or reimbursement using call contract with token. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/govt-reimburse-policy-call-contract-with-token
 
-3. Polygon: Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
+c. Polygon: Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
 
 Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
 
-4. Multi-Chain: MultiChain Webapp integration with SocialCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
+4.a. Multi-Chain: MultiChain Webapp integration with SocialCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
+
+b. Moralis Deployment URL: https://1li2klwerizr.usemoralis.com:2053/server (to be deployed to moralis)
 
 5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks. PLease visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Nft-Covalent-aggregator
 
