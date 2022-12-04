@@ -3,12 +3,6 @@
 # Summary 
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes IPFS, ethereum and optimism powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
-We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
-
-1. OpenSeaCalc data analytics & visualization tool for communities
-2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups
-3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS.
-4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets.
 
 Features:
 •Detection : Identifying the UAVs in the video feed using object detection.
@@ -22,6 +16,19 @@ Features:
 •Analysis : Analyzing route patterns and incidents.
 
 •Drone Incident Reporting : Publish drone incident reports.
+
+We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
+
+1. OpenSeaCalc data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-community-tooling
+
+2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
+3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+
+4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
+
+5. OpenSea Liquidity API Tooling: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
+
 
 
 # Details
