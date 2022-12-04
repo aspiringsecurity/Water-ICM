@@ -1,11 +1,36 @@
 # Water-ICM
+
+# Summary 
+
+Our platform solution offers an Artificial Intelligence-based object detection system that utilizes IPFS, ethereum and optimism powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
+We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
+
+1. OpenSeaCalc data analytics & visualization tool for communities
+2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups
+3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS.
+4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets.
+
+Features:
+•Detection : Identifying the UAVs in the video feed using object detection.
+
+•Discovery : Logging the identities of UAVs flying in a particular air space at any instant of time, using exchange of unique identifiers.
+
+•Geo-fencing : Discovering unlawful presence and raising alarms using the detection & discovery data.
+
+•Monitoring : Looking out and reporting incidents based on event detection in visual data.
+
+•Analysis : Analyzing route patterns and incidents.
+
+•Drone Incident Reporting : Publish drone incident reports.
+
+
+# Details
+
 Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS for cost effective monitoring of water supply chain units at sewage treatment plants and at larger water sources like dams, rivers and forest lakes in a variety of topographic regions. 
 
 Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
-
-
 
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes NFT.Storage, IPFS and Axelar powered solutions with BNB audit contracts and Fantom destination chain for sorting information obtained from a variety of drone cameras deployed at monitoring spots.
