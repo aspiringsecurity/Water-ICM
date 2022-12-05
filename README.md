@@ -34,7 +34,9 @@ Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
-Demo Videos:
+Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1-A3OA0GT21SBx8ipKeQkJHsj96Bb48AK
+
+Demo Videos: 
 
 1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
 
