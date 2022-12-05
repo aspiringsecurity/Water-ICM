@@ -30,11 +30,6 @@ We have developed an Integrated Management solution to improve Water and Transpo
 5. OpenSea Liquidity API Tooling: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
 
 
-
-# Details
-
-Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS for cost effective monitoring of water supply chain units at sewage treatment plants and at larger water sources like dams, rivers and forest lakes in a variety of topographic regions. 
-
 Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
@@ -47,6 +42,10 @@ Demo Videos:
 
 3. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
 
+
+# Details
+
+Investigative Case Management for Integrated Water Management. Developer Tools to manage and monitor drones, UAVS for cost effective monitoring of water supply chain units at sewage treatment plants and at larger water sources like dams, rivers and forest lakes in a variety of topographic regions. 
 
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes NFT.Storage, IPFS and Axelar powered solutions with BNB audit contracts and Fantom destination chain for sorting information obtained from a variety of drone cameras deployed at monitoring spots.
