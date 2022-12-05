@@ -39,6 +39,15 @@ Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
+Demo Videos:
+
+1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
+
+2. UAV Monitor for Integrated Water Management: https://www.youtube.com/watch?v=dqR-I70UT1I&t=1s
+
+3. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
+
+
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes NFT.Storage, IPFS and Axelar powered solutions with BNB audit contracts and Fantom destination chain for sorting information obtained from a variety of drone cameras deployed at monitoring spots.
 
