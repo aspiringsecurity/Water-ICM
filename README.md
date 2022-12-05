@@ -23,7 +23,7 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
 
-3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/niftykitxls
 
 4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
