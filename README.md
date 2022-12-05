@@ -27,7 +27,7 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
-5. OpenSea Liquidity API Tooling: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
+5. OpenSea API Tooling: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
 
 
 Website for Developers: https://sites.google.com/view/latcglobal/home
