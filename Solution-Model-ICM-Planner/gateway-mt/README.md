@@ -1,3 +1,7 @@
+Our solution offers an Artificial Intelligence-based object detection system that utilizes ethereum and Tron DAO blockchain, Oort blockchain services and Storj storage solutions for sorting information obtained from a variety of water management bodies, cameras deployed at monitoring spots.
+
+Oort blockchain services and Storj decentralized storage: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner
+
 # Storj Edge Services
 
 [![Go Report Card](https://goreportcard.com/badge/storj.io/gateway-mt)](https://goreportcard.com/report/storj.io/gateway-mt)
