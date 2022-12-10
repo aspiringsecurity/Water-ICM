@@ -1,3 +1,8 @@
+Our solution offers an Artificial Intelligence-based object detection system that utilizes ethereum and Tron DAO blockchain, Oort blockchain services and Storj storage solutions for sorting information obtained from a variety of water management bodies, cameras deployed at monitoring spots.
+
+Oort blockchain services and Storj decentralized storage: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner
+
+
 # Oort
 
 This repository contains scripts and instructions for reproducing the experiments in our OSDI '21 paper "[Oort: Efficient Federated Learning via Guided Participant Selection](https://www.usenix.org/conference/osdi21/presentation/lai)".
