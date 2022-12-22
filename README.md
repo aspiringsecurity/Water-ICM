@@ -17,7 +17,7 @@ Features:
 
 •Drone Incident Reporting : Publish drone incident reports.
 
-We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
+We have developed an Integrated Management solution to improve Water and Transport Monitoring on XDC network by UAVs powered by:
 
 1. OpenSeaCalc data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-community-tooling
 
@@ -29,10 +29,15 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 5. OpenSea API Tooling: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
 
+6. XDC network: Borrowing XDC funds for community tanks using collaterals: https://github.com/aspiringdevapps/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
+We allow community or civic leaders to set up an XDC account, send funds, and apply for community tanks or sewage treatment plants using collateral items. 
+
 
 Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
+
+XDC network 
 
 Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1-A3OA0GT21SBx8ipKeQkJHsj96Bb48AK
 
