@@ -1,0 +1,36 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: Release Please
+    runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{steps.release.outputs.releases_created}}
+      paths_released: ${{steps.release.outputs.paths_released}}
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3
+        id: release
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          command: manifest
+  publish:
+    name: Publish
+    needs: release
+    if: ${{needs.release.outputs.releases_created}}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        path_released: ${{fromJson(needs.release.outputs.paths_released)}}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/test
+      - name: Run pnpm publish
+        run: |
+          cd ${{ matrix.path_released }}
+          pnpm install
+          pnpm publish --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
