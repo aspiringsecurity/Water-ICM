@@ -19,13 +19,15 @@ Features:
 
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
 
-1. OpenSeaCalc data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-community-tooling
+1. NFT Port dashboard and : https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
+
+b. The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
 
-3. Niftykit Dynamic NFTs and No Code Tooling using NiftykitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/niftykitxls
+3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
-4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
+4. Polygon NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
 5. OpenSea API Tooling: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
 
