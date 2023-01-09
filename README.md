@@ -23,7 +23,9 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 b. The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
-2. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
+b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
 
 3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
