@@ -52,6 +52,8 @@ Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-inc
 
 Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
 
+Demo: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
+
 5. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
 
 6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
