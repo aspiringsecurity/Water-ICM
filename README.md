@@ -40,7 +40,7 @@ b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solut
 
 c. Aleo quotation and water maintenance management: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
 
-d. XDC network to borrow funds using collaterals: 
+d. XDC network to borrow funds using collaterals: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
 3. Lit security and Streamr No Code Tooling using LitXLS
 
@@ -50,13 +50,15 @@ Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-inc
 
 4. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
 
-Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
+Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
 
 5. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
 
 6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
 
-7. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
+7. Push Protocol: Please visit https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
+
+8. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
 
 Demo Videos: 
