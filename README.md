@@ -29,7 +29,7 @@ b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solut
 
 3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
-4. Polygon NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
+4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
 5. OpenSea API Tooling: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
 
