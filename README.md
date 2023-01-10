@@ -17,28 +17,43 @@ Features:
 
 •Drone Incident Reporting : Publish drone incident reports.
 
-We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
-
-1. NFT Port dashboard and : https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
-
-b. The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
-
-2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
-
-b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
-
-3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
-
-4. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
-
-5. OpenSea API Tooling: Python script to retrieve nft trasactions event from OpenSea API. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/opensea-api-nft-sales
-
 
 Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
-Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1-A3OA0GT21SBx8ipKeQkJHsj96Bb48AK
+Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
+
+
+We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
+
+1. NFT Port dashboard and IPFS's w3ui storage : https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
+
+https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+
+b. The Graph: Use of existing subgraph at the graph explorer
+The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
+
+2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
+b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
+
+c. Aleo quotation and water maintenance management: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
+
+d. XDC network to borrow funds using collaterals: 
+
+3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
+
+4. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
+
+Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
+
+5. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
+
+6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
+
+7. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
+
 
 Demo Videos: 
 
