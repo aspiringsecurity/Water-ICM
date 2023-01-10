@@ -42,7 +42,11 @@ c. Aleo quotation and water maintenance management: https://github.com/aspirings
 
 d. XDC network to borrow funds using collaterals: 
 
-3. Lit security and Streamr No Code Tooling using LitXLS: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls and https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
+3. Lit security and Streamr No Code Tooling using LitXLS
+
+Lit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
+
+Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
 4. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
 
