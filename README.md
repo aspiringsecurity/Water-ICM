@@ -31,7 +31,11 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
-b. The Graph: Use of existing subgraph at the graph explorer
+b.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
+
+Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
+
+c. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
@@ -112,37 +116,9 @@ Our project focuses on effective design, engineering and delivery of solution fo
 A more safe & regulated local air traffic of drones & UAVs with availability of movement data and prediction of future of conditions. Drone incident reporting, preventive measures and remediation using a decentralized twitter application.
 
 
-Blockchain Eco-system
 
-1. Metaverse: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
 
-2. Optimism and Open Sea Community Tooling
 
-3a. Binance smart contract light client implementation: Binance: Binance smart contract implementation onn light client at https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/Smart-Contract-Implement-Light-Client and Binance audit smart contract implementation for Third Party administrators (TPAs) at 
-https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/BSC-WaterICM-Audit-Platform%20
 
-b. Axelar, Polygon and Fantom: Axelar for communication between Polygon blockchain (infrastructure companies and Contract research organizations) and Fantom destination chain (compliance system by government organizations like Ministry of Water or Jal Board).
 
-b.1. Cross chain dapp development using https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/axelar-Water-ICM . We are extending the starter kit to develop cross chain dapps using Axelar.
 
-b.2. Cross chain lending platform: We can supply collateral and borrow tokens from a satellite chain to a fork of Ethereum's mainnet using existing Compound Protocol. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/collateral-cross-chain-lending
-
-b.3. Government organizations can send aUSDC from Polygon source-chain to Fantom destination-chain and distribute it equally among all accounts specified for subsidy or reimbursement using call contract with token. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Axelar-Fantom-destination-chain/govt-reimburse-policy-call-contract-with-token
-
-c. Polygon: Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
-
-Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
-
-4.a. Multi-Chain: MultiChain Webapp integration with SocialCalc for analysis, tabulation, graphing, charting and visualization. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/multichain-webapp
-
-b. Moralis Deployment URL: https://1li2klwerizr.usemoralis.com:2053/server (to be deployed to moralis)
-
-5. Covalent:  Covalent-NFT-Dashboard enables us to analyze, observe all NFTs from wallet address of Contract Research Organizations (CROs), water Quality assurance companies in different networks. PLease visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Nft-Covalent-aggregator
-
-6. Tron DAO: DAOtooling using TronDAO. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/tron-contracts
-
-7. Chainlink: We are utilizing Chainlink VRF as follows:
-
-Water Bill Generation: We are utilizing Chainlink Mix to work with Chainlink smart contracts. The bill script will deploy a smart contract to goerli and get a Random number via Chainlink VRF, which can used to identify a unique transaction/order number for the water bill.
-
-Parametric Insurance Solution for Dams and water supply pipes in crisis region. We are utilizing an existing example at chainlink github repo to develop an insurance solution for water management systems like dams and water supply pipes and drinking storage tanks. We can also utilize it for water sewage pipes. Link: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
