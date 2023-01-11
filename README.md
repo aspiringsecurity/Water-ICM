@@ -37,7 +37,7 @@ b.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in 
 
 Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
 
-c. IPFS's w3ui storage: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+c. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
 c. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
