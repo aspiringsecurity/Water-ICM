@@ -39,13 +39,16 @@ Audit smart contracts compiled on Polygon managed by Ministry of Water. Please v
 
 c. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
+Further, we are storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident.
+
+
 c. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 
 2. Lit security and Streamr No Code Tooling using LitXLS
 
-Lit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
+Lit: We are using Lit protocol to automate signing, reading, and writing road incident metadata (snapshots) and alarm viewer data to web3 decentralized networks (Ethereum and IPFS). Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
 
 Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
