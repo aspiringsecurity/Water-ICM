@@ -25,14 +25,6 @@ Website for End Consumers, Civic bodies: https://sites.google.com/view/integrate
 Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
 
 
-# Demo Videos: 
-
-1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
-
-2. UAV Monitor for Integrated Water Management: https://www.youtube.com/watch?v=dqR-I70UT1I&t=1s
-
-3. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
-
 
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
@@ -107,6 +99,14 @@ d. XDC network to borrow funds using collaterals: https://github.com/aspiringsec
 
 8. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
+
+# Demo Videos: 
+
+1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
+
+2. UAV Monitor for Integrated Water Management: https://www.youtube.com/watch?v=dqR-I70UT1I&t=1s
+
+3. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
 
 
 # Details
