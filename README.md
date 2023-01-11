@@ -27,16 +27,17 @@ Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhM
 
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
 
-1. NFT Port dashboard and IPFS's w3ui storage : https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
-
-https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+1. a. NFT Port dashboard: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
 
 b.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
 
 Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
 
+c. IPFS's w3ui storage: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+
 c. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
+
 
 2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
 
@@ -46,11 +47,13 @@ c. Aleo quotation and water maintenance management: https://github.com/aspirings
 
 d. XDC network to borrow funds using collaterals: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
+
 3. Lit security and Streamr No Code Tooling using LitXLS
 
 Lit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
 
 Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
+
 
 4. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
 
@@ -58,16 +61,20 @@ Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solu
 
 Demo: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
+
 5. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
+
 
 6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
 
+
 7. Push Protocol: Please visit https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
+
 
 8. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
 
-Demo Videos: 
+# Demo Videos: 
 
 1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
 
@@ -83,7 +90,8 @@ Investigative Case Management for Integrated Water Management. Developer Tools t
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes NFT.Storage, IPFS and Axelar powered solutions with BNB audit contracts and Fantom destination chain for sorting information obtained from a variety of drone cameras deployed at monitoring spots.
 
-How it works:
+
+# How it works:
 
 Camera Management: Add/edit/delete cameras with a front end application with NFT.Storage (IPFS/Filecoin)  
 
@@ -97,7 +105,8 @@ Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS 
 
 Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
 
-Features:
+
+# Features
 
 Our project focuses on effective design, engineering and delivery of solution for detecting & managing UAVs & Drones and setting up geo fences using predictive analytics and blockchain. 
 
