@@ -77,8 +77,11 @@ c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/S
 Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
 
-6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
+6. a. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
 
+b. ENS: We are using ethops.blockchain for ENS configuration and routing.
+
+c. Arweave + bundlr: We are using it for storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/arweave-bundlr-img-upload
 
 
 7. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
