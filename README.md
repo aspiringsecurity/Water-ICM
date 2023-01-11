@@ -31,18 +31,23 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 1. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users:UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
 
-Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
+Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard 
 
-b.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
+
+b. XMTP: We are implementing XMTP Chat for administrators in a particular region with CyberConnect functions. Please visit the implementation at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/XMTP-Chat
+
+
+c.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
 
 Audit smart contracts compiled on Polygon managed by Ministry of Water. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Polygon-Audit-Contracts
 
-c. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+
+d. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
 Further, we are storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident.
 
 
-c. The Graph: Use of existing subgraph at the graph explorer
+e. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 
@@ -59,11 +64,15 @@ Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-inc
 4. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
 
 
-5. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
+5. Livepeer: We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
 
-Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
+a. Aptos: https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement and https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/social-drone-data-framework-apt-livepeer
 
-Demo: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
+b. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
+
+c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
+
+Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
 
 6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
