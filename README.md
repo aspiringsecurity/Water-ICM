@@ -25,7 +25,9 @@ Website for End Consumers, Civic bodies: https://sites.google.com/view/integrate
 Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
 
 
-We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by:
+We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
+
+# Blockchain Eco-system
 
 1. a. NFT Port dashboard: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard and 
 
@@ -39,36 +41,37 @@ c. The Graph: Use of existing subgraph at the graph explorer
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 
-2. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
-
-b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
-
-c. Aleo quotation and water maintenance management: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
-
-d. XDC network to borrow funds using collaterals: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
-
-
-3. Lit security and Streamr No Code Tooling using LitXLS
+2. Lit security and Streamr No Code Tooling using LitXLS
 
 Lit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
 
 Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
 
-4. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
+3. Push Protocol: Please visit https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
+
+
+4. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
+
+
+5. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
 
 Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
 
 Demo: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
 
-5. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
-
-
 6. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
 
 
-7. Push Protocol: Please visit https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
+
+7. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
+b. Klaytn Monitor: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
+
+c. Aleo quotation and water maintenance management: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
+
+d. XDC network to borrow funds using collaterals: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
 
 8. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
