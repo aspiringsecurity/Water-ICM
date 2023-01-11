@@ -29,7 +29,7 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 # Blockchain Eco-system
 
-1. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users:UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
+1. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users: UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
 
 Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard 
 
@@ -58,13 +58,15 @@ Lit: We are using Lit protocol to automate signing, reading, and writing road in
 Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
 
-3. Push Protocol: Please visit https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
+3. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
+
+Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
 
 
 4. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
 
 
-5. Livepeer: We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
+5. Livepeer and Aptos: We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
 
 a. Aptos: https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement and https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/social-drone-data-framework-apt-livepeer
 
