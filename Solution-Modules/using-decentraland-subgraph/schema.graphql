@@ -1,0 +1,140 @@
+type Decentraland @entity {
+  id: ID!
+  landCount: Int!
+  estateCount: Int!
+}
+
+# aka LAND
+type Parcel @entity {
+  id: ID!
+  idNumber: BigInt!                               # we store ID in hex and in uint256. This helps with interacting with the contract and dapp
+  x: BigInt!
+  y: BigInt!
+  estate: Estate
+  owner: User!
+  data: ParcelData
+  orderOwner: Bytes
+  orderPrice: BigInt
+  activeOrder: Order
+  orders: [Order!] @derivedFrom(field: "parcel")  # history of all orders. should only ever be ONE open order. all others must be closed or sold
+  updatedAt: BigInt!
+  operators: [Bytes!]
+}
+
+type ParcelData @entity {
+  id: ID!
+  parcel: Parcel!
+  version: String
+  name: String
+  description: String
+  ipns: String
+}
+
+
+type Order @entity {
+  id: ID!
+  type: OrderType!
+  parcel: Parcel                                # parcel ID if its a parcel, null if its an estate
+  estate: Estate                                # estate ID if its an estate, null if its a parcel
+  txHash: Bytes!
+  owner: Bytes!
+  price: BigInt!
+  status: OrderStatus!
+  buyer: Bytes
+  blockNumber: BigInt!
+  expiresAt: BigInt!
+  timeCreated: BigInt!
+  timeUpdatedAt: BigInt!
+  marketplace: Bytes!                           # the marketplace address from which this order was created
+
+  # New addition on top of Legacy 'Auction'
+  nftAddress: Bytes
+}
+
+enum OrderType @entity {
+  parcel
+  estate
+}
+
+enum OrderStatus @entity {
+  open
+  sold
+  cancelled
+}
+
+type Estate @entity {
+  id: ID!           # estate ID (based on total supply of estates)
+  owner: User!
+  operator: Bytes
+  metaData: String
+  land: [BigInt!]   # AddLand and TransferLand events
+  orders: [Order!] @derivedFrom(field: "estate")
+  size: Int
+  createTransaction: Bytes
+  updatedAt: BigInt!
+  activeOrder: Order
+  orderOwner: Bytes
+  orderPrice: BigInt
+
+}
+
+ type Mortgage @entity {
+   id: ID!                          # mortage ID
+   txHash: Bytes!
+   createdAt: BigInt!
+   startedAt: BigInt
+   lastUpdatedAt: BigInt!
+   status: MortgageStatus!
+
+   borrower: User!
+   rcnEngine: Bytes!
+   loan_id: BigInt!
+   landMarket: Bytes!
+   landID: BigInt!
+   deposit: BigInt!                 # User deposit in MANA (collateral)
+   tokenConverter: Bytes!
+
+   # Get from Storage
+   landCost: BigInt!
+
+   # Get Estate from Parcel.load()
+   parcel: Parcel
+   estate: Estate
+
+   # Get from loan
+   # Note - Other data could be grabbed from the loan, but none of it seems necessary
+   lender: Bytes!
+   loanAmount: BigInt!
+   dueTime: Int!
+ }
+
+ enum MortgageStatus @entity {
+   pending
+   cancelled
+   ongoing
+   paid
+   defaulted
+ }
+
+type Invite @entity {
+  id: ID!                 # eth user addr
+  inviteBalance: BigInt!  # amount of invites user can hand out
+  invites: [BigInt!]!     # can own multiple invites, which are each ERC721 tokens
+}
+
+type User @entity {
+  id: ID!                                             # eth addr
+  parcels: [Parcel!] @derivedFrom(field: "owner")
+  # contributions:                                    # NOT AVAILABLE
+  estates: [Estate!] @derivedFrom(field: "owner")
+  mana: BigInt                                        # amount of mana owned
+  mortgages: [Mortgage!] @derivedFrom(field: "borrower")
+}
+#
+#type Token @entity {
+#  id: ID!
+#  totalSupply: BigInt!
+#  decimals: Int!
+#  ticker: String!
+#  name: String!
+#}
