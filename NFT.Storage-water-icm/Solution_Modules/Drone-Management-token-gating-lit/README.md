@@ -1,4 +1,4 @@
-# Token-gate the Drone Management Dashboard Page with 3 different personas using Lit Protocol
+# Token-gate the Drone Management Dashboard Page with 6 different personas using Lit Protocol
 
 
 We are extending the example of how to token-gate a Next.js page using [Lit Protocol](https://developer.litprotocol.com/) using `getServerSideProps`.
