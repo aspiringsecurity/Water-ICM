@@ -48,15 +48,25 @@ Further, we are storing a variety of offchain data like incident snapshots, alar
 
 e. The Graph: Use of existing subgraph at the graph explorer: We are using Decentraland and Adchain subgraph to build a datasource from the websites for sentiment analysis, which are kept in the Adchain registry. A python crawler mine these websites and feed relevant information to the analytics and visualization tool.
 
+Please visit Adchain subgraph module at https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/using-adchain-subgraph 
+
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
-Using subgraphs: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node
 
-2. Lit security and Streamr No Code Tooling using LitXLS
+2. a. Lit:  We are using Lit protocol to automate signing, reading, and writing road incident metadata (snapshots) and alarm viewer data to web3 decentralized networks (Ethereum and IPFS). Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
 
-Lit: We are using Lit protocol to automate signing, reading, and writing road incident metadata (snapshots) and alarm viewer data to web3 decentralized networks (Ethereum and IPFS). Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
+- Lit Access Control: Lit Protocol Oauth to Enable faster login for 5 different personas. The 6 different personas: Drone Driver, Citizen, Police officer, dispatcher, admin, government roles can easily be authenticated and logged in so that they can use their Ethereum address. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Drone-Monitoring-oauth-lit-access-control
 
-Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
+- Token-gate the Drone Management Dashboard Page with 6 different personas using Lit Protocol: Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Drone-Management-token-gating-lit
+
+- Lit Actions: We are using JS function bindings to do things like request a signature or a decryption. Please visit:
+
+i) https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/lit-actions_conditional_signing
+
+ii) https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/lit-actions_sign_api_response
+
+
+b. Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
 
 3. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
@@ -78,13 +88,15 @@ c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/S
 Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
 
-6. a. Ceramic Composedb challenge: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
+6. a. Ceramic Composedb challenge and Ceramic Lit Integration: Please visit:
 
-b. ENS: We are using ethops.blockchain for ENS configuration and routing.
+- https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
+
+- https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Ceramic-Lit-Integration
+
+b. ENS: We are using ethops.blockchain domain purchased at UD for ENS. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/ENS-ethops
 
 c. Arweave + bundlr: We are using it for storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/arweave-bundlr-img-upload
-
-
 
 
 7. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
