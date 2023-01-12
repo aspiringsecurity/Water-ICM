@@ -46,9 +46,11 @@ d. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation fi
 Further, we are storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident.
 
 
-e. The Graph: Use of existing subgraph at the graph explorer
-The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
+e. The Graph: Use of existing subgraph at the graph explorer: We are using Decentraland and Adchain subgraph to build a datasource from the websites for sentiment analysis, which are kept in the Adchain registry. A python crawler mine these websites and feed relevant information to the analytics and visualization tool.
 
+The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
+
+Using subgraphs: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/subgraph-node
 
 2. Lit security and Streamr No Code Tooling using LitXLS
 
