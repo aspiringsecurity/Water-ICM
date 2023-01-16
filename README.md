@@ -111,9 +111,11 @@ c. Arweave + bundlr: We are using it for storing a variety of offchain data like
 
 b. Klaytn Monitor: Klaytn Monitor is a DeFi dashboard that allows drone owners and drone controllers to search their address and view their drone token holdings and balance, also available is the ability for owners to view their drone services and associated NFT holdings and their balance(s) and price if available. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
 
-c. Aleo quotation and water maintenance management: We are also extending Aleo's auction, vote and token examples for enabling sharing of government assets like aerial traffic routes, drone details information for geolocation and travel routes, drone license management and quarterly maintenance check and control. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
+c. Aleo quotation and water maintenance management: Aleo Quotation, Bidding, voting and token management for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators on Aleo Network. We are also extending Aleo's auction, vote and token examples for enabling sharing of government assets like aerial traffic routes, drone details information for geolocation and travel routes, drone license management and quarterly maintenance check and control. 
 
-d. XDC network to borrow funds using collaterals: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
+Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
+
+d. XDC network to borrow funds using collaterals for for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
 
 8. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
