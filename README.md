@@ -45,7 +45,9 @@ Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storag
 Please visit the demo video at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer
 
 
-d. IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
+d. FVM: FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
+
+IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
 We are also extending the w3notes example app to develop an incident notes tool for the drone and UAV administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/w3ui-incident-notes
 
