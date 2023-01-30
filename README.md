@@ -49,7 +49,7 @@ d. FVM: We are generating NFTs for NFC tags of drone licenses of drone owners/dr
 
 FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
 
-
+Please visit DataDAO for UAV incidents in Monitoring solution using Drones: https://github.com/aspiringsecurity/Water-ICM/tree/main/fvm-drone-incident-data-dao
 
 IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
 
