@@ -47,7 +47,7 @@ Enablement using Optimism Eco-system and Tools: Optimism NFT marketplace for dro
 We are also using Optimism to enable scaling of the decentralized public goods mobility network and effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. We are extending and adapting our platform for connected vehicles in Europe for sustainability and efficiency. We are currently working on a dataset of 15000 trips, 45+ trucks and 175+ drivers and enabling them to achieve better fleet management using drone monitor. We wish to use Optimism for scaling the solution for the current dataset.
 
 
-3. a. FVM: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
+3. a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
 
 FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
 
@@ -60,6 +60,8 @@ We are also extending the w3notes example app to develop an incident notes tool 
 Further, we are storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident.
 
 Please visit the demo videos at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer and https://drive.google.com/drive/u/3/folders/1AUdsHAcUPTF85gVk93w8tzfEzbD7K6-Y
+
+Chainlink Functions: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/hsk-dev
 
 b. Klaytn Monitor: Klaytn Monitor is a DeFi dashboard that allows drone owners and drone controllers to search their address and view their drone token holdings and balance, also available is the ability for owners to view their drone services and associated NFT holdings and their balance(s) and price if available. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
 
@@ -190,23 +192,7 @@ Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS 
 Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
 
 
-# Features
 
-Our project focuses on effective design, engineering and delivery of solution for detecting & managing UAVs & Drones and setting up geo fences using predictive analytics and blockchain. 
-
-•Detection : Identifying the drones & UAVs in the video feed using object detection.
-
-•Discovery : Logging the identities of the drones & UAVs flying in a particular air space at any instant of time, using exchange of unique identifiers.
-
-•Geo-fencing : Discovering unlawful presence and raising alarms using the detection & discovery data.
-
-•Monitoring : Looking out and reporting incidents based on event detection in visual data.
-
-•Analysis : Analyzing route patterns and incidents.
-
-•Drone Incident Reporting : Publish drone incident reports, preventive measures and remediation using a decentralized twitter application over the Ethereum blockchain network and Embark Tools.
-
-A more safe & regulated local air traffic of drones & UAVs with availability of movement data and prediction of future of conditions. Drone incident reporting, preventive measures and remediation using a decentralized twitter application.
 
 
 
