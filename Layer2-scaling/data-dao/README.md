@@ -1,7 +1,7 @@
-# DataDAO Example - Deal Bounty Contract
-**A FVM compatible deal bounty contract example that demonstrates one way of implementing a Data DAO on Filecoin.**
+# DataDAO for Drone Monitoring and UAV Incident Management
+**A FVM compatible deal bounty contract that demonstrates one way of implementing a Data DAO on Filecoin for Drone Monitoring and UAV Incident Management.**
 
-This repo contains a solidity contract template that lists data bounties to claim, and pays out the bounty upon the deal proven to be made with the builtin filecoin builtin market.
+Lists data bounties by insurance organizations and air traffic control departments to claim, and pays out the bounty upon the deal proven to be made with the builtin filecoin builtin market.
 
 ### Install
 
