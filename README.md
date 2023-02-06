@@ -72,6 +72,34 @@ d. Push Protocol: We are using Push protocol to to enable periodic alarm notific
 Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
 
 
+e. Layer 2 Scaling: Layer 2 for Security, decentralized voting and DAO management, contract payment management for service and maintenance
+
+
+
+- Metis: Decentralized NFT-based voting system for RFPs on Metis network. Workflow:
+
+-DAOs or Organisations create a RFP on the app.
+-Users can join a RFP by minting an NFT of that RFP
+- Users that have a certain RFP's NFT are eligible to create proposals and vote on them.
+- Voting is gasless and the vote is stored on IPFS
+
+Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/metis-rfp-dao-nft-voting
+
+
+- Boba network: Hybrid-Compute for Drone Management and Monitoring on the Boba Network. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/mobility-scaling-using-hybrid-compute-boba
+
+
+- AltLayer: Maintenance and service contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/payment-automation-altlayer
+
+
+- zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
+
+- Account Abstraction plugins: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/zksync-account-abstraction-drone-delivery-payment
+
+- https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/hardhat-zksync
+
+
+
 4. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users: UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
 
 Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard 
