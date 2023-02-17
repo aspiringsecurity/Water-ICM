@@ -1,0 +1,53 @@
+[package]
+authors = ["Supercolony <green.baneling@supercolony.net>"]
+edition = "2021"
+name = "pallet-assets-chain-extension"
+version = "0.1.1"
+
+[dependencies]
+# Common deps
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2", default-features = false, features = ["derive"] }
+obce = { git = "https://github.com/Supercolony-net/obce", branch = "polkadot-v0.9.32", default-features = false }
+
+# Substrate deps
+pallet-assets = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.32", default-features = false, optional = true }
+
+# Ink deps
+ink_primitives = { version = "3", default-features = false, optional = true }
+ink_metadata = { version = "3", default-features = false, features = ["derive"], optional = true }
+ink_storage = { version = "3", default-features = false, optional = true }
+
+[features]
+default = ["std"]
+substrate = [
+	"obce/substrate",
+	"pallet-assets",
+]
+ink = [
+	"obce/ink",
+	"ink_primitives",
+	"ink_storage",
+]
+std = [
+	"scale-info/std",
+	"scale/std",
+]
+substrate-std = [
+	"std",
+	"substrate",
+	"obce/substrate-std",
+	"pallet-assets/std",
+]
+ink-std = [
+	"std",
+	"ink",
+	"obce/ink-std",
+	"ink_primitives",
+	"ink_storage",
+	"ink_metadata",
+]
+runtime-benchmarks = [
+	"obce/runtime-benchmarks",
+	"pallet-assets/runtime-benchmarks",
+]
