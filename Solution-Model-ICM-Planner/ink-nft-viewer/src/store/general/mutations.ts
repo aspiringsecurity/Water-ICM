@@ -1,0 +1,91 @@
+import type { ChainInfo } from 'src/hooks/useChainInfo';
+import type { Extensions } from 'src/hooks/useMetaExtensions';
+import { GasTip } from '@astar-network/astar-sdk-core';
+import { MutationTree } from 'vuex';
+import {
+  AlertBox,
+  AlertType,
+  ConnectionType,
+  GeneralStateInterface as State,
+  SubstrateAccount,
+} from './state';
+
+export interface GeneralMutations<S = State> {
+  setInitialized(state: S): void;
+  setLoading(state: S, isLoading: boolean): void;
+  pushAlertMsg(state: S, alert: AlertBox): void;
+  removeAlertMsg(state: S, index: number): void;
+  setAlertMsg(state: S, msg: string): void;
+  setAlertType(state: S, type: AlertType): void;
+  setChainInfo(state: S, type: ChainInfo): void;
+  setMetaExtensions(state: S, type: Extensions): void;
+  setExtensionCount(state: S, type: number): void;
+  setSubstrateAccounts(state: S, type: SubstrateAccount[]): void;
+  setCurrentNetworkStatus(state: S, networkStatus: ConnectionType): void;
+  setCurrentNetworkIdx(state: S, networkIdx: number): void;
+  setCurrentAddress(state: S, address: string): void;
+  setCurrentCustomEndpoint(state: S, endpoint: string): void;
+  setHeaderName(state: S, name: string): void;
+  setCurrentWallet(state: S, wallet: string): void;
+  setGas(state: S, gas: GasTip): void;
+  setCurrentBlock(state: S, blockNumber: number): void;
+}
+
+const mutation: MutationTree<State> & GeneralMutations = {
+  setInitialized(state) {
+    state.initialized = true;
+  },
+  setLoading(state, isLoading) {
+    state.isLoading = isLoading;
+  },
+  pushAlertMsg(state, alert) {
+    state.alertBoxStack.push(alert);
+  },
+  removeAlertMsg(state, index) {
+    state.alertBoxStack = state.alertBoxStack.filter((el, idx) => idx !== index);
+  },
+  setAlertMsg(state, msg) {
+    state.alertBox.alertMsg = msg;
+  },
+  setAlertType(state, type) {
+    state.alertBox.alertType = type;
+  },
+  setChainInfo(state, chainInfo) {
+    state.chainInfo = chainInfo;
+  },
+  setMetaExtensions(state, extensions) {
+    state.metaExtensions = extensions;
+  },
+  setExtensionCount(state, count) {
+    state.extensionCount = count;
+  },
+  setSubstrateAccounts(state, accounts) {
+    state.substrateAccounts = accounts;
+  },
+  setCurrentNetworkStatus(state, networkStatus) {
+    state.currentNetworkStatus = networkStatus;
+  },
+  setCurrentNetworkIdx(state, networkIdx) {
+    state.currentNetworkIdx = networkIdx;
+  },
+  setCurrentAddress(state, address) {
+    state.currentAddress = address;
+  },
+  setCurrentCustomEndpoint(state, endpoint) {
+    state.currentCustomEndpoint = endpoint;
+  },
+  setHeaderName(state, name) {
+    state.headerName = name;
+  },
+  setCurrentWallet(state, walle: string) {
+    state.currentWallet = walle;
+  },
+  setGas(state, gas: GasTip) {
+    state.gas = gas;
+  },
+  setCurrentBlock(state, blockNumber) {
+    state.currentBlock = blockNumber;
+  },
+};
+
+export default mutation;

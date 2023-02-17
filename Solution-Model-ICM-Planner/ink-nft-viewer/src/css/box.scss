@@ -1,0 +1,100 @@
+@import 'src/css/quasar.variables.scss';
+
+.container {
+  box-shadow: $container-border-shadow-light;
+  background: $container-bg-white;
+  border-radius: 6px;
+  padding: 8px 16px;
+  @media (min-width: $md) {
+    padding: 8px 24px;
+  }
+}
+
+.container-wrapper--feature {
+  border-radius: 2px;
+  height: auto;
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(
+    90.91deg,
+    #e6007a -1.47%,
+    #8131b7 17.42%,
+    #703ac2 20.65%,
+    #0070eb 57.36%,
+    #0297fb 81.25%,
+    #0ae2ff 96.42%
+  );
+}
+
+.container-inner--feature {
+  box-shadow: $container-border-shadow-light;
+  background: $container-bg-white;
+  padding: 8px 16px;
+  @media (min-width: $md) {
+    padding: 8px 24px;
+  }
+}
+
+.box--input {
+  display: grid;
+  row-gap: 12px;
+  padding: 9px 15px;
+  border-radius: 6px;
+  width: 320px;
+  background: $container-bg-white;
+  @media (min-width: $xs) {
+    width: 344px;
+  }
+}
+
+.box--hover--active {
+  border: 1px solid transparent;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    border: 1px solid $astar-blue !important;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.box--active {
+  border: 1px solid $astar-blue !important;
+  transition: all 0.3s ease 0s;
+}
+
+.box--tooltip-warning {
+  background-color: $astar-blue;
+  max-width: 320px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.box--tooltip {
+  background-color: $astar-blue;
+  width: 240px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 0 8px;
+  text-align: left;
+  @media (min-width: $sm) {
+    margin: 0;
+  }
+}
+
+.body--dark {
+  .container,
+  .container-inner--feature {
+    background: $container-bg-dark;
+    box-shadow: $container-border-shadow-dark;
+  }
+  .box--input {
+    background: $gray-6;
+  }
+  .box--tooltip-warning {
+    background-color: $astar-blue-dark;
+  }
+}

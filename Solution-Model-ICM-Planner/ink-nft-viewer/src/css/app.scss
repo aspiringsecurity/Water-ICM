@@ -1,0 +1,92 @@
+// Memo: app global css in SCSS form
+// Memo: Following the BEM methodology
+// Ref:  https://css-tricks.com/bem-101/
+
+@use 'src/css/quasar.variables.scss';
+@use 'src/css/text.scss';
+@use 'src/css/button.scss';
+@use 'src/css/color.scss';
+@use 'src/css/modal.scss';
+@use 'src/css/box.scss';
+@use 'src/css/skeleton.scss';
+@use 'src/css/icon.scss';
+@use 'src/css/astar-ui.scss';
+@use 'src/css/markdown.scss';
+
+body {
+  overflow: hidden;
+}
+
+main {
+  background: $body-bg-light;
+}
+
+.screen--phone {
+  @media (min-width: $sm) {
+    display: none !important;
+  }
+}
+
+.screen--sm {
+  display: none;
+  @media (min-width: $sm) {
+    display: block;
+  }
+}
+
+.screen--md {
+  display: none;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+
+.screen--lg {
+  display: none;
+  @media (min-width: $lg) {
+    display: block;
+  }
+}
+
+.screen--xl {
+  display: none;
+  @media (min-width: $xl) {
+    display: block;
+  }
+}
+
+.border--separator {
+  border-top: 1px solid $border-separator-light;
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.width-auto {
+  width: auto !important;
+}
+
+.highest-z-index {
+  z-index: 999 !important;
+}
+
+.body--dark {
+  main {
+    background: $body-bg-dark;
+  }
+
+  .border--separator {
+    border-top: 1px solid $border-separator-dark;
+  }
+  .toggle--custom {
+    .q-toggle__inner--falsy {
+      .q-toggle__thumb:after {
+        background: $gray-4 !important;
+      }
+    }
+  }
+}
