@@ -43,8 +43,9 @@ c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/S
 
 Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
+# Optimism Eco-system
 
-2. Optimism NFT marketplace and Scalability of Decentralized Public Goods Mobility Network 
+Optimism NFT marketplace and Scalability of Decentralized Public Goods Mobility Network 
 Enablement using Optimism Eco-system and Tools: Optimism NFT marketplace for drone and UAV spare parts and also for early-stage detection and prevention of incidents; NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets. Improving Data Transparency in Incident Management Using Ethereum Blockchain, IPFS and Optimism NFT marketplace. Optimism NFT marketplace for NFC tags of UAVs for enabling sharing of government assets and service/repair of vital assets:  https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/optimism-nfc-tag-nft-marketplace
 
 We are also using Optimism to enable scaling of the decentralized public goods mobility network and effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. We are extending and adapting our platform for connected vehicles in Europe for sustainability and efficiency. We are currently working on a dataset of 15000 trips, 45+ trucks and 175+ drivers and enabling them to achieve better fleet management using drone monitor. We wish to use Optimism for scaling the solution for the current dataset.
