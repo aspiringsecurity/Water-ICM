@@ -90,13 +90,7 @@ d. Push Protocol: We are using Push protocol to to enable periodic alarm notific
 Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
 
 
-# Near Eco-system
-
-Near's license NFT registration module is to enable drone owners to register their UAV driving licenses as well as their UAV registration details in a decentralized manner. An individual can be identified by his/her SSN and a vehicle by UAV Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated to an address of an individual Near account. We are developing our own NFT smart contract from the ground up following Near's NEP-171 standard and the key tutorial shared at the Near github website. We are also logging the identities of the driving license owners, their vehicle assets using exchange of unique identifiers powered by Near.
-
 e. Layer 2 Scaling: Layer 2 for Security, decentralized voting and DAO management, contract payment management for service and maintenance
-
-
 
 - Metis: Decentralized NFT-based voting system for RFPs on Metis network. Workflow:
 
@@ -121,6 +115,10 @@ Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-sca
 - https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/hardhat-zksync
 
 
+
+# Near Eco-system
+
+Near's license NFT registration module is to enable drone owners to register their UAV driving licenses as well as their UAV registration details in a decentralized manner. An individual can be identified by his/her SSN and a vehicle by UAV Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated to an address of an individual Near account. We are developing our own NFT smart contract from the ground up following Near's NEP-171 standard and the key tutorial shared at the Near github website. We are also logging the identities of the driving license owners, their vehicle assets using exchange of unique identifiers powered by Near.
 
 4. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users: UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
 
