@@ -115,11 +115,6 @@ Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-sca
 - https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/hardhat-zksync
 
 
-
-# Near Eco-system
-
-Near's license NFT registration module is to enable drone owners to register their UAV driving licenses as well as their UAV registration details in a decentralized manner. An individual can be identified by his/her SSN and a vehicle by UAV Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated to an address of an individual Near account. We are developing our own NFT smart contract from the ground up following Near's NEP-171 standard and the key tutorial shared at the Near github website. We are also logging the identities of the driving license owners, their vehicle assets using exchange of unique identifiers powered by Near.
-
 4. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users: UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
 
 Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard 
@@ -208,6 +203,7 @@ Live streaming with Object Detection Video Analytics using open source solutions
 Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS using NFT.Storage. Store the hash returned from IPFS to Ethereum test network using NFT.Storage. Provide links to alarms and blockchain transaction details.Alarm Viewer: Add alarms with a single touch. Open the Alarm Settings menu from the home page. Add an alarm, set the wallpaper or choose an alarm tone. You can also delete an existing alarm
 
 Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
+
 
 
 
