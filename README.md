@@ -62,10 +62,6 @@ We are also using Optimism to enable scaling of the decentralized public goods m
 
 6. OP ICM: Low code framework tool for ICM Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling.
 
-# Near Eco-system
-
-Near's license NFT registration module is to enable drone owners to register their UAV driving licenses as well as their UAV registration details in a decentralized manner. An individual can be identified by his/her SSN and a vehicle by UAV Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated to an address of an individual Near account. We are developing our own NFT smart contract from the ground up following Near's NEP-171 standard and the key tutorial shared at the Near github website. We are also logging the identities of the driving license owners, their vehicle assets using exchange of unique identifiers powered by Near.
-
 
 3. a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
 
@@ -93,6 +89,10 @@ d. Push Protocol: We are using Push protocol to to enable periodic alarm notific
 
 Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
 
+
+# Near Eco-system
+
+Near's license NFT registration module is to enable drone owners to register their UAV driving licenses as well as their UAV registration details in a decentralized manner. An individual can be identified by his/her SSN and a vehicle by UAV Registry Number both of which for now are integers between 0 and 65535 (16 bit integers). Every SSN or individual is associated to an address of an individual Near account. We are developing our own NFT smart contract from the ground up following Near's NEP-171 standard and the key tutorial shared at the Near github website. We are also logging the identities of the driving license owners, their vehicle assets using exchange of unique identifiers powered by Near.
 
 e. Layer 2 Scaling: Layer 2 for Security, decentralized voting and DAO management, contract payment management for service and maintenance
 
