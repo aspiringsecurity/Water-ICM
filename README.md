@@ -33,7 +33,25 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 # Blockchain Eco-system
 
-1. Livepeer and Aptos: We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
+# Theta Blockchain
+
+- SAP BTP platform integration with Theta Blockchain:
+
+- Theta Blockchain and SAP Enterprise ETL library
+
+- Theta User Analytics for tabulation, organization and validation
+
+- Theta MetaChain implementation
+
+- Theta User Security for 5 dapp personas
+
+- Theta Incident System Management
+
+
+
+# Livepeer and Aptos
+
+We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
 
 a. Aptos: https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement and https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/social-drone-data-framework-apt-livepeer
 
