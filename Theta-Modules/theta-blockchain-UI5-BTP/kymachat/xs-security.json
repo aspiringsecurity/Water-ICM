@@ -1,0 +1,41 @@
+{
+  "xsappname": "kymachat-${space}",
+  "tenant-mode": "shared",
+  "scopes": [
+    { "name": "$XSAPPNAME.ExtendCDS", "description": "Extend CDS application" },
+    { "name": "$XSAPPNAME.ExtendCDSdelete", "description": "Extend CDS application with undeploy" },
+    { "name": "$XSAPPNAME.MtxDiagnose", "description": "Diagnose MTX sidecar" },
+    { "name": "$XSAPPNAME.mtdeployment", "description": "Deploy applications" },
+    { "name": "$XSAPPNAME.mtcallback", "description": "Subscribe to applications", "grant-as-authority-to-apps": [
+      "$XSAPPNAME(application,sap-provisioning,tenant-onboarding)"
+    ]}
+  ],
+  "authorities": [
+    "$XSAPPNAME.MtxDiagnose"
+  ],
+  "role-templates": [
+    {
+      "name": "MultitenancyAdministrator",
+      "description": "Administrate multitenant applications",
+      "scope-references": [
+        "$XSAPPNAME.MtxDiagnose",
+        "$XSAPPNAME.mtdeployment",
+        "$XSAPPNAME.mtcallback"
+      ]
+    },
+    {
+      "name": "ExtensionDeveloper",
+      "description": "Extend application",
+      "scope-references": [
+        "$XSAPPNAME.ExtendCDS"
+      ]
+    },
+    {
+      "name": "ExtensionDeveloperUndeploy",
+      "description": "Undeploy extension",
+      "scope-references": [
+        "$XSAPPNAME.ExtendCDSdelete"
+      ]
+    }
+  ]
+}

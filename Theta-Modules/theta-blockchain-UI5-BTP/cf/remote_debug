@@ -1,0 +1,18 @@
+#!/bin/bash
+#creds=$(cf jq theta-trustee | jq '.VCAP_SERVICES | .postgresql[0] | .credentials')
+#host=$(echo $creds | jq '.hostname' | tr -d '"')
+##echo "host: "$host
+#port=$(echo $creds | jq '.port' | tr -d '"')
+##echo "port: "$port
+#dbname=$(echo $creds | jq '.dbname' | tr -d '"')
+#username=$(echo $creds | jq '.username' | tr -d '"')
+#password=$(echo $creds | jq '.password' | tr -d '"')
+#echo "In another window..."
+#echo "cf ssh theta-trustee -L 5432:"$host":"$port" -T"
+#echo "pgcli -h localhost -p 5432 -d "$dbname" -u "$username" -W "$password""
+rm -rf trustee/node_modules
+rm -f trustee/package-lock.json
+echo "cf push theta-trustee -p trustee -n theta-dev-theta-trustee -d cfapps.eu10.hana.ondemand.com -k 512M -m 256M -i 1 -b nodejs_buildpack -c 'node --inspect server.js'"
+guid=$(cf app theta-trustee --guid)
+echo "cf ssh-code ; ssh -nNT -p 2222 cf:"$guid"/0@ssh.cf.eu10.hana.ondemand.com -R 9229:localhost:9229"
+echo "cf ssh theta-trustee -L 9229:localhost:9229 -T"

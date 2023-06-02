@@ -1,0 +1,31 @@
+{
+  "generator-sap-partner-eng": {
+    "package_version": "0.3.11",
+    "project_name": "btp-blockchain-theta",
+    "app_name": "theta",
+    "app_desc": "MTA Theta Sample with Off-Chain Micropayment Support",
+    "router_name": "theta-app",
+    "domain_name": "cfapps.us21.hana.ondemand.com",
+    "router_path": "app",
+    "database_path": "db",
+    "services_path": "srv",
+    "uaa_res_name": "theta-uaa",
+    "uaa_svc_name": "THETA_UAA",
+    "module_names": [
+      "theta-worker"
+    ],
+    "module_paths": [
+      "worker"
+    ],
+    "module_apis": [
+      "theta_worker_api"
+    ],
+    "module_bes": [
+      "theta_worker_be"
+    ],
+    "module_routes": [
+      "worker"
+    ],
+    "multitenant_enabled": false
+  }
+}

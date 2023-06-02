@@ -1,0 +1,180 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cf-3300-dev
+  labels:
+    app: cf-3300-dev
+  annotations:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cf-3300-dev
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cf-3300-dev
+        version: v1
+    spec:
+      #https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+      hostname: k8-ldc3300
+      subdomain: ppm-team
+      containers:
+       ### - image: isveng.docker.repositories.sap.ondemand.com/isveng:cf-3.3.0.0-kyma2
+        - image: isveng.isveng.common.cdn.repositories.cloud.sap/isveng:cf-3.3.0.0-kyma2
+          imagePullPolicy: Always
+          #imagePullPolicy: IfNotPresent
+          #imagePullPolicy: Never
+          ### https://stackoverflow.com/questions/33887194/how-to-set-multiple-commands-in-one-yaml-file-with-kubernetes/33888424#33888424
+          command: 
+           - sh 
+           - -c
+           - /docker-entrypoint.sh scc-cf
+          ports:
+              - containerPort: 19443
+              - containerPort: 19080
+              - containerPort: 29080
+              - containerPort: 8080
+              - containerPort: 8443
+              - containerPort: 48443
+              - containerPort: 48080
+          name: cf-3300-dev
+          #env:
+          resources:
+            limits:
+              memory: 10000Mi
+            requests:
+              memory: 3300Mi
+      restartPolicy: Always
+      imagePullSecrets:
+         - name: isvengdockerreposecretcdn ## isvengdockerreposecret ### mydockerregsecret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cf-3300-dev
+  labels:
+    app: cf-3300-dev
+spec:
+  #https://kubernetes.io/docs/concepts/services-networking/service/
+  #clusterIP: None
+  type: LoadBalancer #NodePort
+  externalTrafficPolicy: Cluster
+  ### externalTrafficPolicy: Local ###https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+  #externalName: k8-ldc31dev4.ppm-team.sap.com
+  ports:
+  - port: 19080
+    targetPort: 19080
+    protocol: TCP
+    name: http-tomcat-19080
+  - port: 19443
+    protocol: TCP
+    name: https-tomcat-19443
+  - port: 8080
+    protocol: TCP
+    name: http-sapcc-8080
+  - port: 8443
+    protocol: TCP
+    name: https-sapcc-8443
+  - port: 48080
+    protocol: TCP
+    name: http-ldc-48080
+  - port: 48443
+    protocol: TCP
+    name: https-ldc-48443
+  - port: 29080
+    protocol: TCP
+    name: http-lde-29080
+  selector:
+    app: cf-3300-dev
+
+---
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: c4a-3300
+spec:
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - path: /C4A_AGENT/deploymentInfo/|/C4A_AGENT/.*|/.*
+      accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+  service:
+    host: c4a-3300
+    name: cf-3300-dev
+    port: 19080   
+
+---
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: sapcc-3300
+spec:
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - path: /.*
+      accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+  service:
+    host: sapcc-3300
+    name: cf-3300-dev
+    port: 8080        
+
+---
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: ldc-3300
+spec:
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - path: /.*
+      accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+  service:
+    host: ldc-3300
+    name: cf-3300-dev
+    port: 48080        
+
+---
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: lde-3300
+spec:
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - path: /.*
+      accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+  service:
+    host: lde-3300
+    name: cf-3300-dev
+    port: 29080        

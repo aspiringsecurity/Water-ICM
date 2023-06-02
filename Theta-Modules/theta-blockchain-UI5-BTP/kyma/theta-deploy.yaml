@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: theta
+  labels:
+    app: theta
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: theta
+  template:
+    metadata:
+      labels:
+        app: theta
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: theta
+          image: alunde/theta_ubuntu:noentry #change it to your image
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 16888
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: theta
+  labels:
+    app: theta
+spec:
+  selector:
+    app: theta
+  ports:
+    - protocol: TCP
+      port: 16888
+      targetPort: 16888

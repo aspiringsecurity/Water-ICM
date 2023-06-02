@@ -1,0 +1,20 @@
+{
+  "name": "thetajs",
+  "version": "1.0.0",
+  "description": "NodeJs mainnet api demo",
+  "scripts": {
+    "start": "node_modules/nodemon/bin/nodemon.js batch.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-fetch": "latest",
+    "@thetalabs/theta-js": "latest",
+    "bignumber.js": "^8.1.1",
+    "class-validator": "^0.9.1",
+    "jayson": "^2.1.2",
+    "morphism": "^1.10.0",
+    "wallet-address-validator": "^0.2.4",
+    "nodemon": "latest"
+  }
+}

@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dpagent
+  labels:
+    app: dpagent
+  annotations:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dpagent
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: dpagent
+        version: v1
+    spec:
+      #https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+      hostname: dphost
+      subdomain: dphost
+      containers:
+        - image: isveng.common.cdn.repositories.cloud.sap/dpagent:latest
+          imagePullPolicy: Always
+          #imagePullPolicy: IfNotPresent
+          #imagePullPolicy: Never
+          ### https://stackoverflow.com/questions/33887194/how-to-set-multiple-commands-in-one-yaml-file-with-kubernetes/33888424#33888424
+          ### https://stackoverflow.com/questions/31870222/how-can-i-keep-a-container-running-on-kubernetes
+          command: 
+           - sh 
+           - -c
+           -  >-
+                su -l bipadm &&
+                cd /usr/sap/dataprovagent/bin &&
+                tail -f /dev/null
+          ports:
+              - containerPort: 5050
+              - containerPort: 5051
+          name: dpagent
+          #env:
+          resources:
+            limits:
+              memory: 10000Mi
+            requests:
+              memory: 4000Mi
+      restartPolicy: Always
+      imagePullSecrets:
+         - name: isvengdockerreposecretcdn
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dpagent
+  labels:
+    app: dpagent
+spec:
+  #https://kubernetes.io/docs/concepts/services-networking/service/
+  #clusterIP: None
+  type: LoadBalancer #NodePort
+  ##externalTrafficPolicy: Cluster
+  ### externalTrafficPolicy: Local ###https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+  #externalName: k8-ldc31dev4.ppm-team.sap.com
+  ports:
+  - port: 5050
+    protocol: TCP
+    name: http-tomcat-5050
+  - port: 5051
+    protocol: TCP
+    name: https-tomcat-5051
+  selector:
+    app: dpagent

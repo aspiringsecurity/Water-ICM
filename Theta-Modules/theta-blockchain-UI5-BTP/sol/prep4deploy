@@ -1,0 +1,120 @@
+#!/bin/bash
+do_run=1 # Execute(evaluate) the commands
+#do_run=0 # Don't evaluate any commands
+do_echo=1 # Echo the commands
+#do_echo=0 # Don't echo any commands
+do_ToDeploy=1 # Echo ToDeploy statements
+#do_ToDeploy=0 # Don't echo Echo ToDeploy statements
+#
+echo ""
+solfile="./contract.sol"
+contractName="Contract"
+if [ "$#" -ge 1 ]; then
+  solfile=$1
+fi
+
+dofind=contract
+
+while read solline
+do
+    #echo "Line contents are : $solline "
+    case $solline in 
+        *${dofind}*) 
+            #echo $solline " yes"
+            wordnum=1
+            isnext=0
+            IFS=' '     # space ( ) is set as delimiter
+            read -ra ADDR <<< "$solline"   # str is read into an array as tokens separated by IFS
+            for i in "${ADDR[@]}"; do   # access each element of array
+                #echo "$i"
+                #echo $isnext
+                if [ $isnext -eq 0 ] && [ $wordnum -eq 1 ]; then
+                    if [ $i = $dofind ]; then
+                        isnext=1
+                    fi
+                else
+                    if [ $isnext -eq 1 ] && [ $wordnum -eq 2 ]; then
+                    isnext=9
+                    contractName=$i
+                    fi
+                fi
+                ((wordnum++))
+            done
+            IFS=' '     # reset to default value after usage
+
+            ;;
+        *)
+            #echo " no"
+            ;;
+    esac
+
+done < $solfile
+
+
+if [ "$#" -ge 2 ]; then
+  contractName=$2
+fi
+
+echo ""
+echo "Making outbin..."
+cmd='mkdir -p outbin'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+
+echo "Generating for "$solfile" contract : "$contractName
+
+# solc --pretty-json --combined-json opcodes,srcmap ./zombiefactory.sol > outbin/out.json ; cat outbin/out.json | jq '.contracts | ."./zombiefactory.sol:ZombieFactory" '
+
+echo ""
+echo "Compiling..."
+#cmd='solc --pretty-json --combined-json abi,bin,opcodes,srcmap '$solfile' > outbin/combined.json'
+cmd='solc --combined-json abi,bin,opcodes,srcmap '$solfile' > outbin/combined.json'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+echo ""
+echo "Writing abi..."
+cmd='cat outbin/combined.json | jq '"'"'.contracts | ."'$solfile':'$contractName'" | .abi '"'"' > outbin/abi.json'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+echo ""
+echo "Writing bin object..."
+cmd='cat outbin/combined.json | jq '"'"'.contracts | ."'$solfile':'$contractName'" | .bin '"'"' > outbin/object.json'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+echo ""
+echo "Writing opcodes..."
+cmd='cat outbin/combined.json | jq '"'"'.contracts | ."'$solfile':'$contractName'" | .opcodes '"'"' > outbin/opcodes.json'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+echo ""
+echo "Writing srcmap..."
+cmd='cat outbin/combined.json | jq '"'"'.contracts | ."'$solfile':'$contractName'" | .srcmap '"'"' > outbin/sourceMap.json'
+if [ $do_echo -eq 1 ]; then echo $cmd; fi
+if [ $do_run -eq 1 ]; then eval $cmd; fi
+
+if [ $do_ToDeploy -eq 1 ]; then
+
+#	const ABIToDeploy = "[{\"constant\":true,\"inputs\":[]...";
+#	const byteCodeToDeploy = {
+#        "linkReferences": {},
+#        "object": "608060405234806...",
+#        "opcodes": "PUSH1 0x80 PUSH1 0x4...",
+#        "sourceMap": "4920:8128:0:-;;;5320:252;8:..."
+#    };
+	
+    echo "=START==========="
+    echo '  const ABIToDeploy = '$(cat outbin/abi.json)';'
+    echo '  const byteCodeToDeploy = {'
+    echo '      "linkReferences": {},'
+    echo '      "object": '$(cat outbin/object.json)','
+    echo '      "opcodes": '$(cat outbin/opcodes.json)','
+    echo '      "sourceMap": '$(cat outbin/sourceMap.json)''
+    echo '  };'
+    echo "=END============="
+
+fi

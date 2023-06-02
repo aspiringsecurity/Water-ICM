@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: theta
+  labels:
+    app.kubernetes.io/name: theta
+    app.kubernetes.io/component: backend
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: theta
+      app.kubernetes.io/component: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: theta
+        app.kubernetes.io/component: backend
+    spec:
+      containers:
+      - name: theta
+        image: alunde/theta_ubuntu:latest
+        args:
+          - --bind_ip
+          - 0.0.0.0
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 2000Mi
+        ports:
+        - containerPort: 16888

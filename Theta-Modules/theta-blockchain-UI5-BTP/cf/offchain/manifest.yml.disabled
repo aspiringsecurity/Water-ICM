@@ -1,0 +1,9 @@
+---
+applications:
+- name: offchain
+  instances: 1
+  memory: 64MB
+  host: offchain
+  buildpack: https://github.com/cloudfoundry/go-buildpack.git
+  env:
+    GOPACKAGENAME : offchain

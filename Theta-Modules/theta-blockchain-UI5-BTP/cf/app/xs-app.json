@@ -1,0 +1,49 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "(chat/)(.*)",
+      "destination": "theta_chat_be",
+      "csrfProtection": true,
+      "authenticationType": "none"
+    },
+    {
+      "source": "(srv/)(.*)",
+      "destination": "theta_trustee_be",
+      "scope": "$XSAPPNAME.User",
+      "csrfProtection": true,
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "(callback/)(.*)",
+      "destination": "theta_trustee_be",
+      "csrfProtection": true,
+      "authenticationType": "none"
+    },
+    {
+      "source": "(trustee/)(.*)",
+      "destination": "theta_trustee_be",
+      "scope": "$XSAPPNAME.User",
+      "csrfProtection": true,
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "(offchain/)(.*)",
+      "destination": "theta_offchain_be",
+      "csrfProtection": true,
+      "authenticationType": "none"
+    },
+    {
+      "localDir": "resources",
+      "source": "^/(.*)",
+      "authenticationType": "none"
+    }
+  ]
+}
+
+
+

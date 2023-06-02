@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "PORT=8080" > .env
+echo -n "destinations=" >> .env
+cat default-env.json | jq -c .destinations | sed 's/\\n//g' | sed 's/\\"/"/g' | sed 's/"/'"'"'/' | rev | sed 's/"/'"'"'/' | rev >> .env
+echo -n "VCAP_SERVICES='" >> .env
+cat default-env.json | jq -c .VCAP_SERVICES | tr -d '\n' >> .env
+echo "'" >> .env

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="scripts/jquery.min.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="scripts/web3.min.js"></script> -->
+    <script language="javascript" type="text/javascript" src="scripts/ethers.umd.min.js"></script>
+  </head>
+  <body>
+
+    <button class="enableEthereumButton">Connect Account</button>
+    <h2>Account: <span class="showAccount"></span></h2>
+    <button class="enableBalanceButton">Get Balance</button>
+    <h2>Balance: <span class="showBalance"></span></h2>
+
+  <script>
+    function startApp() {
+      const ethereumButton = document.querySelector('.enableEthereumButton');
+      const showAccount = document.querySelector('.showAccount');
+
+      ethereumButton.addEventListener('click', () => {
+        getAccount();
+      });
+
+      async function getAccount() {
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        const account = accounts[0];
+        showAccount.innerHTML = account;
+        document.querySelector('.enableBalanceButton').disabled = false;
+      }
+
+      const balanceButton = document.querySelector('.enableBalanceButton');
+      const showBalance = document.querySelector('.showBalance');
+
+      ethereumButton.addEventListener('click', () => {
+        getBalance();
+      });
+
+      async function getBalance() {
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        const account = accounts[0];
+        showAccount.innerHTML = account;
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        // const provider = new ethers.providers.JsonRpcProvider();
+
+        //balance = await provider.getBlockNumber();
+        weibalance = await provider.getBalance(account);
+        balance = ethers.utils.formatEther(weibalance);
+        showBalance.innerHTML = balance;
+      }
+    }
+
+    window.addEventListener('load', function() {
+
+      // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+        // Use Mist/MetaMask's provider
+        //web3js = new Web3(ethereum.currentProvider);
+ 
+      } else {
+        // Handle the case where the user doesn't have web3. Probably
+        // show them a message telling them to install Metamask in
+        // order to use our app.
+        window.alert("Web3 not installed.");
+      }
+
+      // Now you can start your app & access web3js freely:
+      startApp();
+      document.querySelector('.enableEthereumButton').click();
+      document.querySelector('.enableBalanceButton').disabled = true;
+
+    });
+
+    if (typeof window.ethereum !== 'undefined') {
+
+      ethereum.on('accountsChanged', (accounts) => {
+        document.querySelector('.enableBalanceButton').disabled = true;
+        // Handle the new accounts, or lack thereof.
+        // "accounts" will always be an array, but it can be empty.
+        console.log('accountsChanged! ' + JSON.stringify(accounts,null,2));
+        document.querySelector('.enableEthereumButton').click();
+      });
+
+    }
+
+  </script>
+
+  </body>
+
+</html>
+

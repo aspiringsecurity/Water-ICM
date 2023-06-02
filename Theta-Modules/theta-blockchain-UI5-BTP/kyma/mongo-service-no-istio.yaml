@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+  labels:
+    app.kubernetes.io/name: mongo
+    app.kubernetes.io/component: backend
+spec:
+  type: LoadBalancer
+  ports:
+  #- protocol: TCP
+  - port: 27317
+    targetPort: 27017
+    protocol: TCP
+  selector:
+    app.kubernetes.io/name: mongo
+    app.kubernetes.io/component: backend

@@ -1,0 +1,160 @@
+{
+  "VCAP_SERVICES": {
+    "credstore": [
+      {
+        "binding_guid": "6f6d807f-a280-4fc6-bf7a-3baf68951399",
+        "binding_name": null,
+        "credentials": {
+          "encryption": {
+            "client_private_key": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCDyMl7Iln2i+fL5FVoHNTu9XPjQQ1E6IuYM+NEIXtAOL8qFvAX8WtGJWwyeDLFpuGs/oocx8f9ZJs/rdJGUWDTiNKfHZNXlJAWVSTzkPAZtkHGyg30vmh2J29RrhqTCHkPQU5987sMDmF7xugvwjrvFGz0qnLAcxxd686dmE4yPxGRHwQP3LkGW4oziajyuejpdOB24Z55qG8DnRTeX6wi2pgJ2TZ7sUekYsBLbaHFyfEhDA6WDNJDXXTE3N02Mes1QN/cLk+9Q9oY0l3JYANk0coO7iQky+z0HSb+Mboynfc0NLDmpQP7pw3Je2nsq9IfLLIWPwam98osU34bKSLLAgMBAAECggEATSju7y25xuU7nuHeL8tR0Wfdpp2cC1CtCzy2QFnqNDwFkbtEcIBl8vhOVW6TK67+S6/tZdSDgBW74JkBmTJkovZle8xxTMIraygHLqUaL7PK532+liI2P5fvUb/Cx3wahZgTQSPHzNNOuI5JvEzY/MrU0JxL++pqHYPHwfY/MqNrpo9e8IjNnPn5BAmPEcLc3QWpc0m0Pg8J82W87kBeLXgr17Hk8CDXjhpf14xfxfZuVTpTJtnJ3RsXOjKpfntTUS0PVoZDLDt6r1osYIDkZFq3Wgrcr6UbGMlri1IWfpVcTYHZifTKHIyIJthrJvNDQA4nzpLwBUX+hzwRPR264QKBgQC6D1e/+ilkZ0SeH4XlXHCWyupEZqtMxNsKyFvkRDBXFgUjIE/4Q4cNEM6qWenN49Bh1zM8XEsA/fstFwDZTd4ieYd1A3zlBYnGnbFZcEn3lMlRPeS+urV+gP1Tqz3EQdkhiinLNaBNaZzLoA69QOBvZswN1Ydz7PQmymE+1QesJQKBgQC1Unhs1cn5BdV5eXwf2HSCEzWtiVHIRjhE9zvZtltVtHywnClUMf0T9/xINQ5cIGEFFVMDsZ/5hWXGDlgHGivnLcc8wyWLJsAIyaJCe2w1rMKOZotW4WOrY2BFMFSGkyepKMmMnU767m+9uQTMfDJuyXJ+3FUOrqi/IMLt9BPoLwKBgHGPa7+AsELXxMm987tJ8G4Y62NURrlUbVznbS6lb9u3VOtbjXO5w3P2Di1rM4i2wzj0YBE3Q5AXdHbQ03POUwY3prWEq3YdKzpOhTBRmNPDvBwZ6sN+scfEctneapSenCgca+XblTuqekjOKDDaqCFWXLUU3teiiGIko7X1z/kBAoGAdahEGGtJmdtdQGvCTW/JejY42JiIhup5zNaY8ZbRAXYSiw9qCgY98F00SS6UWNdx3TiPG5CA/ArBlZjtKf6jimk8JYODsx278nfUYEtyVgn6XSjRNdkfMbFUYNERqBmI3M1oq2PQQifCPlv2bzIQD6+MKiGS1+oh+ZOqqXl+CWUCgYBEHDFPm2vc+A2dkDKCfNYqsy2xfzaYUfGfoZIIutNOC77Q7C40oBMZseqbUZllcNIpeldAk8srnyNgAahcLCtLlRO0W6u7QGg4uYuodlhKSITGQSovTXQmWcFsTSebpYGlOwlHRSj2SH4U9IGaMjpcsq89EdPykTZUJMTTG+BvTQ==",
+            "server_public_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvNUDWkUgt/2SgM2qRHAXpGy+GU+JvykrmP0abyAuNshwTlp2mQPSm3uOpuCgaorEy3Osmv4gA1hxToH/FN2wLpVS6p/f/YkIJPVCQIrE/9uH0zP2gbiapg6d3FC2Nb3vPTw5eoMPk7/6MbcJwH5zFWlUUk0952Iqd0s25Rss+XZCvnCV2jt8BCfE8PUfDRW2jEwbSFHPXm68MIcvs4PrqFDDvHarEYJJRlO0Ue15OXDCK9OpJWIL5IBQEkB1tDIj37WOxWmAFFv/QPwS5diZngFmbfjC3e1VUa0Sh6KrI2tDCUxqbjSgsAgW82I+3f/f1/0p+zskLW0Fg8vQXKoq3QIDAQAB"
+          },
+          "parameters": {
+            "authorization": {
+              "default_permissions": [
+                "create",
+                "decrypt",
+                "delete",
+                "encrypt",
+                "info",
+                "list",
+                "namespaces",
+                "read",
+                "update"
+              ],
+              "namespace_permissions": {
+                "<namespace>": [
+                  "create",
+                  "decrypt",
+                  "delete",
+                  "encrypt",
+                  "list",
+                  "read",
+                  "update"
+                ]
+              }
+            }
+          },
+          "password": "jE9j50LCfJD6vsSk2LTyJEm28IDLwfJ44uXvPFmPf4neFH3XfMMAoSta06epcp8v.0.k2dl6is8qGF6reNHo/OBbmgLf4L3ELfDRF09pyz2Wzo=",
+          "url": "https://credstore.cfapps.eu10.hana.ondemand.com/api/v1/credentials",
+          "username": "6f6d807f-a280-4fc6-bf7a-3baf68951399.0.bASoiHrQaQCVMtjb2slhoIai3RwaEqRl32HM/ud/KwU="
+        },
+        "instance_guid": "402209d7-4e7e-4720-8ee8-3758dddd6a6a",
+        "instance_name": "THETA_CRED",
+        "label": "credstore",
+        "name": "THETA_CRED",
+        "plan": "standard",
+        "provider": null,
+        "syslog_drain_url": null,
+        "tags": [
+          "credstore",
+          "securestore",
+          "keystore",
+          "credentials"
+        ],
+        "volume_mounts": []
+      }
+    ],
+    "market-rates-byor": [
+      {
+        "binding_guid": "3de590e1-915c-43bb-b282-b0da7ed34d0e",
+        "binding_name": null,
+        "credentials": {
+          "LPSCallbackDependencyName": "market-data-MRM-MRM_BYOD",
+          "downloadUrl": "https://mrmawseu10-mrm-mrm-byod-market-data-download.cfapps.eu10.hana.ondemand.com/downloadMarketData",
+          "saasregistryappname": "market-data-MRM-MRM_BYOD",
+          "saasregistryenabled": true,
+          "uaa": {
+            "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+            "clientid": "sb-86418c2d-78f2-4336-9431-00aab2321318!b94272|market-data-MRM-MRM_BYOD!b4225",
+            "clientsecret": "NSKyKpbXeEgBRe13smKK/cakonc=",
+            "credential-type": "instance-secret",
+            "identityzone": "theta",
+            "identityzoneid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+            "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+            "subaccountid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+            "tenantid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+            "tenantmode": "dedicated",
+            "uaadomain": "authentication.eu10.hana.ondemand.com",
+            "url": "https://theta.authentication.eu10.hana.ondemand.com",
+            "verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoP9bqxkJOOKIAwyxXeeJ3ob4w6v9A0vv7vhaVoJl3ULFKzIo4bMYnp+TZUUevse36Zhq2cfK8zsoKR5U+JpwTgZ8J3N+QrGitmwEBJYuPnXXIfKq2my2eZzkZiwbA20PGXS9PoYe3nEvkYg4vPcbGiEEhhwLJsTG/5/9DsYoZapIHux4yzz1HZ2hANAHryYQCigcEdsyPnnBF8Vdr/2UkGcI01rBYCEea4CXS/XdZ/H8ONOzSZy8mb+w4yQYV/VM9Am82fewA76YBhQGJWxBhqHdt3oHuFL67OXCosGyIaEb9GpN67IV81w1q6GTHu0HIivxoTkOg4bCNH9yo1fBMwIDAQAB-----END PUBLIC KEY-----",
+            "xsappname": "86418c2d-78f2-4336-9431-00aab2321318!b94272|market-data-MRM-MRM_BYOD!b4225",
+            "zoneid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3"
+          },
+          "uploadUrl": "https://mrmawseu10-mrm-mrm-byod-market-data-upload.cfapps.eu10.hana.ondemand.com/uploadMarketData"
+        },
+        "instance_guid": "86418c2d-78f2-4336-9431-00aab2321318",
+        "instance_name": "THETA_MRO",
+        "label": "market-rates-byor",
+        "name": "THETA_MRO",
+        "plan": "default",
+        "provider": null,
+        "syslog_drain_url": null,
+        "tags": [],
+        "volume_mounts": []
+      }
+    ],
+    "xsuaa": [
+      {
+        "binding_guid": "466d418c-8960-421a-9488-a25c3abbce6b",
+        "binding_name": null,
+        "credentials": {
+          "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+          "clientid": "sb-dev-theta-app!t94272",
+          "clientsecret": "CtfhC3hz282CzY3WKz3m+WvuX3s=",
+          "credential-type": "instance-secret",
+          "identityzone": "theta",
+          "identityzoneid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+          "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+          "subaccountid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+          "tenantid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3",
+          "tenantmode": "dedicated",
+          "uaadomain": "authentication.eu10.hana.ondemand.com",
+          "url": "https://theta.authentication.eu10.hana.ondemand.com",
+          "verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoP9bqxkJOOKIAwyxXeeJ3ob4w6v9A0vv7vhaVoJl3ULFKzIo4bMYnp+TZUUevse36Zhq2cfK8zsoKR5U+JpwTgZ8J3N+QrGitmwEBJYuPnXXIfKq2my2eZzkZiwbA20PGXS9PoYe3nEvkYg4vPcbGiEEhhwLJsTG/5/9DsYoZapIHux4yzz1HZ2hANAHryYQCigcEdsyPnnBF8Vdr/2UkGcI01rBYCEea4CXS/XdZ/H8ONOzSZy8mb+w4yQYV/VM9Am82fewA76YBhQGJWxBhqHdt3oHuFL67OXCosGyIaEb9GpN67IV81w1q6GTHu0HIivxoTkOg4bCNH9yo1fBMwIDAQAB-----END PUBLIC KEY-----",
+          "xsappname": "dev-theta-app!t94272",
+          "zoneid": "2de7657c-00b3-416e-9ad9-6f28c1a906b3"
+        },
+        "instance_guid": "ce6c0b7a-a468-46de-93a3-56e08efb4336",
+        "instance_name": "THETA_UAA",
+        "label": "xsuaa",
+        "name": "THETA_UAA",
+        "plan": "application",
+        "provider": null,
+        "syslog_drain_url": null,
+        "tags": [
+          "xsuaa"
+        ],
+        "volume_mounts": []
+      }
+    ]
+  },
+  "VCAP_APPLICATION": {
+    "application_id": "ce382a5c-04ae-43ec-a129-c69066903175",
+    "application_name": "theta-trustee",
+    "application_uris": [
+      "theta-dev-theta-trustee.cfapps.eu10.hana.ondemand.com"
+    ],
+    "application_version": "b854ebae-94c3-49d9-bc8f-ab76a18fba19",
+    "cf_api": "https://api.cf.eu10.hana.ondemand.com",
+    "limits": {
+      "disk": 512,
+      "fds": 32768,
+      "mem": 256
+    },
+    "name": "theta-trustee",
+    "organization_id": "70ea42eb-79f4-4c59-a9ce-8ddcb03bbe76",
+    "organization_name": "theta",
+    "process_id": "ce382a5c-04ae-43ec-a129-c69066903175",
+    "process_type": "web",
+    "space_id": "65db2683-3135-48be-8f62-d21d4ae124ae",
+    "space_name": "dev",
+    "uris": [
+      "theta-dev-theta-trustee.cfapps.eu10.hana.ondemand.com"
+    ],
+    "users": null,
+    "version": "b854ebae-94c3-49d9-bc8f-ab76a18fba19"
+  },
+  "DEPLOY_ATTRIBUTES": "{\n  \"app-content-digest\" : \"6047C826112196310E8569C9FAF124B2\"\n}",
+  "destinations": "[ {\n  \"forwardAuthToken\" : true,\n  \"name\" : \"theta_privatenet_be\",\n  \"url\" : \"https://theta-dev-theta-privatenet.cfapps.eu10.hana.ondemand.com\"\n} ]"
+}

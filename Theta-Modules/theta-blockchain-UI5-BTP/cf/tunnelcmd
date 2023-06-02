@@ -1,0 +1,12 @@
+#!/bin/bash
+creds=$(cf jq theta-trustee | jq '.VCAP_SERVICES | .postgresql[0] | .credentials')
+host=$(echo $creds | jq '.hostname' | tr -d '"')
+#echo "host: "$host
+port=$(echo $creds | jq '.port' | tr -d '"')
+#echo "port: "$port
+dbname=$(echo $creds | jq '.dbname' | tr -d '"')
+username=$(echo $creds | jq '.username' | tr -d '"')
+password=$(echo $creds | jq '.password' | tr -d '"')
+echo "In another window..."
+echo "cf ssh theta-trustee -L 5432:"$host":"$port" -T"
+echo "pgcli -h localhost -p 5432 -d "$dbname" -u "$username" -W "$password""

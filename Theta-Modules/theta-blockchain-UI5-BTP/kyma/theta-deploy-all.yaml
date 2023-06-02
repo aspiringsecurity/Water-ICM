@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: theta
+  labels:
+    app: theta
+  annotations:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: theta
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: theta
+        version: v1
+    spec:
+      #https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+      hostname: thetahost
+      subdomain: thetahost
+      containers:
+        - image: alunde/theta_ubuntu:noentry
+          imagePullPolicy: Always
+          #imagePullPolicy: IfNotPresent
+          #imagePullPolicy: Never
+          ### https://stackoverflow.com/questions/33887194/how-to-set-multiple-commands-in-one-yaml-file-with-kubernetes/33888424#33888424
+          ### https://stackoverflow.com/questions/31870222/how-can-i-keep-a-container-running-on-kubernetes
+          #command: 
+          # - sh 
+          # - -c
+          # -  >-
+          #      su -l bipadm &&
+          #      cd /usr/sap/dataprovagent/bin &&
+          #      tail -f /dev/null
+          #command: 
+          # - /bin/bash
+          # - -c
+          # - /usr/local/bin/entrypoint.sh
+          ports:
+              - containerPort: 16888
+          name: theta
+          #env:
+          resources:
+            limits:
+              memory: 20000Mi
+            requests:
+              memory: 8000Mi
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: theta
+  labels:
+    app: theta
+spec:
+  #https://kubernetes.io/docs/concepts/services-networking/service/
+  #clusterIP: None
+  type: LoadBalancer #NodePort
+  ##externalTrafficPolicy: Cluster
+  ### externalTrafficPolicy: Local ###https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
+  #externalName: k8-ldc31dev4.ppm-team.sap.com
+  ports:
+  - port: 16988
+    targetPort: 16888
+    protocol: TCP
+    name: theta-privnet-16988
+  selector:
+    app: theta

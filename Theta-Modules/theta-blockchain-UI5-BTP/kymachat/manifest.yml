@@ -1,0 +1,18 @@
+# Generated manifest.yml based on template version 0.1.0
+# appName = kymachat
+# language=nodejs
+# multitenancy=true
+---
+applications:
+# -----------------------------------------------------------------------------------
+# Backend Service
+# -----------------------------------------------------------------------------------
+- name: kymachat-srv
+  random-route: true  # for development only
+  path: gen/srv
+  memory: 256M
+  buildpack: nodejs_buildpack
+  services:
+  - kymachat-db-mt
+  - kymachat-uaa-mt
+

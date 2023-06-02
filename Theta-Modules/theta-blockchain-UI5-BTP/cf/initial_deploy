@@ -1,0 +1,29 @@
+#!/bin/bash
+echo "Run like this: source ./initial_deploy"
+mkdir -p mta_archives
+echo "Switching to Node v12.22.1"
+nvm use v12.22.1
+echo "Building MTAR"
+mbt build -p=cf -t=mta_archives --mtar=theta.mtar
+echo "Deploying"
+cf deploy mta_archives/theta.mtar -f
+echo "Tagging Postgres"
+cf update-service THETA_PGSQL -t sbss
+echo "Initializing Postgres for SBSS"
+cf start theta-sbss
+echo "Waiting for SBSS Initialization"
+sleep 20
+echo "Stopping SBSS Initialization"
+cf stop theta-sbss
+echo "Enable SSH for Trustee"
+cf enable-ssh theta-trustee
+source ./tunnelcmd
+echo "Set up ENV for Route Creation"
+cf set-env theta-trustee cf_api_user 'andrew.lunde@sap.com'
+echo "Initial Deploy Finished"
+echo ""
+echo "2 more things...."
+echo ""
+echo "cf set-env theta-trustee cf_api_password ''"
+echo "cf restage theta-trustee"
+
