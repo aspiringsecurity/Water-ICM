@@ -1,0 +1,1 @@
+{"version":3,"file":"exchange.module.js","sourceRoot":"","sources":["../../src/exchange/exchange.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAoD;AAEpD,uDAAkD;AAQ3C,IAAM,cAAc,GAApB,MAAM,cAAc;CAAG,CAAA;AAAjB,cAAc;IAL1B,IAAA,eAAM,EAAC;QACN,OAAO,EAAE,EAAE;QACX,SAAS,EAAE,CAAC,gCAAc,CAAC;QAC3B,OAAO,EAAE,CAAC,gCAAc,CAAC;KAC1B,CAAC;GACW,cAAc,CAAG;AAAjB,wCAAc"}

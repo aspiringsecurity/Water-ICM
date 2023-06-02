@@ -1,0 +1,18 @@
+input[type=text] {
+	font-family: inherit;
+	padding: 10px 10px;
+	width: 33ch;
+}
+
+.warn {
+	font-size: 18px;
+	font-weight: bold;
+	align-content: center;
+	color: white;
+	background-color: red;
+	border: 1px solid red;
+}
+
+td {
+	padding: 10px;
+}

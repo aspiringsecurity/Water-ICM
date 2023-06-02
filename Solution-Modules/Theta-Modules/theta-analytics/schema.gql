@@ -1,0 +1,915 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CandidateStakeType {
+  source: String!
+  amount: String!
+  withdrawn: Boolean!
+  return_height: String!
+}
+
+type CandidateType {
+  Holder: String!
+  Stakes: [CandidateStakeType!]!
+}
+
+type VcpPairType {
+  BlockHash: String
+  SortedCandidates: [CandidateType!]!
+}
+
+type HeightListType {
+  Heights: [Int!]!
+}
+
+type BlockHashVcpPair {
+  BlockHash: String!
+  Vcp: VcpPairType!
+  HeightList: HeightListType!
+}
+
+type GetVcpByHeightModel {
+  BlockHashVcpPairs: [BlockHashVcpPair!]!
+}
+
+type GcpType {
+  SortedGuardians: [CandidateType!]!
+}
+
+type BlockHashGcpPairType {
+  BlockHash: String!
+  Gcp: GcpType!
+  HeightList: HeightListType
+}
+
+type GetGcpByHeightModel {
+  BlockHashGcpPairs: [BlockHashGcpPairType!]!
+}
+
+type BlockHashEenpPairType {
+  BlockHash: String!
+  EENs: [CandidateType!]!
+  HeightList: HeightListType
+}
+
+type GetEenpByHeightModel {
+  BlockHashEenpPairs: [BlockHashEenpPairType!]!
+}
+
+type StakeRewardDistributionRuleType {
+  Beneficiary: String!
+  SplitBasisPoint: String!
+  StakeHolder: String!
+}
+
+type StakeRewardDistributionRuleSetType {
+  BlockHash: String!
+  StakeRewardDistributionRuleSet: [StakeRewardDistributionRuleType!]!
+}
+
+type BlockHashStakeRewardDistributionRuleSetPairsModel {
+  BlockHashStakeRewardDistributionRuleSetPairs: [StakeRewardDistributionRuleSetType!]!
+}
+
+type TokenType {
+  thetawei: String!
+  tfuelwei: String!
+}
+
+type HolderType {
+  address: String!
+  coins: TokenType!
+}
+
+type GetVersionModel {
+  """the version number"""
+  version: String!
+
+  """the git commit hash of the code base"""
+  git_hash: String!
+
+  """the build timestamp"""
+  timestamp: String!
+}
+
+type receiptType {
+  TxHash: String!
+  Logs: [receiptLogType!]
+  EvmRet: String
+  ContractAddress: String!
+  GasUsed: Int!
+  EvmErr: String
+}
+
+type receiptLogType {
+  address: String!
+  topics: [String!]!
+  data: String
+}
+
+type GetAccountModel {
+  """ the current sequence number of the account"""
+  sequence: Float!
+
+  """the native token balance"""
+  coins: TokenType!
+
+  """
+  fund reserved for micropayment through the off-chain resource-oriented payment pool
+  """
+  reserved_funds: [String!]!
+
+  """"""
+  last_updated_block_height: String!
+
+  """
+  the root hash of the data Merkle-Patricia trie (for smart contract accounts)
+  """
+  root: String!
+
+  """the hash of the smart contract bytecode (for smart contract accounts)"""
+  code: String!
+}
+
+type HccVoteType {
+  Block: String!
+  Height: Int!
+  Epoch: Int!
+  ID: String!
+  Signature: String!
+}
+
+type HccType {
+  Votes: [HccVoteType!]!
+  BlockHash: String!
+}
+
+type GuardianVotesType {
+  Block: String!
+  Gcp: String!
+  Multiplies: [Int!]!
+}
+
+type EliteEdgeNodeVotesType {
+  Block: String!
+  Multiplies: [Int!]!
+  Addresses: [String!]!
+}
+
+type SourceTargetType {
+  address: String!
+  sequence: String!
+  coins: TokenType!
+  signature: String!
+}
+
+type BlockModel {
+  """ID of the chain"""
+  chain_id: String!
+
+  """epoch of the block"""
+  epoch: String!
+
+  """height of the block"""
+  height: String!
+
+  """hash of the parent block"""
+  parent: String!
+
+  """root hash of the transaction Merkle-Patricia trie"""
+  transactions_hash: String!
+
+  """root hash of the state Merkle-Patricia trie"""
+  state_hash: String!
+
+  """timestamp when the block was proposed"""
+  timestamp: String!
+
+  """address of the proposer validator"""
+  proposer: String!
+
+  """children blocks"""
+  children: [String!]!
+
+  """status of the block"""
+  status: THETA_BLOCK_STATUS_ENUM!
+
+  """hash of the transaction"""
+  hash: String!
+
+  """ json representation of the transactions contained in the block"""
+  transactions: [transactionType!]!
+  hcc: HccType
+  guardian_votes: GuardianVotesType
+  elite_edge_node_votes: EliteEdgeNodeVotesType
+}
+
+enum THETA_BLOCK_STATUS_ENUM {
+  pending
+  valid
+  invalid
+  committed
+  directly_finalized
+  indirectly_finalized
+  trusted
+}
+
+type proposerType {
+  address: String
+  coins: TokenType
+  sequence: String
+  signature: String
+}
+
+type inputOutputType {
+  address: String!
+  coins: TokenType!
+}
+
+type transactionRawType {
+  proposer: proposerType
+  fee: TokenType
+  outputs: [inputOutputType]
+  inputs: [inputOutputType]
+  gas_limit: String
+  gas_price: String
+  gas_used: String
+  from: proposerType
+  to: proposerType
+  data: String
+  block_height: String
+  payment_sequence: String
+  reserve_sequence: String
+  resource_id: String
+  source: SourceTargetType
+  target: SourceTargetType
+  collateral: TokenType
+  resource_ids: [String!]
+  duration: String
+  purpose: STAKE_PURPOSE_ENUM
+  holder: HolderType
+}
+
+enum STAKE_PURPOSE_ENUM {
+  validator
+  guardian
+  elite_edge_node
+}
+
+type transactionType {
+  raw: transactionRawType
+  type: THETA_TRANSACTION_TYPE_ENUM!
+  hash: String!
+  receipt: receiptType
+}
+
+enum THETA_TRANSACTION_TYPE_ENUM {
+  coinbase
+  slash
+  send
+  reserve_fund
+  release_fund
+  service_payment
+  split_rule
+  smart_contract
+  deposit_stake
+  withdraw_stake
+  tx_deposit_stake_v2
+  tx_stake_reward_distribution
+}
+
+type GetTransactionModel {
+  block_hash: String!
+  block_height: String!
+  type: THETA_TRANSACTION_TYPE_ENUM!
+  status: String!
+  hash: String!
+  transaction: transactionRawType!
+  receipt: receiptType
+}
+
+type NodeStatusModel {
+  address: String!
+  chain_id: String!
+  peer_id: String!
+  latest_finalized_block_hash: String!
+  latest_finalized_block_height: String!
+  latest_finalized_block_time: String!
+  latest_finalized_block_epoch: String!
+  current_epoch: String!
+  current_height: String!
+  current_time: String!
+  syncing: Boolean!
+  genesis_block_hash: String!
+}
+
+type GetPendingTransactionsModel {
+  tx_hashes: [String!]!
+}
+
+type ThetaRpcModel {
+  """This field returns the version of the blockchain software."""
+  GetVersion: GetVersionModel!
+
+  "This Field returns the details of the account.\n\n"
+  GetAccount(address: String!): GetAccountModel!
+
+  """This Field returns the details of the block"""
+  GetBlock(hash: String!): BlockModel!
+
+  """
+  This Field returns the finalized block given the height.
+  If none of the blocks at the given height are finalized (either directly or indirectly), 
+  then returns an empty result.
+  """
+  GetBlockByHeight(height: Int!): BlockModel!
+
+  """This field return the status of the guardian node run by theta data"""
+  GetStatus: NodeStatusModel!
+
+  """This field returns the detail of the transaction by hash."""
+  GetTransaction(hash: String!): GetTransactionModel!
+  GetVcpByHeight(height: Int): GetVcpByHeightModel!
+  GetGcpByHeight(height: Int): GetGcpByHeightModel!
+  GetEenpByHeight(height: Int): GetEenpByHeightModel!
+
+  """This field returns the pending transactions in the mempool."""
+  GetPendingTransactions: GetPendingTransactionsModel!
+  GetStakeRewardDistributionByHeight(height: Int): BlockHashStakeRewardDistributionRuleSetPairsModel!
+}
+
+type FiatCurrencyType {
+  usd: Float!
+  cny: Float!
+  eur: Float!
+}
+
+type TokenBalanceType {
+  amount: Float!
+  fiat_currency_value: FiatCurrencyType!
+}
+
+type StakeBalanceType {
+  node_address: String!
+  amount: Float!
+  withdrawn: Boolean!
+  return_height: String!
+  fiat_currency_value: FiatCurrencyType!
+}
+
+type TotalBalanceType {
+  theta_amount: Float!
+  theta_fuel_amount: Float!
+  fiat_currency_value: FiatCurrencyType!
+}
+
+type BalanceModel {
+  theta: TokenBalanceType!
+  theta_fuel: TokenBalanceType!
+  stake_to_guardian: [StakeBalanceType!]
+  stake_to_elite_node: [StakeBalanceType!]
+  stake_to_validator_node: [StakeBalanceType!]
+  total: TotalBalanceType!
+}
+
+type StakeRewardModel {
+  last_24_hour: TokenBalanceType
+  last_3_days: TokenBalanceType
+  last_7_days: TokenBalanceType
+}
+
+type WalletDpWdHistoryEntity {
+  wallet_address: String!
+  tx_hash: String!
+  theta: Float!
+  tfuel: Float!
+  node_address: String!
+  node_type: STAKE_NODE_TYPE_ENUM!
+  tx_type: THETA_TRANSACTION_TYPE_ENUM!
+  height: Int!
+  timestamp: Int!
+}
+
+enum STAKE_NODE_TYPE_ENUM {
+  validator
+  guardian
+  edge_cache
+}
+
+type WalletSendHistoryEntity {
+  from: String!
+  to: String!
+  tx_hash: String!
+  theta: Float!
+  tfuel: Float!
+  timestamp: Int!
+}
+
+type NftTransferRecordEntity {
+  smart_contract_address: String!
+  from: String!
+  name: String!
+  img_uri: String
+  to: String!
+  token_id: Int!
+  payment_token_amount: Float!
+  tdrop_mined: Float!
+  height: Int!
+  transaction_hash: String!
+  timestamp: Int!
+}
+
+type StakeRewardEntity {
+  reward_amount: Float!
+  wallet_address: String!
+  reward_height: Int!
+  timestamp: Int!
+}
+
+type TransactionEntity {
+  tx_hash: String!
+  tx_type: THETA_TRANSACTION_TYPE_ENUM!
+  from: String
+  to: String
+  fee: String
+  gas_price: String
+  gas_limit: String
+  height: Int!
+  timestamp: Int!
+  theta: Float!
+  theta_fuel: Float!
+}
+
+type HistoryTransactionsModel {
+  stake_rewards: [StakeRewardEntity!]
+  nft_transfers: [NftTransferRecordEntity!]
+  send_transfers: [WalletSendHistoryEntity!]
+  deposit_withdraw: [WalletDpWdHistoryEntity!]
+  start_time: Int!
+  end_time: Int!
+}
+
+type NftStatisticsEntity {
+  smart_contract_address: String!
+  name: String!
+  description: String!
+  unique_owners: Int!
+  items: Int!
+  destroyed_items: Int!
+  img_uri: String
+  contract_uri: String!
+  contract_uri_detail: String!
+  last_24_h_transactions: Int!
+  last_24_h_volume: Int!
+  last_24_h_users: Int!
+  last_24_h_floor_price: Float!
+  last_24_h_highest_price: Float!
+  last_7_days_transactions: Int!
+  last_7_days_volume: Int!
+  last_7_days_users: Int!
+  last_7_days_highest_price: Float!
+  last_7_days_floor_price: Float!
+  last_30_days_transactions: Int!
+  last_30_days_volume: Int!
+  last_30_days_users: Int!
+  last_30_days_highest_price: Float!
+  last_30_days_floor_price: Float!
+  update_timestamp: Int!
+  contract_uri_update_timestamp: Int!
+}
+
+type PaginatedNftStatistics {
+  nodes: [NftStatisticsEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+type NftDetailType {
+  contract_uri: String
+  smart_contract_address: String
+  contract_uri_detail: String
+  name: String
+  img_uri: String
+  description: String
+  unique_owners: Int!
+  items: Int!
+  destroyed_items: Int!
+  update_timestamp: Float
+  contract_uri_update_timestamp: Float
+  by_24_hours(
+    """
+    the timezone difference in minutes, between the UTC and the current local time.Such as PDT time is utc-07, should pass -420
+    """
+    timezoneOffset: Int = 0
+  ): [NftDetailByDate!]
+  by_7_days(
+    """
+    the timezone difference in minutes, between the UTC and the current local time.Such as PDT time is utc-07, should pass -420
+    """
+    timezoneOffset: Int = 0
+  ): [NftDetailByDate!]
+  by_30_days(
+    """
+    the timezone difference in minutes, between the UTC and the current local time.Such as PDT time is utc-07, should pass -420
+    """
+    timezoneOffset: Int = 0
+  ): [NftDetailByDate!]
+}
+
+type NftDetailByDate {
+  date: Int!
+  volume: Float!
+  transactions: Int!
+  users: Int!
+}
+
+type NftBalanceEntity {
+  smart_contract_address: String!
+  owner: String!
+  from: String!
+  contract_uri: String!
+  base_token_uri: String!
+  token_uri: String!
+  name: String!
+  img_uri: String
+  detail: String!
+  token_id: Int!
+}
+
+type KlineObj {
+  time: String!
+  price: Float!
+}
+
+type TokenMarketInformationType {
+  name: String!
+  price: Float!
+  circulating_supply: Float!
+  total_supply: Float!
+  volume_24h: Float!
+  price_change_percent: Float!
+  kline: [KlineObj!]!
+}
+
+type MarketInformationType {
+  Theta: TokenMarketInformationType!
+  ThetaFuel: TokenMarketInformationType!
+  Kline(token_type: TOKEN_PAIR_TYPE!, interval: KLINE_INTERVAL!): [KlineObj!]!
+}
+
+enum TOKEN_PAIR_TYPE {
+  thetaUsdt
+  tfuelUSdt
+}
+
+enum KLINE_INTERVAL {
+  _1m
+  _3m
+  _5m
+  _15m
+  _30m
+  _1h
+  _2h
+  _4h
+  _6h
+  _8h
+  _12h
+  _1d
+  _3d
+  _1w
+  _1M
+}
+
+type SmartContractEntity {
+  """Address of the smart contract"""
+  contract_address: String!
+  verified: Boolean!
+  protocol: Int!
+  abi: String
+  source_code: String
+  byte_code: String
+  verification_date: Int!
+  compiler_version: String
+  optimizer: String
+  optimizerRuns: Int!
+  name: String
+  function_hash: String
+  constructor_arguments: String
+
+  """Total number of smart contract calls"""
+  call_times: Int!
+
+  """Number of smart contract calls in the last 7 days"""
+  last_seven_days_call_times: Int!
+
+  """Number of smart contract calls in the last 24 hours"""
+  last_24h_call_times: Int!
+
+  """call times update timestamp"""
+  call_times_update_timestamp: Int!
+
+  """verification check timestamp"""
+  verification_check_timestamp: Int!
+  contract_uri: String!
+  contract_uri_detail: String!
+  latest_record_parse_height: Int!
+}
+
+type ContactEntity {
+  first_name: String!
+  last_name: String!
+  email: String!
+  content: String!
+}
+
+type WalletModel {
+  Balance(wallet_address: String!): BalanceModel!
+}
+
+type NftType {
+  SearchNfts(name: String!, take: Int = 10, after: String): PaginatedSmartContract
+  Balance(wallet_address: String!, search: String, take: Int = 10, skip: Int = 0, after: String): PaginatedNftBalance!
+  NftsForContract(wallet_address: String!, smart_contract_address: String!, take: Int = 10, after: String): PaginatedNftBalance
+  NftTransfers(wallet_address: String!, take: Int = 10, after: String): PaginatedNftTransferRecord!
+  NftTransfersByBlock(block_height: Int!): [NftTransferRecordEntity!]!
+  NftOwners(smart_contract_address: String!, take: Int = 10, skip: Int = 0, after: String): PaginatedNftBalance!
+  ContractNftTransfers(smart_contract_address: String!, token_id: Int, take: Int = 10, after: String, skip: Int = 0): PaginatedNftTransferRecord!
+  TokenIdOwners(token_id: Int = 1, contract_adress: String!): NftBalanceEntity!
+}
+
+type PaginatedNftBalance {
+  nodes: [NftBalanceEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+type PaginatedSmartContract {
+  nodes: [SmartContractEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+type PaginatedNftTransferRecord {
+  nodes: [NftTransferRecordEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+"""Statistics on smart contract related calls"""
+type SmartContractStatisticsType {
+  CallRank(rank_by: RankByEnum, take: Int = 500): [SmartContractEntity!]!
+  Search(protocol: SmartContractProtocolEnum, name: String, rank_by: RankByEnum, take: Int = 500): [SmartContractEntity!]!
+}
+
+enum RankByEnum {
+  call_times
+  last_24h_call_times
+  last_seven_days_call_times
+}
+
+enum SmartContractProtocolEnum {
+  unknow
+  tnt721
+  tnt20
+}
+
+type SmartContractScType {
+  address: String!
+  abi: String!
+  source_code: String!
+  verification_date: String!
+  compiler_version: String!
+  optimizer: String!
+  optimizerRuns: Float!
+  name: String!
+  function_hash: String!
+  constructor_arguments: String!
+}
+
+type BlokcListEntity {
+  height: Int!
+  block_hash: String!
+  timestamp: Int!
+  tfuel_burnt: Float!
+  txns: Int!
+}
+
+type PaginatedBlockList {
+  nodes: [BlokcListEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+type PaginatedTransactions {
+  nodes: [TransactionEntity!]
+  totalCount: Int!
+  hasNextPage: Boolean!
+  skip: Int!
+  endCursor: String!
+}
+
+type ExplorerSearchModelType {
+  transaction_rpc: GetTransactionModel
+  transaction: TransactionEntity
+  transaction_nft_records: [NftTransferRecordEntity!]
+  search_type: SEARCH_TYPE_ENUM
+  block: BlockModel
+  nft_statistics: [NftStatisticsEntity!]
+  total: Int
+  account: GetAccountModel
+  block_extend: BlokcListEntity
+}
+
+enum SEARCH_TYPE_ENUM {
+  none
+  block
+  transaction
+  account
+  nft
+}
+
+type ExplorerModelType {
+  blockList(take: Int = 10, after: String, skip: Int = 0): PaginatedBlockList!
+  transactions(take: Int = 10, block_height: Int = 0, after: String, skip: Int = 0): PaginatedTransactions!
+  search(search: String!): ExplorerSearchModelType!
+}
+
+type ThetaTxNumByHoursEntity {
+  year: Int!
+  month: Int!
+  date: Int!
+  hour: Int!
+  block_number: Int!
+  theta_fuel_burnt: Float!
+  theta_fuel_burnt_by_smart_contract: Float!
+  theta_fuel_burnt_by_transfers: Float!
+  active_wallet: Int!
+  coin_base_transaction: Int!
+  slash_transaction: Int!
+  send_transaction: Int!
+  reserve_fund_transaction: Int!
+  release_fund_transaction: Int!
+  service_payment_transaction: Int!
+  split_rule_transaction: Int!
+  deposit_stake_transaction: Int!
+  withdraw_stake_transaction: Int!
+  smart_contract_transaction: Int!
+  latest_block_height: Int!
+  timestamp: String!
+}
+
+type ThetaTransactionStatisticsType {
+  ByDate(
+    """
+    the timezone difference in minutes, between the UTC and the current local time.Such as PDT time is utc-07, should pass -420
+    """
+    timezoneOffset: Int = 0
+    amount: TX_GET_DATA_AMOUNT = _2week
+  ): [ThetaTxNumByDateModel!]!
+  ByHour(
+    """
+    the timezone difference in minutes, between the UTC and the current local time.Such as PDT time is utc-07, should pass -420
+    """
+    timezoneOffset: Int = 0
+    amount: TX_GET_DATA_AMOUNT = _2week
+  ): [ThetaTxNumByHoursEntity!]!
+}
+
+"""TX_GET_DATA_AMOUNT"""
+enum TX_GET_DATA_AMOUNT {
+  _2week
+  _1month
+  _3month
+  _6month
+  _1year
+  _2year
+}
+
+type ThetaTxNumByDateModel {
+  year: Int!
+  month: Int!
+  date: Int!
+  block_number: Int!
+  theta_fuel_burnt: Float!
+  theta_fuel_burnt_by_smart_contract: Float!
+  theta_fuel_burnt_by_transfers: Float!
+  active_wallet: Int!
+  coin_base_transaction: Int!
+  slash_transaction: Int!
+  send_transaction: Int!
+  reserve_fund_transaction: Int!
+  release_fund_transaction: Int!
+  service_payment_transaction: Int!
+  split_rule_transaction: Int!
+  deposit_stake_transaction: Int!
+  withdraw_stake_transaction: Int!
+  smart_contract_transaction: Int!
+  latest_block_height: Int!
+  timestamp: Int!
+}
+
+"""Return to statistics related to token pledges"""
+type StakeStatisticsEntity {
+  """Height of the block where pledge statistics are performed """
+  block_height: Int!
+
+  """Total number of elite edge nodes"""
+  total_elite_edge_node_number: Int!
+
+  """Number of theta fuel pledged to elite edge nodes"""
+  total_edge_node_stake_amount: String!
+
+  """Total number of guardian nodes"""
+  total_guardian_node_number: Int!
+
+  """Number of online guardian nodes"""
+  effective_guardian_node_number: Int!
+
+  """Total number of theta tokens pledged to the guardian nodes"""
+  total_guardian_stake_amount: String!
+
+  """Total number of theta pledges for the online guardian nodes"""
+  effective_guardian_stake_amount: String!
+
+  """Total number of validator nodes"""
+  total_validator_node_number: Int!
+
+  """Number of online validator nodes"""
+  effective_validator_node_number: Int!
+
+  """otal number of theta tokens pledged to the validator nodes"""
+  total_validator_stake_amount: String!
+
+  """The number of tokens pledged by the online validator nodes"""
+  effective_validator_stake_amount: String!
+
+  """Theta Fuel pledge ratio"""
+  theta_fuel_stake_ratio: Float!
+
+  """Theta pledge ratio"""
+  theta_stake_ratio: Float!
+
+  """Block time for performing pledge statistics"""
+  timestamp: Int!
+}
+
+type LoggerEntity {
+  query: String!
+  hash: String!
+  call_times: Float!
+  update_timestamp: Float!
+  update_date: Float!
+}
+
+type Query {
+  TransactionsStatistics: ThetaTransactionStatisticsType!
+  Wallet: WalletModel!
+  ThetaRpc: ThetaRpcModel!
+  MarketInformation: MarketInformationType!
+
+  """Return to statistics related to token pledges"""
+  StakeStatistics: [StakeStatisticsEntity!]
+  StakeReward(wallet_address: String!): StakeRewardModel!
+  SmartContractStatistics: SmartContractStatisticsType!
+  Nfts: NftType!
+  Logger(rank_by: LoggerRankByEnum = call_times): [LoggerEntity!]!
+  NftStatistics(order_by: NftStatisticsOrderByType!, take: Int = 10, skip: Int = 0, search: String, after: String): PaginatedNftStatistics!
+  NftDetail(contract_address: String!): NftDetailType!
+  Explorer: ExplorerModelType!
+  WalletActivityHistory(wallet_address: String!, start_time: Int, end_time: Int): HistoryTransactionsModel!
+}
+
+enum LoggerRankByEnum {
+  call_times
+  update_time
+}
+
+"""NftStatisticsOrderByType"""
+enum NftStatisticsOrderByType {
+  last_24_h_users
+  last_7_days_users
+  last_30_days_users
+  last_24_h_transactions
+  last_7_days_transactions
+  last_30_days_transactions
+  last_24_h_volume
+  last_7_days_volume
+  last_30_days_volume
+}
+
+type Mutation {
+  verifyWithThetaExplorer(address: String!): SmartContractEntity!
+  newMsg(first_name: String!, last_name: String!, email: String!, content: String!): ContactEntity!
+  updateNftImg(contract_address: String!, img_uri: String!): NftStatisticsEntity!
+}

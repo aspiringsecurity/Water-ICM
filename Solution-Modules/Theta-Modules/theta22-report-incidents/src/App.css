@@ -1,0 +1,111 @@
+.App {
+  /* text-align: center; */
+}
+
+.dropzone {
+  border: 2px dotted black;
+  padding: 20px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.ant-layout-header {
+  background-color: white;
+  background: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  min-height: 85vh;
+  background: white;
+}
+
+.about-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-image {
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.header-image {
+  height: 50px;
+}
+
+.sell-area {
+  margin-top: 25px;;
+  min-height: 40vh;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.sell-heading {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result-box {
+  padding: 10px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.success {
+  color: green;
+}
+
+.result-box:hover {
+  background: lightgray;
+}
+
+.img-invoice {
+  width: 80px;
+  margin-right: 10px;
+}
+
+.payment-form input {
+  margin: 5px;
+}
+
+.error-text {
+  color: red;
+  font-style: italic;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 90vh;
+}
+.standard-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  position: relative;
+}
+
+.box-overlay {
+  z-index: 999;
+  border-radius: 5px;
+  position: absolute;
+  opacity: 0.9;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  background: white;
+  top: 20px;
+  left: 20px;
+}

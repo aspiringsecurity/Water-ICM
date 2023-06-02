@@ -1,0 +1,32 @@
+export declare class NftStatisticsEntity {
+    id: number;
+    smart_contract_address: string;
+    name: string;
+    description: string;
+    unique_owners: number;
+    items: number;
+    destroyed_items: number;
+    img_uri: string;
+    contract_uri: string;
+    contract_uri_detail: string;
+    last_24_h_transactions: number;
+    last_24_h_volume: number;
+    last_24_h_users: number;
+    last_24_h_floor_price: number;
+    last_24_h_highest_price: number;
+    last_7_days_transactions: number;
+    last_7_days_volume: number;
+    last_7_days_users: number;
+    last_7_days_highest_price: number;
+    last_7_days_floor_price: number;
+    last_30_days_transactions: number;
+    last_30_days_volume: number;
+    last_30_days_users: number;
+    last_30_days_highest_price: number;
+    last_30_days_floor_price: number;
+    update_timestamp: number;
+    contract_uri_update_timestamp: number;
+    refetch_times: number;
+    create_date: number;
+    update_date: number;
+}

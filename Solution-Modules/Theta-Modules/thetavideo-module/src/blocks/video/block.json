@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "thetavp/thetavp",
+  "version": "0.1.0",
+  "title": "Theta Video Plugin",
+  "category": "media",
+  "description": "Video block for the Theta Video Plugin",
+  "attributes": {
+	"video": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"html": false
+  },
+  "textdomain": "thetavp",
+  "editorScript": "file:../../../build/video.js",
+  "editorStyle": "file:./build/video.css",
+  "style": "file:./build/style-video.css"
+}

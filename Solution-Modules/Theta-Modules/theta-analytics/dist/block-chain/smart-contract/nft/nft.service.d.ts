@@ -1,0 +1,37 @@
+import { SmartContractCallLogEntity } from './../smart-contract-call-log.entity';
+import { Logger } from '@nestjs/common';
+import { QueryRunner, Repository } from 'typeorm';
+import { SmartContractCallRecordEntity } from '../smart-contract-call-record.entity';
+import { SmartContractEntity } from '../smart-contract.entity';
+import { NftBalanceEntity } from './nft-balance.entity';
+import { NftTransferRecordEntity } from './nft-transfer-record.entity';
+import { UtilsService } from 'src/common/utils.service';
+export declare class NftService {
+    private nftTransferRecordRepository;
+    private nftBalanceRepository;
+    private smartContractCallRecordRepository;
+    private smartContractRepository;
+    private utilsService;
+    logger: Logger;
+    constructor(nftTransferRecordRepository: Repository<NftTransferRecordEntity>, nftBalanceRepository: Repository<NftBalanceEntity>, smartContractCallRecordRepository: Repository<SmartContractCallRecordEntity>, smartContractRepository: Repository<SmartContractEntity>, utilsService: UtilsService);
+    parseRecordByContractAddress(contractAddress: string): Promise<number>;
+    parseRecordByContractAddressWithConnection(nftConnection: QueryRunner, smartContractConnection: QueryRunner, contract: SmartContractEntity): Promise<number>;
+    updateNftRecord(nftConnection: QueryRunner, smartContractConnection: QueryRunner, record: SmartContractCallRecordEntity): Promise<boolean>;
+    updateNftLog(nftConnection: QueryRunner, smartContractConnection: QueryRunner, logEntity: SmartContractCallLogEntity): Promise<boolean>;
+    updateNftBalance(contract_address: string, from: string, to: string, tokenId: number): Promise<void>;
+    getContractUri(address: string, abi: any): Promise<any>;
+    getBaseTokenUri(address: string, abi: any): Promise<any>;
+    getTokenUri(address: string, abi: any, tokenId: number): Promise<any>;
+    getNftByWalletAddress(address: string, take: number, after: string | undefined, skip?: number, search?: string | undefined): Promise<[boolean, number, Array<NftBalanceEntity>]>;
+    getNftsBySmartContractAddress(address: string, take: number, after: string | undefined, skip?: number): Promise<[boolean, number, Array<NftBalanceEntity>]>;
+    getNftTransfersForSmartContract(contractAddress: string, tokenId: number | undefined, take: number, after: string | undefined, skip?: number): Promise<[boolean, number, Array<NftTransferRecordEntity>]>;
+    getNftTransfersByWallet(walletAddress: any, take: number, after: string | undefined): Promise<[boolean, number, Array<NftTransferRecordEntity>]>;
+    getNftsForContract(walletAddress: string, contractAddress: string, take: number, after: string | undefined): Promise<[boolean, number, Array<NftBalanceEntity>]>;
+    getNftTransfersForBlockHeight(height: number): Promise<NftTransferRecordEntity[]>;
+    getNftByTokenId(tokenId: number, contractAddress: string): Promise<NftBalanceEntity>;
+    checkSources(nfts: Array<NftBalanceEntity>): Promise<NftBalanceEntity[]>;
+    uniqueHolders(contractAddress: string): Promise<number>;
+    totalAmount(contractAddress: string): Promise<[totalAmount: number, uniqueHolders: number]>;
+    findNftsByName(name: string, take: number, after: string | undefined): Promise<[boolean, number, Array<SmartContractEntity>]>;
+    getNftTransferRecordsByTxHash(txHash: any): Promise<NftTransferRecordEntity[]>;
+}

@@ -1,0 +1,83 @@
+{
+  "ORM_CONFIG": {
+    "database": "/data/theta-data/database_v4/",
+    "synchronize": true,
+    "autoLoadEntities": true,
+    "name": "THETA_DATA",
+    "statementCacheSize": 500,
+    "type": "better-sqlite3",
+    "entities": ["src/**/*.entity{.ts,.js}"],
+    "bigNumberStrings": false,
+    "logging": false,
+    "extra": {
+      "charset": "utf8mb4_unicode_ci"
+    }
+  },
+  "START_HEIGHT": 8650000,
+  "THETA_NODE_HOST": "http://ip-172-31-35-81.ap-southeast-1.compute.internal/rpc",
+  "LOG_PATH": "/home/ubuntu/theta-data/logs/",
+  "ANALYSE_INTERVAL": 3000,
+  "ANALYSE_NUMBER": 1000,
+  "IGNORE": false,
+  "RATE_LIMIT": {
+    "ttl": 60,
+    "limit": 60
+  },
+  "SMART_CONTRACT_VERIFY_DETECT_TIMES": 10,
+  "RE_SYNC_BALANCE": false,
+  "STAKE_ANALYSE_START_HEIGHT": 16003926,
+  "CONFLICT_TRANSACTIONS": [
+    "0x4a9c74bf71ac6a3591672d67e975887ef8374ba34b45342305e656666d9cdcf1",
+    "0x82236267393c31c17bf4e79fb14f9fc0396c05821ebd357e6b420a43933d64db"
+  ],
+  "NFT": {
+    "ANALYSE_NUMBER": 1000,
+    "ANALYSE_INTERVAL": 60000,
+    "STATIC_PATH": "/data/theta-data/static/nft_img/",
+    "DL_ALL_NFT_IMG": true,
+    "MONITOR_PATH": "/data/theta-data/monitor/nft/"
+  },
+  "SMART_CONTRACT": {
+    "ANALYSE_NUMBER": 1000,
+    "ANALYSE_INTERVAL": 60000,
+    "THETA_NODE_HOST": "https://theta-bridge-rpc.thetatoken.org/rpc",
+    "START_HEIGHT": 14590900,
+    "MONITOR_PATH": "/data/theta-data/monitor/smart_contract/"
+  },
+  "NFT_STATISTICS": {
+    "ANALYSE_NUMBER": 5000,
+    "ANALYSE_INTERVAL": 60000,
+    "STATIC_PATH": "/data/theta-data/static/nft_img/",
+    "MONITOR_PATH": "/data/theta-data/monitor/nft_statistics/"
+  },
+  "EXPLORER": {
+    "ANALYSE_NUMBER": 1000,
+    "ANALYSE_INTERVAL": 1000,
+    "START_HEIGHT": 8000000,
+    "MONITOR_PATH": "/data/theta-data/monitor/explorer/"
+  },
+  "STAKE": {
+    "ANALYSE_NUMBER": 1000,
+    "ANALYSE_INTERVAL": 60000,
+    "START_HEIGHT": 16003926,
+    "MONITOR_PATH": "/data/theta-data/monitor/stake/"
+  },
+  "TX": {
+    "ANALYSE_NUMBER": 3000,
+    "ANALYSE_INTERVAL": 60000,
+    "START_HEIGHT": 8000000,
+    "MONITOR_PATH": "/data/theta-data/monitor/tx/"
+  },
+  "WALLET": {
+    "START_HEIGHT": 8000000,
+    "ANALYSE_NUMBER": 4500,
+    "ANALYSE_INTERVAL": 1000,
+    "MONITOR_PATH": "/data/theta-data/monitor/wallet/"
+  },
+  "WALLET-TX-HISTORY": {
+    "START_HEIGHT": 8000000,
+    "ANALYSE_NUMBER": 1000,
+    "ANALYSE_INTERVAL": 100,
+    "MONITOR_PATH": "/data/theta-data/monitor/wallet-tx-history/"
+  }
+}
