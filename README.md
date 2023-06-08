@@ -97,13 +97,8 @@ Please visit the demo videos at https://drive.google.com/drive/u/0/folders/1V8OC
 
 Chainlink Functions: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/hsk-dev
 
-b. Klaytn Monitor: Klaytn Monitor is a DeFi dashboard that allows drone owners and drone controllers to search their address and view their drone token holdings and balance, also available is the ability for owners to view their drone services and associated NFT holdings and their balance(s) and price if available. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/klaytn-monitor
 
-c. Aleo quotation and water maintenance management: Aleo Quotation, Bidding, voting and token management for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators on Aleo Network. We are also extending Aleo's auction, vote and token examples for enabling sharing of government assets like aerial traffic routes, drone details information for geolocation and travel routes, drone license management and quarterly maintenance check and control. 
-
-Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/water-maintenance-quote-mgmt
-
-d. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
+b. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
 
 Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
 
@@ -118,9 +113,6 @@ e. Layer 2 Scaling: Layer 2 for Security, decentralized voting and DAO managemen
 - Voting is gasless and the vote is stored on IPFS
 
 Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/metis-rfp-dao-nft-voting
-
-
-- Boba network: Hybrid-Compute for Drone Management and Monitoring on the Boba Network. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/mobility-scaling-using-hybrid-compute-boba
 
 
 - AltLayer: Maintenance and service contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/payment-automation-altlayer
