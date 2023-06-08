@@ -18,9 +18,9 @@ Features:
 •Drone Incident Reporting : Publish drone incident reports.
 
 
-Website for Developers: https://sites.google.com/view/latcglobal/home
-
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
+
+Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
 
