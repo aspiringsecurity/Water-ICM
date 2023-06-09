@@ -1,3 +1,0 @@
-[submodule "cf/trustee/lib/theta-js"]
-	path = cf/trustee/lib/theta-js
-	url = git@github.com:andrewlunde/theta-js.git

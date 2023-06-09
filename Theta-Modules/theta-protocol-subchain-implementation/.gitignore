@@ -1,7 +1,0 @@
-/build/
-.vscode
-vendor/
-local/
-p2p/messenger/.addrbooks
-.DS_Store
-*/.DS_Store
