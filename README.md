@@ -33,21 +33,18 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 # Blockchain Eco-system
 
-# Theta Blockchain
+# Chainlink Blockchain
 
-- SAP BTP platform integration with Theta Blockchain:
+- SAP BTP platform integration with Chainlink Blockchain
 
-- Theta Blockchain and SAP Enterprise ETL library
+- Chainlink Blockchain and SAP Enterprise ETL library
 
-- Theta User Analytics for tabulation, organization and validation
+- Chainlink User Analytics for tabulation, organization and validation
 
-- Theta MetaChain implementation
+- Chainlink User Security for 5 dapp personas
 
-- Theta User Security for 5 dapp personas
+- Chainlink Incident System Management
 
-- Theta Incident System Management
-
-Theta Modules at https://github.com/aspiringsecurity/Water-ICM/tree/main/Theta-Modules and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Theta-Modules
 
 
 # Livepeer and Aptos
@@ -182,7 +179,7 @@ c. Arweave + bundlr: We are using it for storing a variety of offchain data like
 
 b. XDC network to borrow funds using collaterals for for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
-
+c. Theta Modules at https://github.com/aspiringsecurity/Water-ICM/tree/main/Theta-Modules and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Theta-Modules
 
 # Demo Videos: 
 
