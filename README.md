@@ -1,6 +1,8 @@
 # Security Peer (Drone Monitor)
-
+# SIH_DRIVE_LINK (https://drive.google.com/drive/folders/1t_GLEjSpVXdXTm2lk-z5Jey122ifLco1?usp=drive_link)
 # Summary 
+
+
 
 Our platform solution offers an Artificial Intelligence-based object detection system that utilizes Chainlink, IPFS, ethereum, Aptos, livepeer and optimism, Flow, Truflation, Space and Time powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
 
@@ -28,12 +30,15 @@ Pitch Video: https://www.youtube.com/watch?v=-o5qVzeV5hk&t=288s
 
 Notable Achievements: Optimism Finalists at Encode Metaverse Hackathon (https://www.youtube.com/watch?v=-o5qVzeV5hk&t=288s) and Aptos Grand Challenge Prize Winner at Encode Next Video Build 2022 (https://medium.com/encode-club/next-video-build-hackathon-prizewinners-and-summary-33f258fdc9f5)
 
+6. XDC network: Borrowing XDC funds for community tanks using collaterals: https://github.com/aspiringdevapps/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
+We allow community or civic leaders to set up an XDC account, send funds, and apply for community tanks or sewage treatment plants using collateral items. 
+
 
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
 # Blockchain Eco-system
 
-# Chainlink Blockchain
+
 
 - SAP BTP platform integration with Chainlink Blockchain
 
