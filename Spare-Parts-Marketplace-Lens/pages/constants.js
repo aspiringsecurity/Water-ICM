@@ -1,0 +1,11 @@
+export const CONTRACT_ADDRESS = '0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d';
+export const API_URL = 'https://api.lens.dev';
+export const IPFS_URL = 'https://media.lenster.xyz/tr:n-avatar,tr:di-placeholder.webp/https://lens.infura-ipfs.io/ipfs/';
+export const AAVE_V2_MATIC_SUBGRAPH = "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic";
+export const ZERO_BYTES = "0x0000000000000000000000000000000000000000000000000000000000000000";
+export const Collect_Module = "0x23b9467334bEb345aAa6fd1545538F3d54436e96";
+export const Reference_Module = "0x081a84ABF515302a276D98Dc551E69f3CC33A833";
+export const ReferenceModuleInitData = "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002";
+export const POLYGONSCAN_MAINNET = "https://polygonscan.com/tx/";
+export const ARWEAVE_URI = "http://arweave.net/";
+export const Smart_Contract_Wallet = "0x2333d2a01526265e4608b8c598BF9a9b65c66F19";
