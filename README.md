@@ -33,19 +33,6 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 # Blockchain Eco-system
 
-# Chainlink Blockchain
-
-- SAP BTP platform integration with Chainlink Blockchain
-
-- Chainlink Blockchain and SAP Enterprise ETL library
-
-- Chainlink User Analytics for tabulation, organization and validation
-
-- Chainlink User Security for 5 dapp personas
-
-- Chainlink Incident System Management
-
-
 
 # Livepeer and Aptos
 
@@ -94,6 +81,18 @@ Further, we are storing a variety of offchain data like incident snapshots, alar
 Please visit the demo videos at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer and https://drive.google.com/drive/u/3/folders/1AUdsHAcUPTF85gVk93w8tzfEzbD7K6-Y
 
 Chainlink Functions: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/hsk-dev
+
+# Chainlink Blockchain
+
+- SAP BTP platform integration with Chainlink Blockchain
+
+- Chainlink Blockchain and SAP Enterprise ETL library
+
+- Chainlink User Analytics for tabulation, organization and validation
+
+- Chainlink User Security for 5 dapp personas
+
+- Chainlink Incident System Management
 
 
 b. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
