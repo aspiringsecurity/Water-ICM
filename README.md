@@ -24,7 +24,7 @@ Website for Developers: https://sites.google.com/view/latcglobal/home
 
 Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
 
-Pitch Video: https://www.youtube.com/watch?v=-o5qVzeV5hk&t=288s
+Pitch Video: https://youtu.be/-o5qVzeV5hk?feature=shared
 
 Notable Achievements: Optimism Finalists at Encode Metaverse Hackathon (https://www.youtube.com/watch?v=-o5qVzeV5hk&t=288s) and Aptos Grand Challenge Prize Winner at Encode Next Video Build 2022 (https://medium.com/encode-club/next-video-build-hackathon-prizewinners-and-summary-33f258fdc9f5)
 
