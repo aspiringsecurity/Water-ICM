@@ -33,21 +33,6 @@ We have developed an Integrated Management solution to improve Water and Transpo
 
 # Blockchain Eco-system
 
-Contribution to Optimism and OP ecosystem:
-
-- Developer and DAO tools on Optimism for organization, tabulation, visualization of on-chain and off-chain data.
-
-- Low code tools to enable automation, feedback, and asset management on Optimism.
-
-- OP solutions for zero knowledge proofs and privacy preserving initiatives, on-chain reputation models.
-
-- Tools for NFT creation, management, and marketplaces.
-
-- Identity management, user analytics, and leaderboard template on OP.
-
-- Web3 solutions for community, environment, and sustainability using a mix of IoT hardware, Optimism, and ecosystem tools.
-
-
 # Optimism Eco-system
 
 Our users will interact with Optimism in the following ways:
@@ -66,6 +51,21 @@ We are also using Optimism to enable scaling of the decentralized public goods m
 5. Attestation Hub Contract for Incident Reports: We are extending the AttestationStation smart contract to develop the Attestation Hub smart contract for Incident Reports. We look forward to enabling drone owners to use OP for all their insurance-claim transaction needs and collaborating with Third Party administrators. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Optimism-data-analytics-community-tooling/OP-attest-incident-reports-hub
 
 6. OP ICM: Low code framework tool for ICM Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling.
+
+
+Contribution of OP Nodekit to Optimism and OP ecosystem in Drone Monitor:
+
+- Developer and DAO tools on Optimism for organization, tabulation, visualization of on-chain and off-chain data.
+
+- Low code tools to enable automation, feedback, and asset management on Optimism.
+
+- OP solutions for zero knowledge proofs and privacy preserving initiatives, on-chain reputation models.
+
+- Tools for NFT creation, management, and marketplaces.
+
+- Identity management, user analytics, and leaderboard template on OP.
+
+- Web3 solutions for community, environment, and sustainability using a mix of IoT hardware, Optimism, and ecosystem tools.
 
 
 # Livepeer and Aptos
