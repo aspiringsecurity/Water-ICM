@@ -1,8 +1,8 @@
-# Security Peer (Drone Monitor)
+# UAV Monitor
 
 # Summary 
 
-Our platform solution offers an Artificial Intelligence-based object detection system that utilizes Optimism and OP ecosystem tools, IPFS, ethereum, Aptos, livepeer, Flow, and OP ecosystem powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
+Our platform solution offers an Artificial Intelligence-based object detection system that utilizes Optimism and Optimism ecosystem tools, IPFS, ethereum, Aptos, livepeer, Flow, and OP ecosystem powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
 
 Features:
 •Detection : Identifying the UAVs in the video feed using object detection.
@@ -32,6 +32,20 @@ Notable Achievements: Optimism Finalists at Encode Metaverse Hackathon (https://
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
 # Blockchain Eco-system
+
+Contribution to Optimism and OP ecosystem:
+
+- Developer and DAO tools on Optimism for organization, tabulation, visualization of on-chain and off-chain data.
+
+- Low code tools to enable automation, feedback, and asset management on Optimism.
+
+- OP solutions for zero knowledge proofs and privacy preserving initiatives, on-chain reputation models.
+
+- Tools for NFT creation, management, and marketplaces.
+
+- Identity management, user analytics, and leaderboard template on OP.
+
+- Web3 solutions for community, environment, and sustainability using a mix of IoT hardware, Optimism, and ecosystem tools.
 
 
 # Optimism Eco-system
