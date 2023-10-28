@@ -34,18 +34,6 @@ We have developed an Integrated Management solution to improve Water and Transpo
 # Blockchain Eco-system
 
 
-# Livepeer and Aptos
-
-We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
-
-a. Aptos: https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement and https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/social-drone-data-framework-apt-livepeer
-
-b. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
-
-c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
-
-Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
-
 # Optimism Eco-system
 
 Our users will interact with Optimism in the following ways:
@@ -66,7 +54,20 @@ We are also using Optimism to enable scaling of the decentralized public goods m
 6. OP ICM: Low code framework tool for ICM Log. Secure data storage, transparent data movement and data authenticity using OP low code tooling.
 
 
-3. a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
+# Livepeer and Aptos
+
+We are using Livepeer ondemand service to enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized with Livepeer's ondemand support for building operations, inspection and maintenance and safer and more efficient surveys. Please visit Livepeer integration with Aptos and also minting Livepeer Video NFT at Aptos as follows:
+
+a. Aptos: https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement and https://github.com/aspiringsecurity/Water-ICM/tree/main/BSC-Smart-Contract-Implement/social-drone-data-framework-apt-livepeer
+
+b. Livepeer: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/livepeer
+
+c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/livepeer-video-nft
+
+Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
+
+
+a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
 
 FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
 
