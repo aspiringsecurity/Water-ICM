@@ -160,19 +160,6 @@ Please visit Adchain subgraph module at https://github.com/aspiringsecurity/Wate
 The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
 
 
-5. a. Lit:  We are using Lit protocol to automate signing, reading, and writing road incident metadata (snapshots) and alarm viewer data to web3 decentralized networks (Ethereum and IPFS). Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lit-xls  
-
-- Lit Access Control: Lit Protocol Oauth to Enable faster login for 5 different personas. The 6 different personas: Drone Driver, Citizen, Police officer, dispatcher, admin, government roles can easily be authenticated and logged in so that they can use their Ethereum address. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Drone-Monitoring-oauth-lit-access-control
-
-- Token-gate the Drone Management Dashboard Page with 6 different personas using Lit Protocol: Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Drone-Management-token-gating-lit
-
-- Lit Actions: We are using JS function bindings to do things like request a signature or a decryption. Please visit:
-
-i) https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/lit-actions_conditional_signing
-
-ii) https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/lit-actions_sign_api_response
-
-
 b. Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
 
 
