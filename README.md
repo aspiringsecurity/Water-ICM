@@ -83,66 +83,6 @@ c. Livepeer Video NFT: https://github.com/aspiringsecurity/Water-ICM/tree/main/S
 Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS5AkSp2mC
 
 
-a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
-
-FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
-
-Please visit DataDAO for UAV incidents in Monitoring solution using Drones: https://github.com/aspiringsecurity/Water-ICM/tree/main/fvm-drone-incident-data-dao
-
-IPFS's w3ui storage: We are using IPFS's w3ui storage to store geolocation file data and additional snapshot files and data. This will enable effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions. Drones can be effectively utilized for building operations, inspection and maintenance and safer and more efficient surveys. https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/w3ui-incident-storage
-
-We are also extending the w3notes example app to develop an incident notes tool for the drone and UAV administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/w3ui-incident-notes
-
-Further, we are storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident.
-
-Please visit the demo videos at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer and https://drive.google.com/drive/u/3/folders/1AUdsHAcUPTF85gVk93w8tzfEzbD7K6-Y
-
-Chainlink Functions: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/hsk-dev
-
-# Chainlink Blockchain
-
-- SAP BTP platform integration with Chainlink Blockchain
-
-- Chainlink Blockchain and SAP Enterprise ETL library
-
-- Chainlink User Analytics for tabulation, organization and validation
-
-- Chainlink User Security for 5 dapp personas
-
-- Chainlink Incident System Management
-
-
-b. Push Protocol: We are using Push protocol to to enable periodic alarm notifications in case of unexpected flight of drones outside the guard rails. This enables effective management and communication setup for Drones utilized in Operations and Maintenance across multiple regions.  Please visit the link at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/push-incidents-notification
-
-Configuration screenshots at https://drive.google.com/drive/u/3/folders/1zFxrhlOfTCmm5lNs1CwMX_OVbl_mVU5q
-
-
-e. Layer 2 Scaling: Layer 2 for Security, decentralized voting and DAO management, contract payment management for service and maintenance
-
-- Metis: Decentralized NFT-based voting system for RFPs on Metis network. Workflow:
-
--DAOs or Organisations create a RFP on the app.
--Users can join a RFP by minting an NFT of that RFP
-- Users that have a certain RFP's NFT are eligible to create proposals and vote on them.
-- Voting is gasless and the vote is stored on IPFS
-
-Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/metis-rfp-dao-nft-voting
-
-
-- AltLayer: Maintenance and service contract payment Management and Amount Distribution on Altlayer. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/payment-automation-altlayer
-
-
-- zkync: We are utilizing zkysync layer 2 tooling for account abstraction, encryption tooling: please visit 
-
-- Account Abstraction plugins: https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/zksync-account-abstraction-drone-delivery-payment
-
-- https://github.com/aspiringsecurity/Water-ICM/tree/main/Layer2-scaling/hardhat-zksync
-
-
-4. a. NFT Port dashboard: We are using NFTPort to see all NFTs from different networks. This enables UAV Users: UAV Users can views their NFTs in different network when they enter their address and select the network such as Ethereum, Polygon (Matic), Avalanche, and Binance Smart Chain. UAV Users can view the contract of the NFT such as floor price, unique token ids sold today, gas quote rate day, and list of NFTs minted. 
-
-Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/nftport-dashboard 
-
 
 b. XMTP: We are implementing XMTP Chat for administrators in a particular region with CyberConnect functions. Please visit the implementation at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/XMTP-Chat
 
@@ -153,36 +93,6 @@ Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storag
 
 Please visit the demo video at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer
 
-d. The Graph: Use of existing subgraph at the graph explorer: We are using Decentraland and Adchain subgraph to build a datasource from the websites for sentiment analysis, which are kept in the Adchain registry. A python crawler mine these websites and feed relevant information to the analytics and visualization tool.
-
-Please visit Adchain subgraph module at https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/using-adchain-subgraph 
-
-The Graph data analytics & visualization tool for communities: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/TheGraph-data-analytics-community-tooling
-
-
-b. Streamr: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/streamr-network
-
-
-
-6. Len's Community and Citizens DAO: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/lens-citizens-dao
-
-
-7. a. Ceramic Composedb challenge and Ceramic Lit Integration: Please visit:
-
-- https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/js-composedb-ceramic
-
-- https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/Ceramic-Lit-Integration
-
-b. ENS: We are using ethops.blockchain domain purchased at UD for ENS. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/Solution_Modules/ENS-ethops
-
-c. Arweave + bundlr: We are using it for storing a variety of offchain data like incident snapshots, alarm metadata and object types at the time of incident. Please visit https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/arweave-bundlr-img-upload
-
-
-8. a Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
-
-b. XDC network to borrow funds using collaterals for for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
-
-c. Theta Modules at https://github.com/aspiringsecurity/Water-ICM/tree/main/Theta-Modules and https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/Theta-Modules
 
 # Demo Videos: 
 
