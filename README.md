@@ -28,6 +28,15 @@ Notable Achievements: Optimism Finalists at Encode Metaverse Hackathon (https://
 
 Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
+
+# Demo Videos: 
+
+1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
+
+2. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
+
+3. UAV Monitor for Integrated Water Management: https://www.youtube.com/watch?v=dqR-I70UT1I&t=1s
+
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
 # Blockchain Eco-system
@@ -86,20 +95,12 @@ Demo Video: https://drive.google.com/drive/u/3/folders/1qmLJX-RwLCqA3uRidyC_OSUS
 b. XMTP: We are implementing XMTP Chat for administrators in a particular region with CyberConnect functions. Please visit the implementation at https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/XMTP-Chat
 
 
-c.  Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
+c. Zora and Polygon: We are utilizing ZoraModuleManager, and ZoraProtocolFeeSettings in our our dapp and deploying it on Polygon after registering the Zora market module. We are developing a crowdsourcing marketplace using Zora's auction house template for enabling sharing of government assets like prepaid card, meter details information, meter license management and quarterly pollution check and control. We are using the zora starter kit to access ZORA API, Creator Toolkit, and Marketplace Hyperstructure. Zora's Auction House template is being utilized for NFT marketplace of alarm clock wallpapers and background ringtones purchase and auction. 
 
 Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-incidents-alarm/deploy-at-polygon
 
 Please visit the demo video at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer
 
-
-# Demo Videos: 
-
-1. UAV Monitor (Screencast): https://www.youtube.com/watch?v=dk3TQlEsxfo&t=3s
-
-2. UAV Monitor for Integrated Water Management: https://www.youtube.com/watch?v=dqR-I70UT1I&t=1s
-
-3. End Node Commissioning using NFC tag and iot modular gateway (Hardware Demo): https://www.youtube.com/watch?v=vNKONKA2sow
 
 
 # Details
@@ -124,6 +125,7 @@ Alarm storage using Ethereum. Save/delete alarm metadata and image to/from IPFS 
 
 Crowdsourcing information sharing for better and cleaner drinking water, Remote Water Monitoring, Recyclability of Water.
 
+
 8. a. IPFS + FVM + Chainlink Functions: We are generating NFTs for NFC tags of drone licenses of drone owners/drivers and contract professionals involved in drone administration. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/NFT.Storage-water-icm/nfc-tag-nft-fvm
 
 FVM enables us to use building blocks exposed through interfaces, enabling the construction of incident archiving and drone imaging solutions. This improves better outcomes for monitoring, incident reporting, precision logistics. Links: shorturl.at/chzB6 (dapp, monitoring), https://youtu.be/dk3TQlEsxfo and https://youtu.be/dqR-I70UT1I (dapp, management). 
@@ -139,6 +141,7 @@ Further, we are storing a variety of offchain data like incident snapshots, alar
 Please visit the demo videos at https://drive.google.com/drive/u/0/folders/1V8OCwu_MJmyAHQVbbepzsR8_igx5huer and https://drive.google.com/drive/u/3/folders/1AUdsHAcUPTF85gVk93w8tzfEzbD7K6-Y
 
 b. Metaverse Asset/Risk Manager for Cooperatives and Self Help Groups: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules/metaverse-cooperative-assets
+
 
 c. XDC network to borrow funds using collaterals for for contract work undertaken by contractors and aerial traffic controllers developers from Ministry of Aerospace or Aerial Transportation, administrators. Please visit: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Model-ICM-Planner/XDC-network
 
