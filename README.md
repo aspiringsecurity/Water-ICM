@@ -1,4 +1,4 @@
-# UAV Monitor (OP Nodekit Project)
+# UAV Monitor ( Project in OP Nodekit Collective)
 
 # Summary 
 
@@ -18,16 +18,15 @@ Features:
 •Drone Incident Reporting : Publish drone incident reports.
 
 
-Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
-
 Website for Developers: https://sites.google.com/view/latcglobal/home
-
-Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
 
 Pitch Video: https://youtu.be/-o5qVzeV5hk?feature=shared
 
+Pitch Deck and Demo: https://drive.google.com/drive/u/3/folders/1xYwivgACmcjNkhMEJA69DsKisXUIEIde
+
 Notable Achievements: Optimism Finalists at Encode Metaverse Hackathon (https://www.youtube.com/watch?v=-o5qVzeV5hk&t=288s) and Aptos Grand Challenge Prize Winner at Encode Next Video Build 2022 (https://medium.com/encode-club/next-video-build-hackathon-prizewinners-and-summary-33f258fdc9f5)
 
+Website for End Consumers, Civic bodies: https://sites.google.com/view/integratedwatermanagment/home
 
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
