@@ -1,4 +1,4 @@
-# UAV Monitor ( Project in OP Nodekit Collective)
+# UAV Monitor 
 
 # Summary 
 
@@ -40,6 +40,28 @@ Website for End Consumers, Civic bodies: https://sites.google.com/view/integrate
 We have developed an Integrated Management solution to improve Water and Transport Monitoring by UAVs powered by web3 eco-system tools:
 
 # Blockchain Eco-system
+
+# Chainlink
+
+Chainlink DAOs: https://github.com/aspiringsecurity/Water-ICM/tree/main/Solution-Modules
+
+Chainlink Visualization, Tabulation, Anaytics and Organization tool for user interaction at DEX exchange using OSS spreadsheet module with a wiki interface. 
+
+Chainlink Blockchain Modules: 
+
+SAP BTP platform integration with Chainlink Blockchain
+
+Chainlink Blockchain and SAP Enterprise ETL library
+
+Chainlink User Analytics for tabulation, organization and validation
+
+Chainlink User Security for 5 dapp personas
+
+Chainlink Incident System Management
+
+Chainlink Automation,  and XDC network for sewage treatment plants and community tankers: Borrowing LINK, XDC funds for community tanks using collaterals.
+
+We allow community or civic leaders to set up an XDC and LINK account, send funds, and apply for community tanks or sewage treatment plants using collateral items.
 
 # Optimism Eco-system
 
