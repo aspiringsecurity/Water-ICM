@@ -1,0 +1,9178 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"GetSwapDto": {
+				"properties": {
+					"src": {
+						"type": "string"
+					},
+					"dst": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "string"
+					},
+					"from": {
+						"type": "string"
+					},
+					"slippage": {
+						"type": "number",
+						"format": "double"
+					},
+					"protocols": {
+						"type": "string"
+					},
+					"fee": {
+						"type": "string"
+					},
+					"disableEstimate": {
+						"type": "boolean"
+					},
+					"permit": {
+						"type": "string"
+					},
+					"includeTokensInfo": {
+						"type": "boolean"
+					},
+					"includeProtocols": {
+						"type": "boolean"
+					},
+					"compatibility": {
+						"type": "boolean"
+					},
+					"allowPartialFill": {
+						"type": "boolean"
+					},
+					"parts": {
+						"type": "string"
+					},
+					"mainRouteParts": {
+						"type": "string"
+					},
+					"connectorTokens": {
+						"type": "string"
+					},
+					"complexityLevel": {
+						"type": "string"
+					},
+					"gasLimit": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"referrer": {
+						"type": "string"
+					},
+					"receiver": {
+						"type": "string"
+					},
+					"chainId": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"src",
+					"dst",
+					"amount",
+					"from",
+					"slippage"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"NonceResponse": {
+				"properties": {
+					"nonce": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"nonce"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BalanceResponse": {
+				"properties": {
+					"balance": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"balance"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Tx": {
+				"properties": {
+					"type": {
+						"type": "number",
+						"format": "double"
+					},
+					"chain_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gas_price": {
+						"type": "string"
+					},
+					"gas_tip_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "number",
+						"format": "double"
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_hashes": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"nullable": true
+					},
+					"v": {
+						"type": "string"
+					},
+					"r": {
+						"type": "string"
+					},
+					"s": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TransactionRequest": {
+				"properties": {
+					"nonce": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string"
+					},
+					"from": {
+						"type": "string"
+					},
+					"maxFeePerGas": {
+						"type": "string"
+					},
+					"maxPriorityFeePerGas": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TransactionData": {
+				"properties": {
+					"moon_scan_url": {
+						"type": "string"
+					},
+					"transaction_hash": {
+						"type": "string"
+					},
+					"signed_transaction": {
+						"type": "string"
+					},
+					"signed_message": {
+						"type": "string"
+					},
+					"raw_transaction": {
+						"type": "string"
+					},
+					"signature": {
+						"type": "string"
+					},
+					"transaction": {
+						"$ref": "#/components/schemas/Tx"
+					},
+					"userOps": {
+						"items": {
+							"$ref": "#/components/schemas/TransactionRequest"
+						},
+						"type": "array"
+					},
+					"userop_transaction": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"transaction_hash",
+					"signed_transaction"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Transaction": {
+				"properties": {
+					"userop_transaction": {
+						"type": "string"
+					},
+					"userOps": {
+						"items": {
+							"$ref": "#/components/schemas/TransactionRequest"
+						},
+						"type": "array"
+					},
+					"transaction": {
+						"$ref": "#/components/schemas/Tx"
+					},
+					"signature": {
+						"type": "string"
+					},
+					"moon_scan_url": {
+						"type": "string"
+					},
+					"transactions": {
+						"items": {
+							"$ref": "#/components/schemas/TransactionData"
+						},
+						"type": "array"
+					},
+					"data": {
+						"type": "string",
+						"nullable": true
+					},
+					"raw_transaction": {
+						"type": "string"
+					},
+					"signed_transaction": {
+						"type": "string"
+					},
+					"transaction_hash": {
+						"type": "string"
+					}
+				},
+				"type": "object"
+			},
+			"AccountResponse": {
+				"properties": {
+					"keys": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"address": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SignMessage": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"header": {
+						"type": "boolean"
+					},
+					"signtype": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EnsResolveResponse": {
+				"properties": {
+					"address": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"address"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ENSReverseResolveResponse": {
+				"properties": {
+					"domain": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"domain"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AaveReservesData": {
+				"properties": {
+					"current_atoken_balance": {
+						"type": "string"
+					},
+					"current_borrow_balance": {
+						"type": "string"
+					},
+					"principal_borrow_balance": {
+						"type": "string"
+					},
+					"borrow_rate_mode": {
+						"type": "string"
+					},
+					"borrow_rate": {
+						"type": "string"
+					},
+					"liquidity_rate": {
+						"type": "string"
+					},
+					"origination_fee": {
+						"type": "string"
+					},
+					"variable_borrow_index": {
+						"type": "string"
+					},
+					"last_update_timestamp": {
+						"type": "string"
+					},
+					"usage_as_collateral_enabled": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"current_atoken_balance",
+					"current_borrow_balance",
+					"principal_borrow_balance",
+					"borrow_rate_mode",
+					"borrow_rate",
+					"liquidity_rate",
+					"origination_fee",
+					"variable_borrow_index",
+					"last_update_timestamp",
+					"usage_as_collateral_enabled"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Erc20Response": {
+				"properties": {
+					"type": {
+						"type": "number",
+						"format": "double"
+					},
+					"chain_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gas_price": {
+						"type": "string"
+					},
+					"gas_tip_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "number",
+						"format": "double"
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_hashes": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"nullable": true
+					},
+					"v": {
+						"type": "string"
+					},
+					"r": {
+						"type": "string"
+					},
+					"s": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"symbol": {
+						"type": "string"
+					},
+					"decimals": {
+						"type": "string"
+					},
+					"totalSupply": {
+						"type": "string"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"balanceOf": {
+						"type": "string"
+					},
+					"allowance": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Erc1155Response": {
+				"properties": {
+					"type": {
+						"type": "number",
+						"format": "double"
+					},
+					"chain_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gas_price": {
+						"type": "string"
+					},
+					"gas_tip_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "number",
+						"format": "double"
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_hashes": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"nullable": true
+					},
+					"v": {
+						"type": "string"
+					},
+					"r": {
+						"type": "string"
+					},
+					"s": {
+						"type": "string"
+					},
+					"balance_of": {
+						"type": "string"
+					},
+					"balance_of_batch": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BroadCastRawTransactionResponse": {
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"success",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BitcoinTransactionOutput": {
+				"properties": {
+					"signedTx": {
+						"type": "string"
+					},
+					"transaction_hash": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Erc721Response": {
+				"properties": {
+					"type": {
+						"type": "number",
+						"format": "double"
+					},
+					"chain_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gas_price": {
+						"type": "string"
+					},
+					"gas_tip_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "number",
+						"format": "double"
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_gas_fee_cap": {
+						"type": "string",
+						"nullable": true
+					},
+					"blob_hashes": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"nullable": true
+					},
+					"v": {
+						"type": "string"
+					},
+					"r": {
+						"type": "string"
+					},
+					"s": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"symbol": {
+						"type": "string"
+					},
+					"balance_of": {
+						"type": "string"
+					},
+					"owner_of": {
+						"type": "string"
+					},
+					"token_uri": {
+						"type": "string"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"isApprovedForAll": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AccountControllerResponse": {
+				"properties": {
+					"data": {
+						"anyOf": [
+							{
+								"$ref": "#/components/schemas/NonceResponse"
+							},
+							{
+								"$ref": "#/components/schemas/BalanceResponse"
+							},
+							{
+								"$ref": "#/components/schemas/Transaction"
+							},
+							{
+								"$ref": "#/components/schemas/AccountResponse"
+							},
+							{
+								"$ref": "#/components/schemas/SignMessage"
+							},
+							{
+								"$ref": "#/components/schemas/EnsResolveResponse"
+							},
+							{
+								"$ref": "#/components/schemas/ENSReverseResolveResponse"
+							},
+							{
+								"$ref": "#/components/schemas/AaveReservesData"
+							},
+							{
+								"$ref": "#/components/schemas/Erc20Response"
+							},
+							{
+								"$ref": "#/components/schemas/Erc1155Response"
+							},
+							{
+								"$ref": "#/components/schemas/BroadCastRawTransactionResponse"
+							},
+							{
+								"$ref": "#/components/schemas/BitcoinTransactionOutput"
+							},
+							{
+								"$ref": "#/components/schemas/Erc721Response"
+							}
+						]
+					},
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"InputBody": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SignTypedData": {
+				"properties": {
+					"data": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CreateAccountInput": {
+				"properties": {
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DeployInput": {
+				"properties": {
+					"chain_id": {
+						"type": "string"
+					},
+					"abi": {
+						"type": "string"
+					},
+					"bytecode": {
+						"type": "string"
+					},
+					"constructor_args": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"abi",
+					"bytecode"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BroadcastInput": {
+				"properties": {
+					"chainId": {
+						"type": "string"
+					},
+					"rawTransaction": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"chainId",
+					"rawTransaction"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AaveInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					},
+					"lending_pool": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "string"
+					},
+					"atoken_to_redeeem": {
+						"type": "string"
+					},
+					"ref_code": {
+						"type": "string"
+					},
+					"interest_rate_mode": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BitcoinInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BitcoinTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BitcoinCashInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BitcoinCashTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TransactionResponse": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"tx": {
+						"properties": {
+							"data": {
+								"type": "string"
+							},
+							"value": {
+								"type": "string"
+							},
+							"nonce": {
+								"type": "number",
+								"format": "double"
+							},
+							"gas": {
+								"type": "string"
+							},
+							"to": {
+								"type": "string"
+							},
+							"from": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"data",
+							"value",
+							"nonce",
+							"gas",
+							"to",
+							"from"
+						],
+						"type": "object"
+					},
+					"info": {
+						"properties": {
+							"conveyorGas": {
+								"type": "string"
+							},
+							"affiliateGas": {
+								"type": "string"
+							},
+							"affiliateAggregator": {
+								"type": "string"
+							},
+							"amountOut": {
+								"type": "string"
+							},
+							"amountOutMin": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"conveyorGas",
+							"affiliateGas",
+							"affiliateAggregator",
+							"amountOut",
+							"amountOutMin"
+						],
+						"type": "object"
+					},
+					"chainId": {
+						"type": "number",
+						"format": "double"
+					},
+					"currentBlockNumber": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"message",
+					"tx",
+					"info",
+					"chainId",
+					"currentBlockNumber"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ConveyorFinanceControllerResponse": {
+				"properties": {
+					"input": {
+						"$ref": "#/components/schemas/InputBody"
+					},
+					"convey": {
+						"$ref": "#/components/schemas/TransactionResponse"
+					},
+					"data": {
+						"$ref": "#/components/schemas/TransactionData"
+					},
+					"tx": {
+						"properties": {
+							"data": {
+								"type": "string"
+							},
+							"value": {
+								"type": "string"
+							},
+							"nonce": {
+								"type": "number",
+								"format": "double"
+							},
+							"gas": {
+								"type": "string"
+							},
+							"to": {
+								"type": "string"
+							},
+							"from": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"data",
+							"value",
+							"nonce",
+							"gas",
+							"to",
+							"from"
+						],
+						"type": "object"
+					},
+					"signed": {
+						"$ref": "#/components/schemas/Transaction"
+					},
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"success",
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TokenSwapParams": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					},
+					"tokenIn": {
+						"type": "string"
+					},
+					"tokenOut": {
+						"type": "string"
+					},
+					"tokenInDecimals": {
+						"type": "number",
+						"format": "double"
+					},
+					"tokenOutDecimals": {
+						"type": "number",
+						"format": "double"
+					},
+					"amountIn": {
+						"type": "string"
+					},
+					"slippage": {
+						"type": "string"
+					},
+					"recipient": {
+						"type": "string"
+					},
+					"referrer": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"tokenIn",
+					"tokenOut",
+					"tokenInDecimals",
+					"tokenOutDecimals",
+					"amountIn",
+					"slippage",
+					"recipient",
+					"referrer"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CosmosInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CosmosTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DogeCoinInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"DogeCoinTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EnsResolveInput": {
+				"properties": {
+					"domain": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"domain",
+					"chain_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EosInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"EosTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Erc1155Request": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Erc721Request": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"LitecoinInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"LitecoinTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CryptoCurrency": {
+				"properties": {
+					"networkDisplayName": {
+						"type": "string"
+					},
+					"icon": {
+						"type": "string"
+					},
+					"chainId": {
+						"type": "number",
+						"format": "double"
+					},
+					"address": {
+						"type": "string"
+					},
+					"decimals": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"symbol": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"networkDisplayName",
+					"icon",
+					"chainId",
+					"address",
+					"decimals",
+					"network",
+					"symbol",
+					"name",
+					"code",
+					"id"
+				],
+				"type": "object"
+			},
+			"FiatCurrency": {
+				"properties": {
+					"icon": {
+						"type": "string"
+					},
+					"symbol": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"icon",
+					"symbol",
+					"name",
+					"code",
+					"id"
+				],
+				"type": "object"
+			},
+			"Message": {
+				"properties": {
+					"fiat": {
+						"items": {
+							"$ref": "#/components/schemas/FiatCurrency"
+						},
+						"type": "array"
+					},
+					"crypto": {
+						"items": {
+							"$ref": "#/components/schemas/CryptoCurrency"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"fiat",
+					"crypto"
+				],
+				"type": "object"
+			},
+			"SupportedCurrenciesResponse": {
+				"properties": {
+					"message": {
+						"$ref": "#/components/schemas/Message"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object"
+			},
+			"PaymentType": {
+				"properties": {
+					"icon": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"paymentTypeId": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"icon",
+					"name",
+					"paymentTypeId"
+				],
+				"type": "object"
+			},
+			"SupportedPaymentTypesMessage": {
+				"properties": {
+					"googlepay": {
+						"$ref": "#/components/schemas/PaymentType"
+					},
+					"applepay": {
+						"$ref": "#/components/schemas/PaymentType"
+					},
+					"creditcard": {
+						"$ref": "#/components/schemas/PaymentType"
+					}
+				},
+				"required": [
+					"googlepay",
+					"applepay",
+					"creditcard"
+				],
+				"type": "object"
+			},
+			"SupportedPaymentTypesCurrencyResponse": {
+				"properties": {
+					"message": {
+						"$ref": "#/components/schemas/SupportedPaymentTypesMessage"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object"
+			},
+			"SupportedDefaultResponse": {
+				"properties": {
+					"defaults": {
+						"properties": {
+							"id": {
+								"properties": {
+									"provider": {
+										"type": "string"
+									},
+									"paymentMethod": {
+										"type": "string"
+									},
+									"amount": {
+										"type": "number",
+										"format": "double"
+									},
+									"target": {
+										"type": "string"
+									},
+									"source": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"provider",
+									"paymentMethod",
+									"amount",
+									"target",
+									"source"
+								],
+								"type": "object"
+							}
+						},
+						"required": [
+							"id"
+						],
+						"type": "object"
+					},
+					"recommended": {
+						"properties": {
+							"provider": {
+								"type": "string"
+							},
+							"paymentMethod": {
+								"type": "string"
+							},
+							"amount": {
+								"type": "number",
+								"format": "double"
+							},
+							"target": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"provider",
+							"paymentMethod",
+							"amount",
+							"target",
+							"source"
+						],
+						"type": "object"
+					}
+				},
+				"required": [
+					"defaults",
+					"recommended"
+				],
+				"type": "object"
+			},
+			"SupportedAssetResponse": {
+				"properties": {
+					"country": {
+						"type": "string"
+					},
+					"assets": {
+						"items": {
+							"properties": {
+								"crypto": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								},
+								"paymentMethods": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								},
+								"fiat": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"crypto",
+								"paymentMethods",
+								"fiat"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"country",
+					"assets"
+				],
+				"type": "object"
+			},
+			"GetSupportedOnRampsResponse": {
+				"properties": {
+					"message": {
+						"items": {
+							"properties": {
+								"id": {
+									"type": "string"
+								},
+								"displayName": {
+									"type": "string"
+								},
+								"icons": {
+									"properties": {
+										"png": {
+											"properties": {
+												"160x160": {
+													"type": "string"
+												},
+												"32x32": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"160x160",
+												"32x32"
+											],
+											"type": "object"
+										},
+										"svg": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"png",
+										"svg"
+									],
+									"type": "object"
+								},
+								"icon": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"id",
+								"displayName",
+								"icons",
+								"icon"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object"
+			},
+			"AvailablePaymentMethod": {
+				"properties": {
+					"icon": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"paymentTypeId": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"icon",
+					"name",
+					"paymentTypeId"
+				],
+				"type": "object"
+			},
+			"Quote": {
+				"properties": {
+					"recommendations": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"paymentMethod": {
+						"type": "string"
+					},
+					"quoteId": {
+						"type": "string"
+					},
+					"ramp": {
+						"type": "string"
+					},
+					"availablePaymentMethods": {
+						"items": {
+							"$ref": "#/components/schemas/AvailablePaymentMethod"
+						},
+						"type": "array"
+					},
+					"payout": {
+						"type": "number",
+						"format": "double"
+					},
+					"transactionFee": {
+						"type": "number",
+						"format": "double"
+					},
+					"networkFee": {
+						"type": "number",
+						"format": "double"
+					},
+					"rate": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"recommendations",
+					"paymentMethod",
+					"quoteId",
+					"ramp",
+					"availablePaymentMethods",
+					"payout",
+					"transactionFee",
+					"networkFee",
+					"rate"
+				],
+				"type": "object"
+			},
+			"Quotes": {
+				"items": {
+					"$ref": "#/components/schemas/Quote"
+				},
+				"type": "array"
+			},
+			"SellQuote": {
+				"properties": {
+					"recommendations": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"quoteId": {
+						"type": "string"
+					},
+					"paymentMethod": {
+						"type": "string"
+					},
+					"ramp": {
+						"type": "string"
+					},
+					"payout": {
+						"type": "number",
+						"format": "double"
+					},
+					"transactionFee": {
+						"type": "number",
+						"format": "double"
+					},
+					"networkFee": {
+						"type": "number",
+						"format": "double"
+					},
+					"rate": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"recommendations",
+					"quoteId",
+					"paymentMethod",
+					"ramp",
+					"payout",
+					"transactionFee",
+					"networkFee",
+					"rate"
+				],
+				"type": "object"
+			},
+			"SellQuotes": {
+				"items": {
+					"$ref": "#/components/schemas/SellQuote"
+				},
+				"type": "array"
+			},
+			"TransactionInput": {
+				"properties": {
+					"supportedParams": {
+						"properties": {
+							"partnerData": {
+								"properties": {
+									"redirectUrl": {
+										"properties": {
+											"success": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"success"
+										],
+										"type": "object"
+									}
+								},
+								"required": [
+									"redirectUrl"
+								],
+								"type": "object"
+							},
+							"theme": {
+								"properties": {
+									"borderRadius": {
+										"type": "number",
+										"format": "double",
+										"nullable": true
+									},
+									"cardColor": {
+										"type": "string"
+									},
+									"secondaryTextColor": {
+										"type": "string"
+									},
+									"primaryTextColor": {
+										"type": "string"
+									},
+									"secondaryColor": {
+										"type": "string"
+									},
+									"primaryColor": {
+										"type": "string"
+									},
+									"themeName": {
+										"type": "string"
+									},
+									"isDark": {
+										"type": "boolean"
+									}
+								},
+								"required": [
+									"borderRadius",
+									"cardColor",
+									"secondaryTextColor",
+									"primaryTextColor",
+									"secondaryColor",
+									"primaryColor",
+									"themeName",
+									"isDark"
+								],
+								"type": "object"
+							}
+						},
+						"required": [
+							"partnerData",
+							"theme"
+						],
+						"type": "object"
+					},
+					"wallet": {
+						"properties": {
+							"address": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"address"
+						],
+						"type": "object"
+					},
+					"metaData": {
+						"properties": {
+							"quoteId": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"quoteId"
+						],
+						"type": "object"
+					},
+					"originatingHost": {
+						"type": "string"
+					},
+					"partnerContext": {
+						"type": "string"
+					},
+					"uuid": {
+						"type": "string"
+					},
+					"network": {
+						"type": "string"
+					},
+					"paymentMethod": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "number",
+						"format": "double"
+					},
+					"destination": {
+						"type": "string"
+					},
+					"source": {
+						"type": "string"
+					},
+					"onramp": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"supportedParams",
+					"wallet",
+					"metaData",
+					"originatingHost",
+					"partnerContext",
+					"uuid",
+					"network",
+					"paymentMethod",
+					"type",
+					"amount",
+					"destination",
+					"source",
+					"onramp"
+				],
+				"type": "object"
+			},
+			"PaymentIntentResponse": {
+				"properties": {
+					"metadata": {
+						"properties": {},
+						"additionalProperties": {
+							"type": "string"
+						},
+						"type": "object"
+					},
+					"uri": {
+						"type": "string"
+					},
+					"qr_code": {
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+					"destination": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"currency": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"success": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"success"
+				],
+				"type": "object"
+			},
+			"CreatePaymentIntentInput": {
+				"properties": {
+					"metadata": {
+						"properties": {},
+						"additionalProperties": {
+							"type": "string"
+						},
+						"type": "object"
+					},
+					"network": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "number",
+						"format": "double"
+					},
+					"currency": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"metadata",
+					"amount"
+				],
+				"type": "object"
+			},
+			"Block": {
+				"properties": {
+					"number": {
+						"type": "string"
+					},
+					"hash": {
+						"type": "string"
+					},
+					"timestamp": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"number",
+					"hash",
+					"timestamp"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TriggerOutput": {
+				"properties": {
+					"value": {},
+					"name": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"value",
+					"name"
+				],
+				"type": "object"
+			},
+			"Log": {
+				"properties": {
+					"triggers": {
+						"items": {
+							"$ref": "#/components/schemas/TriggerOutput"
+						},
+						"type": "array"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"transactionHash": {
+						"type": "string"
+					},
+					"address": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"topic0": {
+						"type": "string",
+						"nullable": true
+					},
+					"topic1": {
+						"type": "string",
+						"nullable": true
+					},
+					"topic2": {
+						"type": "string",
+						"nullable": true
+					},
+					"topic3": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"required": [
+					"logIndex",
+					"transactionHash",
+					"address",
+					"data",
+					"topic0",
+					"topic1",
+					"topic2",
+					"topic3"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"InternalTransaction": {
+				"properties": {
+					"from": {
+						"type": "string",
+						"nullable": true
+					},
+					"to": {
+						"type": "string",
+						"nullable": true
+					},
+					"value": {
+						"type": "string",
+						"nullable": true
+					},
+					"transactionHash": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"required": [
+					"from",
+					"to",
+					"value",
+					"transactionHash",
+					"gas"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AbiInput": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"indexed": {
+						"type": "boolean"
+					},
+					"components": {
+						"items": {
+							"$ref": "#/components/schemas/AbiInput"
+						},
+						"type": "array"
+					},
+					"internalType": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"type"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AbiOutput": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"components": {
+						"items": {
+							"$ref": "#/components/schemas/AbiOutput"
+						},
+						"type": "array"
+					},
+					"internalType": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"type"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"AbiItem": {
+				"description": "The abi to parse the log object of the contract",
+				"properties": {
+					"anonymous": {
+						"type": "boolean"
+					},
+					"constant": {
+						"type": "boolean"
+					},
+					"inputs": {
+						"items": {
+							"$ref": "#/components/schemas/AbiInput"
+						},
+						"type": "array"
+					},
+					"name": {
+						"type": "string"
+					},
+					"outputs": {
+						"items": {
+							"$ref": "#/components/schemas/AbiOutput"
+						},
+						"type": "array"
+					},
+					"payable": {
+						"type": "boolean"
+					},
+					"stateMutability": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"type"
+				],
+				"type": "object",
+				"additionalProperties": false,
+				"example": {}
+			},
+			"IERC20Transfer": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"tokenDecimals": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					},
+					"valueWithDecimals": {
+						"type": "string"
+					},
+					"triggers": {
+						"items": {
+							"$ref": "#/components/schemas/TriggerOutput"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"from",
+					"to",
+					"value",
+					"tokenDecimals",
+					"tokenName",
+					"tokenSymbol"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IERC20Approval": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"owner": {
+						"type": "string"
+					},
+					"spender": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"tokenDecimals": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					},
+					"valueWithDecimals": {
+						"type": "string"
+					},
+					"triggers": {
+						"items": {
+							"$ref": "#/components/schemas/TriggerOutput"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"owner",
+					"spender",
+					"value",
+					"tokenDecimals",
+					"tokenName",
+					"tokenSymbol"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"INFTTransfer": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"tokenContractType": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					},
+					"triggers": {
+						"items": {
+							"$ref": "#/components/schemas/TriggerOutput"
+						},
+						"type": "array"
+					},
+					"operator": {
+						"type": "string",
+						"nullable": true
+					},
+					"from": {
+						"type": "string"
+					},
+					"to": {
+						"type": "string"
+					},
+					"tokenId": {
+						"type": "string"
+					},
+					"amount": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"tokenContractType",
+					"tokenName",
+					"tokenSymbol",
+					"operator",
+					"from",
+					"to",
+					"tokenId",
+					"amount"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"INativeBalance": {
+				"properties": {
+					"address": {
+						"type": "string"
+					},
+					"balance": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"address",
+					"balance"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"INFTApprovalERC721": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"owner": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "string"
+					},
+					"tokenId": {
+						"type": "string"
+					},
+					"tokenContractType": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"owner",
+					"approved",
+					"tokenId",
+					"tokenContractType",
+					"tokenName",
+					"tokenSymbol"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"INFTApprovalERC1155": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"account": {
+						"type": "string"
+					},
+					"operator": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"tokenContractType": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"account",
+					"operator",
+					"approved",
+					"tokenContractType",
+					"tokenName",
+					"tokenSymbol"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IOldNFTApproval": {
+				"properties": {
+					"ERC721": {
+						"items": {
+							"$ref": "#/components/schemas/INFTApprovalERC721"
+						},
+						"type": "array"
+					},
+					"ERC1155": {
+						"items": {
+							"$ref": "#/components/schemas/INFTApprovalERC1155"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"ERC721",
+					"ERC1155"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"INFTApproval": {
+				"properties": {
+					"transactionHash": {
+						"type": "string"
+					},
+					"contract": {
+						"type": "string"
+					},
+					"logIndex": {
+						"type": "string"
+					},
+					"tokenContractType": {
+						"type": "string"
+					},
+					"tokenName": {
+						"type": "string"
+					},
+					"tokenSymbol": {
+						"type": "string"
+					},
+					"account": {
+						"type": "string"
+					},
+					"operator": {
+						"type": "string"
+					},
+					"approvedAll": {
+						"type": "boolean"
+					},
+					"tokenId": {
+						"type": "string",
+						"nullable": true
+					}
+				},
+				"required": [
+					"transactionHash",
+					"contract",
+					"logIndex",
+					"tokenContractType",
+					"tokenName",
+					"tokenSymbol",
+					"account",
+					"operator",
+					"approvedAll",
+					"tokenId"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IWebhook": {
+				"properties": {
+					"block": {
+						"$ref": "#/components/schemas/Block"
+					},
+					"chainId": {
+						"type": "string"
+					},
+					"logs": {
+						"items": {
+							"$ref": "#/components/schemas/Log"
+						},
+						"type": "array"
+					},
+					"txs": {
+						"items": {
+							"$ref": "#/components/schemas/Transaction"
+						},
+						"type": "array"
+					},
+					"txsInternal": {
+						"items": {
+							"$ref": "#/components/schemas/InternalTransaction"
+						},
+						"type": "array"
+					},
+					"abi": {
+						"items": {
+							"$ref": "#/components/schemas/AbiItem"
+						},
+						"type": "array"
+					},
+					"retries": {
+						"type": "number",
+						"format": "double"
+					},
+					"confirmed": {
+						"type": "boolean"
+					},
+					"tag": {
+						"type": "string"
+					},
+					"streamId": {
+						"type": "string"
+					},
+					"erc20Transfers": {
+						"items": {
+							"$ref": "#/components/schemas/IERC20Transfer"
+						},
+						"type": "array"
+					},
+					"erc20Approvals": {
+						"items": {
+							"$ref": "#/components/schemas/IERC20Approval"
+						},
+						"type": "array"
+					},
+					"nftTransfers": {
+						"items": {
+							"$ref": "#/components/schemas/INFTTransfer"
+						},
+						"type": "array"
+					},
+					"nativeBalances": {
+						"items": {
+							"$ref": "#/components/schemas/INativeBalance"
+						},
+						"type": "array"
+					},
+					"nftApprovals": {
+						"$ref": "#/components/schemas/IOldNFTApproval",
+						"deprecated": true
+					},
+					"nftTokenApprovals": {
+						"items": {
+							"$ref": "#/components/schemas/INFTApproval"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"block",
+					"chainId",
+					"logs",
+					"txs",
+					"txsInternal",
+					"abi",
+					"retries",
+					"confirmed",
+					"tag",
+					"streamId",
+					"erc20Transfers",
+					"erc20Approvals",
+					"nftTransfers",
+					"nativeBalances",
+					"nftApprovals",
+					"nftTokenApprovals"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"PingResponse": {
+				"properties": {
+					"message": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"RippleInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"RippleTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SolanaInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SolanaTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TronInput": {
+				"properties": {
+					"network": {
+						"type": "string"
+					},
+					"private_key": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TronTransactionInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number",
+						"format": "double"
+					},
+					"network": {
+						"type": "string"
+					},
+					"compress": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UniswapInput": {
+				"properties": {
+					"to": {
+						"type": "string"
+					},
+					"data": {
+						"type": "string"
+					},
+					"input": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"nonce": {
+						"type": "string"
+					},
+					"gas": {
+						"type": "string"
+					},
+					"gasPrice": {
+						"type": "string"
+					},
+					"chain_id": {
+						"type": "string"
+					},
+					"encoding": {
+						"type": "string"
+					},
+					"EOA": {
+						"type": "boolean"
+					},
+					"contract_address": {
+						"type": "string"
+					},
+					"token_id": {
+						"type": "string"
+					},
+					"token_ids": {
+						"type": "string"
+					},
+					"approved": {
+						"type": "boolean"
+					},
+					"broadcast": {
+						"type": "boolean"
+					},
+					"token_a": {
+						"type": "string"
+					},
+					"token_b": {
+						"type": "string"
+					},
+					"amount_a": {
+						"type": "string"
+					},
+					"amount_b": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"BearerAuth": {
+				"type": "apiKey",
+				"name": "Authorization",
+				"in": "header"
+			},
+			"OAuth2": {
+				"type": "oauth2",
+				"flows": {
+					"password": {
+						"tokenUrl": "https://vault-api.usemoon.ai/auth/oauth/openai/oauth",
+						"scopes": {
+							"authorization_code": "grants authorization_code"
+						}
+					}
+				}
+			},
+			"ApiKeyAuth": {
+				"type": "apiKey",
+				"name": "x-api-key",
+				"in": "header"
+			}
+		}
+	},
+	"info": {
+		"title": "moon-vault-api",
+		"version": "1.0.0",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/oneinch/tokens": {
+			"post": {
+				"operationId": "Tokens",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/oneinch/protocols": {
+			"post": {
+				"operationId": "Protocols",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/oneinch/quote": {
+			"post": {
+				"operationId": "Quote",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/oneinch/{accountName}/swap": {
+			"post": {
+				"operationId": "Swap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetSwapDto"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/oneinch/approve-spender": {
+			"post": {
+				"operationId": "ApproveSpender",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/oneinch/approve-call-data": {
+			"post": {
+				"operationId": "ApproveCallData",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"oneinch"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}/nonce": {
+			"get": {
+				"operationId": "GetNonce",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/accounts/{accountName}/balance": {
+			"get": {
+				"operationId": "GetBalance",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "chainId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/accounts/{accountName}/transfer-eth": {
+			"post": {
+				"operationId": "TransferEth",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}/sign-message": {
+			"post": {
+				"operationId": "SignMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SignMessage"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}/sign-transaction": {
+			"post": {
+				"operationId": "SignTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}/sign-typed-data": {
+			"post": {
+				"operationId": "SignTypedData",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SignTypedData"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts": {
+			"get": {
+				"operationId": "ListAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateAccountInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}": {
+			"get": {
+				"operationId": "GetAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "DeleteAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/accounts/{accountName}/deploy": {
+			"post": {
+				"operationId": "DeployContract",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DeployInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/{accountName}/broadcast-tx": {
+			"post": {
+				"operationId": "BroadcastTx",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Accounts"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BroadcastInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/aave/{name}/lend": {
+			"post": {
+				"operationId": "Lend",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Aave"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AaveInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/aave/{name}/borrow": {
+			"post": {
+				"operationId": "Borrow",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Aave"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AaveInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/aave/{name}/user-reserve-data": {
+			"post": {
+				"operationId": "UserReserveData",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Aave"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AaveInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/aave/{name}/repay": {
+			"post": {
+				"operationId": "Repay",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Aave"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AaveInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/bitcoin": {
+			"get": {
+				"operationId": "ListBitcoinAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Bitcoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateBitcoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Bitcoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BitcoinInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/bitcoin/{accountName}": {
+			"get": {
+				"operationId": "GetBitcoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Bitcoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/bitcoin/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignBitcoinTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Bitcoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BitcoinTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/bitcoincash": {
+			"get": {
+				"operationId": "ListBitcoinCashAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"bitcoincash"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateBitcoinCashAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"bitcoincash"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BitcoinCashInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/bitcoincash/{accountName}": {
+			"get": {
+				"operationId": "GetBitcoinCashAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"bitcoincash"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/bitcoincash/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignBitcoinCashTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"bitcoincash"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BitcoinCashTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/conveyorfinance/{name}/swap": {
+			"post": {
+				"operationId": "Swap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ConveyorFinanceControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ConveyorFinance"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TokenSwapParams"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/cosmos": {
+			"get": {
+				"operationId": "ListCosmosAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cosmos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateCosmosAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cosmos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CosmosInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/cosmos/{accountName}": {
+			"get": {
+				"operationId": "GetCosmosAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cosmos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/cosmos/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignCosmosTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cosmos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CosmosTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dogecoin": {
+			"get": {
+				"operationId": "ListDogeCoinAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"DogeCoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateDogeCoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"DogeCoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DogeCoinInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dogecoin/{accountName}": {
+			"get": {
+				"operationId": "GetDogeCoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"DogeCoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/dogecoin/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignDogeCoinTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"DogeCoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DogeCoinTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/ens/resolve": {
+			"post": {
+				"operationId": "Resolve",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ENS"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/EnsResolveInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/eos": {
+			"get": {
+				"operationId": "ListEosAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"eos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateEosAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"eos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/EosInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/eos/{accountName}": {
+			"get": {
+				"operationId": "GetEosAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"eos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/eos/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignEosTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"eos"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/EosTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/balance-of": {
+			"post": {
+				"operationId": "BalanceOf",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/balance-of-batch": {
+			"post": {
+				"operationId": "BalanceOfBatch",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/set-approval-for-all": {
+			"post": {
+				"operationId": "SetApprovalForAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/is-approved-for-all": {
+			"post": {
+				"operationId": "IsApprovedForAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/safe-transfer-from": {
+			"post": {
+				"operationId": "SafeTransferFrom",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc1155/{name}/safe-batch-transfer-from": {
+			"post": {
+				"operationId": "SafeBatchTransferFrom",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ERC1155"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc1155Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/name": {
+			"post": {
+				"operationId": "NameErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/symbol": {
+			"post": {
+				"operationId": "SymbolErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/decimals": {
+			"post": {
+				"operationId": "DecimalsErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/total-supply": {
+			"post": {
+				"operationId": "TotalSupplyErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/balance-of": {
+			"post": {
+				"operationId": "BalanceOfErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/allowance": {
+			"post": {
+				"operationId": "AllowanceErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/transfer": {
+			"post": {
+				"operationId": "TransferErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/approve": {
+			"post": {
+				"operationId": "ApproveErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc20/{name}/transfer-from": {
+			"post": {
+				"operationId": "TransferFromErc20",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc20"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc4337/{accountName}/address": {
+			"post": {
+				"operationId": "GetAddress",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc4337"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc4337/{accountName}/sign-broadcast-userop-tx": {
+			"post": {
+				"operationId": "SignBroadcastUserOpTx",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc4337"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/token-uri": {
+			"post": {
+				"operationId": "TokenUri",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/transfer": {
+			"post": {
+				"operationId": "Transfer",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/transfer-from": {
+			"post": {
+				"operationId": "TransferFrom",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/approve": {
+			"post": {
+				"operationId": "Approve",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/get-approved": {
+			"post": {
+				"operationId": "GetApproved",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/is-approved-for-all": {
+			"post": {
+				"operationId": "IsApprovedForAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/name": {
+			"post": {
+				"operationId": "Name",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/symbol": {
+			"post": {
+				"operationId": "Symbol",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/balance-of": {
+			"post": {
+				"operationId": "BalanceOf",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/owner-of": {
+			"post": {
+				"operationId": "OwnerOf",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/safe-transfer-from": {
+			"post": {
+				"operationId": "SafeTransferFrom",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/erc721/{name}/set-approval-for-all": {
+			"post": {
+				"operationId": "SetApprovalForAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Erc721"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Erc721Request"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/litecoin": {
+			"get": {
+				"operationId": "ListLitecoinAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Litecoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateLitecoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Litecoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/LitecoinInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/litecoin/{accountName}": {
+			"get": {
+				"operationId": "GetLitecoinAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Litecoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/litecoin/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignLitecoinTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Litecoin"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/LitecoinTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/onramper/currencies": {
+			"get": {
+				"operationId": "OnRamperGetSupportedCurrencies",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SupportedCurrenciesResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/payment-types": {
+			"get": {
+				"operationId": "OnRamperGetSupportedPaymentTypes",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SupportedPaymentTypesCurrencyResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fiat",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/payment-types/fiat": {
+			"get": {
+				"operationId": "OnRamperGetSupportedPaymentTypesFiat",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SupportedPaymentTypesCurrencyResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fiat",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/defaults": {
+			"get": {
+				"operationId": "OnRamperGetSupportedDefaultsAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SupportedDefaultResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "type",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/assets": {
+			"get": {
+				"operationId": "OnRamperGetSupportedAssets",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SupportedAssetResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "source",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/onramps": {
+			"get": {
+				"operationId": "OnRamperGetSupportedOnRampsAll",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/GetSupportedOnRampsResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/quotes/buy": {
+			"get": {
+				"operationId": "OnRamperGetQuotesBuy",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Quotes"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fiat",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "crypto",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "amount",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "paymentMethod",
+						"required": false,
+						"schema": {
+							"default": "creditcard",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "uuid",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "clientName",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/quotes/sell": {
+			"get": {
+				"operationId": "OnRamperGetQuotesSell",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SellQuotes"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "fiat",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "crypto",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "amount",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "paymentMethod",
+						"required": false,
+						"schema": {
+							"default": "creditcard",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "uuid",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "clientName",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "country",
+						"required": false,
+						"schema": {
+							"default": "",
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/onramper/fund/${accountName}": {
+			"post": {
+				"operationId": "OnRamperCheckout",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"onramper"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/payment/chains": {
+			"get": {
+				"operationId": "PaymentGetAvailableChains",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/payment": {
+			"post": {
+				"operationId": "PaymentCreatePaymentIntent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PaymentIntentResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreatePaymentIntentInput"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "PaymentGetAllPaymentIntents",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/PaymentIntentResponse"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/payment/{id}": {
+			"delete": {
+				"operationId": "PaymentDeletePaymentIntent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PaymentIntentResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "PaymentUpdatePaymentIntent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PaymentIntentResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreatePaymentIntentInput"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "PaymentGetPaymentIntent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PaymentIntentResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/payment/webhook/{id}": {
+			"post": {
+				"operationId": "MoralisWebhook",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IWebhook"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/payment/tatum/webhook/{id}": {
+			"post": {
+				"operationId": "TatumWebhook",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"payment"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {}
+						}
+					}
+				}
+			}
+		},
+		"/ping": {
+			"get": {
+				"operationId": "GetMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PingResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/ripple": {
+			"get": {
+				"operationId": "ListRippleAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ripple"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateRippleAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ripple"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/RippleInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/ripple/{accountName}": {
+			"get": {
+				"operationId": "GetRippleAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ripple"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/ripple/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignRippleTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"ripple"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/RippleTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/solana": {
+			"get": {
+				"operationId": "ListSolanaAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Solana"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateSolanaAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Solana"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SolanaInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/solana/{accountName}": {
+			"get": {
+				"operationId": "GetSolanaAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Solana"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/solana/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignSolanaTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Solana"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SolanaTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/tron": {
+			"get": {
+				"operationId": "ListTronAccounts",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Tron"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "CreateTronAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Tron"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TronInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/tron/{accountName}": {
+			"get": {
+				"operationId": "GetTronAccount",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Tron"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/tron/{accountName}/sign-tx": {
+			"post": {
+				"operationId": "SignTronTransaction",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Tron"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "accountName",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TronTransactionInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/uniswap/{name}/add-liquidity": {
+			"post": {
+				"operationId": "AddLiquidity",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"UniSwap"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UniswapInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/uniswap/{name}/remove-liquidity": {
+			"post": {
+				"operationId": "RemoveLiquidity",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"UniSwap"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UniswapInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/uniswap/{name}/swap-exact-tokens-for-tokens": {
+			"post": {
+				"operationId": "SwapExactTokensForTokens",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"UniSwap"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UniswapInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/uniswap/{name}/swap-exact-eth-for-tokens": {
+			"post": {
+				"operationId": "SwapExactETHForTokens",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"UniSwap"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UniswapInput"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/yearn/{name}/add-liquidity": {
+			"post": {
+				"operationId": "AddLiquidity",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"yearn"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/yearn/{name}/remove-liquidity": {
+			"post": {
+				"operationId": "RemoveLiquidity",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"yearn"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/yearn/{name}/add-liquidity-weth": {
+			"post": {
+				"operationId": "AddLiquidityWeth",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"yearn"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/yearn/{name}/remove-liquidity-weth": {
+			"post": {
+				"operationId": "RemoveLiquidityWeth",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AccountControllerResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"yearn"
+				],
+				"security": [
+					{
+						"BearerAuth": []
+					},
+					{
+						"Oauth2": []
+					},
+					{
+						"ApiKeyAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "Authorization",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/InputBody"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "https://vault-api.usemoon.ai"
+		}
+	]
+}

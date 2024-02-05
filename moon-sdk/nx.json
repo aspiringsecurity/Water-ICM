@@ -1,0 +1,26 @@
+{
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "build:fast": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "coverage": {
+      "cache": true
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/packages/**", "sharedGlobals"],
+    "sharedGlobals": [],
+    "production": ["default"]
+  }
+}
