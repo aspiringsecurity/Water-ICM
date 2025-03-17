@@ -2,7 +2,7 @@
 
 # Summary 
 
-Our platform solution offers an Artificial Intelligence-based object detection system that utilizes Optimism and Optimism ecosystem tools, IPFS, ethereum, Aptos, livepeer, Flow, and OP ecosystem powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
+Our platform solution offers an Artificial Intelligence-based object detection system that utilizes Optimism & Optimism ecosystem tools, IPFS, ethereum, Aptos, livepeer, Flow, and OP ecosystem powered solutions  for sorting information obtained from a variety of UAV and drone cameras deployed at monitoring spots.
 
 Features:
 •Detection : Identifying the UAVs in the video feed using object detection.
